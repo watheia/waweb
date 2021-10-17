@@ -42,7 +42,7 @@ module.exports = {
           800: "#151313",
           900: "#110f10"
         },
-        mulberry: {
+        red: {
           50: "#f7f3f5",
           100: "#eee7eb",
           200: "#d6c2cd",
@@ -58,13 +58,13 @@ module.exports = {
         "ring-2": "#fefeff",
         disabled: "#a7a5a6",
         primary: "#110f10",
-        "primary-2": "#1a1718",
+        "primary-2": "#231f20",
         secondary: "#fefeff",
         "secondary-2": "#dbdcdd"
       },
       textColor: {
         base: "#110f10",
-        primary: "#1a1718",
+        primary: "#110f10",
         secondary: "#fefeff",
         brand: "#04BFBF"
       },

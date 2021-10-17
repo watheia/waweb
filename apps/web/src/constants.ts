@@ -21,7 +21,7 @@ export const SITE_NAME = "watheia-corporate"
 export const META_DESCRIPTION =
   "Watheia Labs LLC is a digital agency building products for the modern web."
 export const SITE_DESCRIPTION =
-  "Choose Watheia Labs as your partner to build beautiful and engaging experiences for your customer."
+  "Choose Watheia Labs as your partner to build beautiful and engaging experiences for your customers."
 export const DATE = "October 1, 2021"
 export const SHORT_DATE = "Oct 1 - 9:00am PST"
 export const FULL_DATE = "Oct 1st 9am Pacific Time (GMT-7)"

@@ -28,6 +28,7 @@ import {
   HeartIcon
 } from "@heroicons/react/outline"
 import styles from "./index.module.css"
+
 export const features = [
   {
     name: "Unlimited Inboxes",
@@ -127,15 +128,15 @@ const HeroSection = () => (
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-700 bg-white hover:bg-teal-50 sm:px-8"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-700 bg-white hover:bg-teal-200 sm:px-8"
               >
-                Get started
+                Contact Sales
               </a>
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-500 bg-opacity-70 hover:bg-opacity-100 sm:px-8"
               >
-                Live demo
+                Learn More
               </a>
             </div>
           </div>
