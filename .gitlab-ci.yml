@@ -98,11 +98,16 @@ lint: # This job also runs in the test stage.
 #     paths:
 #       - dist/cypress
 
-deploy: # This job also runs in the test stage.
-  needs: [install, build]
-  stage: deploy # It can run at the same time as unit-test-job (in parallel).
+pages:
+  stage: deploy
+  needs: [build]
   script:
-    - echo "TODO not implemented"
-# stages:
-#   - build
-#   - test
+    - yarn nx run web:export --verbose
+    - rm -rf public
+    - copy -r dist/apps/exported public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
