@@ -10,9 +10,7 @@ export function Layout({ children, className, ...props }: LayoutProps) {
   return (
     <div className={clsx(className)} {...props}>
       <Header />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </div>
   )

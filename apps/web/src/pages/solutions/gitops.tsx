@@ -1,8 +1,8 @@
 import React from "react"
-import * as styles from "./gitops.module.css"
+import styles from "./gitops.module.css"
 
 /* eslint-disable-next-line */
-export interface GitopsProps { }
+export interface GitopsProps {}
 
 export function Gitops(props: GitopsProps) {
   return (

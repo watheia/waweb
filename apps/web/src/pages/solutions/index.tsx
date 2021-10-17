@@ -1,8 +1,8 @@
 import React from "react"
-import * as styles from "./index.module.css"
+import styles from "./index.module.css"
 
 /* eslint-disable-next-line */
-export interface IndexProps { }
+export interface IndexProps {}
 
 export function Index(props: IndexProps) {
   return (

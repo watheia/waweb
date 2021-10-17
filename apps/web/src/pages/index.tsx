@@ -16,8 +16,18 @@
   ```
 */
 import React from "react"
-import { InboxIcon, SparklesIcon, UsersIcon, TrashIcon, PencilAltIcon, DocumentReportIcon, ReplyIcon, ChatAltIcon, HeartIcon } from "@heroicons/react/outline"
-import * as styles from "./index.module.css"
+import {
+  InboxIcon,
+  SparklesIcon,
+  UsersIcon,
+  TrashIcon,
+  PencilAltIcon,
+  DocumentReportIcon,
+  ReplyIcon,
+  ChatAltIcon,
+  HeartIcon
+} from "@heroicons/react/outline"
+import styles from "./index.module.css"
 export const features = [
   {
     name: "Unlimited Inboxes",
@@ -90,7 +100,6 @@ export const metrics = [
   },
   { id: 4, stat: "12M+", emphasis: "Issues resolved", rest: "lacus nibh integer quis." }
 ]
-
 
 const HeroSection = () => (
   <div className="relative">
@@ -404,13 +413,13 @@ const CTASection = () => (
 
 export default function IndexPage() {
   return (
-    <>
+    <div className={styles.page}>
       <HeroSection />
       <LogoCloud />
       <AlternatingFeatureSections />
       <GradientFeatureSection />
       <StatsSection />
       <CTASection />
-    </>
+    </div>
   )
 }

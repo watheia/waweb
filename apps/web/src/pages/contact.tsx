@@ -24,14 +24,13 @@
   ```
 */
 import React, { HtmlHTMLAttributes } from "react"
-import { ExternalLinkIcon } from '@heroicons/react/solid'
+import { ExternalLinkIcon } from "@heroicons/react/solid"
 
-import * as styles from "./contact.module.css"
+import styles from "./contact.module.css"
 
 export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={styles.page} {...props}>
-
       {/* Header */}
       <div className="py-24 bg-gray-50 sm:py-32">
         <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
@@ -39,8 +38,8 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
             Get in touch
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">
-            Convallis feugiat et aliquet pellentesque dictum nisi, velit. Egestas fermentum adipiscing risus quam ac
-            consectetur mattis turpis tristique.
+            Convallis feugiat et aliquet pellentesque dictum nisi, velit. Egestas fermentum
+            adipiscing risus quam ac consectetur mattis turpis tristique.
           </p>
         </div>
       </div>
@@ -59,14 +58,24 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
         <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32 lg:grid lg:grid-cols-2">
           <div className="lg:pr-8">
             <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Let's work together</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Let's work together
+              </h2>
               <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                We’d love to hear from you! Send us a message using the form opposite, or email us. We’d love to hear
-                from you! Send us a message using the form opposite, or email us.
+                We’d love to hear from you! Send us a message using the form opposite, or
+                email us. We’d love to hear from you! Send us a message using the form
+                opposite, or email us.
               </p>
-              <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form
+                action="#"
+                method="POST"
+                className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+              >
                 <div>
-                  <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="first-name"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     First name
                   </label>
                   <div className="mt-1">
@@ -80,7 +89,10 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="last-name"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Last name
                   </label>
                   <div className="mt-1">
@@ -94,7 +106,10 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                   </div>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Email
                   </label>
                   <div className="mt-1">
@@ -108,7 +123,10 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                   </div>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Company
                   </label>
                   <div className="mt-1">
@@ -123,7 +141,10 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                 </div>
                 <div className="sm:col-span-2">
                   <div className="flex justify-between">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       Phone
                     </label>
                     <span id="phone-description" className="text-sm text-gray-500">
@@ -143,10 +164,16 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                 </div>
                 <div className="sm:col-span-2">
                   <div className="flex justify-between">
-                    <label htmlFor="how-can-we-help" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="how-can-we-help"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       How can we help you?
                     </label>
-                    <span id="how-can-we-help-description" className="text-sm text-gray-500">
+                    <span
+                      id="how-can-we-help-description"
+                      className="text-sm text-gray-500"
+                    >
                       Max. 500 characters
                     </span>
                   </div>
@@ -157,12 +184,14 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       aria-describedby="how-can-we-help-description"
                       rows={4}
                       className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border border-gray-300 rounded-md"
-                      defaultValue={''}
+                      defaultValue={""}
                     />
                   </div>
                 </div>
                 <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm font-medium text-gray-700">Expected budget</legend>
+                  <legend className="block text-sm font-medium text-gray-700">
+                    Expected budget
+                  </legend>
                   <div className="mt-4 grid grid-cols-1 gap-y-4">
                     <div className="flex items-center">
                       <input
@@ -215,7 +244,10 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                   </div>
                 </fieldset>
                 <div className="sm:col-span-2">
-                  <label htmlFor="how-did-you-hear-about-us" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="how-did-you-hear-about-us"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     How did you hear about us?
                   </label>
                   <div className="mt-1">
@@ -253,11 +285,13 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
             className="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-grape-50 sm:w-auto"
           >
             <span>See open positions</span>
-            <ExternalLinkIcon className="ml-3 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+            <ExternalLinkIcon
+              className="ml-3 h-5 w-5 flex-shrink-0 text-gray-400"
+              aria-hidden="true"
+            />
           </a>
         </div>
       </div>
-
     </div>
   )
 }

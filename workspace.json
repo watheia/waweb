@@ -3,37 +3,37 @@
   "projects": {
     "web": {
       "root": "apps/web",
-      "sourceRoot": "apps/web/src",
+      "sourceRoot": "apps/web",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/gatsby:build",
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "apps/web/public",
-            "uglify": true,
-            "color": true,
-            "profile": false
+            "root": "apps/web",
+            "outputPath": "dist/apps/web"
           },
           "configurations": {
             "production": {}
           }
         },
         "serve": {
-          "executor": "@nrwl/gatsby:server",
+          "executor": "@nrwl/next:server",
           "options": {
-            "buildTarget": "web:build"
+            "buildTarget": "web:build",
+            "dev": true
           },
           "configurations": {
             "production": {
-              "buildTarget": "web:build:production"
+              "buildTarget": "web:build:production",
+              "dev": false
             }
           }
         },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+        "export": {
+          "executor": "@nrwl/next:export",
           "options": {
-            "lintFilePatterns": ["apps/web/**/*.{ts,tsx,js,jsx}"]
+            "buildTarget": "web:build:production"
           }
         },
         "test": {
@@ -42,6 +42,13 @@
           "options": {
             "jestConfig": "apps/web/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/web/**/*.{ts,tsx,js,jsx}"]
           }
         }
       }
@@ -75,7 +82,7 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/gatsby"
+    "defaultCollection": "@nrwl/next"
   },
   "generators": {
     "@nrwl/react": {
@@ -83,9 +90,10 @@
         "babel": true
       }
     },
-    "@nrwl/gatsby": {
+    "@nrwl/next": {
       "application": {
-        "style": "css"
+        "style": "css",
+        "linter": "eslint"
       }
     }
   },

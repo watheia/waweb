@@ -100,7 +100,7 @@ module.exports = {
       to: {
         moreThanOneDependencyType: true
       }
-    },
+    }
 
     /* rules you might want to tweak for your specific situation: */
     // {
@@ -183,11 +183,7 @@ module.exports = {
           leave out if you want to exclude neither (recommended!)
     */
     exclude: {
-      path: [
-        "^jest\\.config$",
-        "^jest\\.setup\\.js$",
-        "^\\.yarn$"
-      ],
+      path: ["^jest\\.config$", "^jest\\.setup\\.js$", "^\\.yarn$"]
       //   dynamic: true
     },
 

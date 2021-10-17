@@ -1,5 +1,5 @@
 const { join } = require("path")
-const { createGlobPatternsForDependencies } = require("@nrwl/react/tailwind")
+const { createGlobPatternsForDependencies } = require("@nrwl/next/tailwind")
 module.exports = {
   purge: [
     join(__dirname, "pages/**/*.{js,ts,jsx,tsx}"),

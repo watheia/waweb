@@ -1,8 +1,8 @@
 import React from "react"
-import * as styles from "./analytics.module.css"
+import styles from "./analytics.module.css"
 
 /* eslint-disable-next-line */
-export interface AnalyticsProps { }
+export interface AnalyticsProps {}
 
 export function Analytics(props: AnalyticsProps) {
   return (

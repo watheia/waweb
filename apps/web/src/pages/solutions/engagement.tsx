@@ -1,8 +1,8 @@
 import React from "react"
-import * as styles from "./engagement.module.css"
+import styles from "./engagement.module.css"
 
 /* eslint-disable-next-line */
-export interface EngagementProps { }
+export interface EngagementProps {}
 
 export function Engagement(props: EngagementProps) {
   return (

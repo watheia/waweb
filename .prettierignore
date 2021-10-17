@@ -2,6 +2,10 @@
 
 /dist
 /coverage
+/node_modules
+/public
+/.yarn
+.docusaurus/
 
 /apps/web/node_modules
 /apps/web/public
