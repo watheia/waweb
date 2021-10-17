@@ -8,6 +8,7 @@
     "build:apps": "nx affected:apps",
     "build:libs": "nx affected:libs",
     "build": "nx affected:build",
+    "export": "nx run-many --target export --all --verbose",
     "e2e": "nx affected:e2e",
     "test": "nx affected:test",
     "lint": "nx workspace-lint && nx affected:lint",
