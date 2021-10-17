@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider } from "@mui/material/styles"
 import theme from "../theme"
 import { SEO, SEOProps } from "../components/SEO"
+import Layout from "apps/web/src/components/Layout"
 
 export type TopLayoutProps = {
   meta?: SEOProps
@@ -26,7 +27,9 @@ export default function TopLayout({ children, meta }: TopLayoutProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {children}
+        <Layout>
+          {children}
+        </Layout>
       </ThemeProvider>
     </>
   )

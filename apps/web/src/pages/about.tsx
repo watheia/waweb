@@ -15,7 +15,7 @@
   ```
 */
 import React, { HtmlHTMLAttributes } from "react"
-import styles from "./index.module.css"
+import styles from "./about.module.css"
 
 export const AboutPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
   return (

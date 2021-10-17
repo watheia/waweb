@@ -22,35 +22,36 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import clsx from "clsx"
+import NavLink from "./NavLink"
 
 const solutions = [
   {
     name: 'Analytics',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: '/solutions/analytics',
     icon: ChartBarIcon,
   },
   {
     name: 'Engagement',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: '/solutions/engagement',
     icon: CursorClickIcon,
   },
   { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
   {
     name: 'Integrations',
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: '/solutions/integrations',
     icon: ViewGridIcon,
   },
 ]
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'View All Products', href: '#', icon: CheckCircleIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: 'See Demos', href: '/demo', icon: PlayIcon },
+  { name: 'All Solutions', href: '/solutions', icon: CheckCircleIcon },
+  { name: 'Contact Sales', href: '/contact', icon: PhoneIcon },
 ]
 const company = [
-  { name: 'About', href: '#', icon: InformationCircleIcon },
+  { name: 'About', href: '/about', icon: InformationCircleIcon },
   { name: 'Customers', href: '#', icon: OfficeBuildingIcon },
   { name: 'Press', href: '#', icon: NewspaperIcon },
   { name: 'Careers', href: '#', icon: BriefcaseIcon },
@@ -60,7 +61,7 @@ const resources = [
   { name: 'Community', href: '#', icon: UserGroupIcon },
   { name: 'Partners', href: '#', icon: GlobeAltIcon },
   { name: 'Guides', href: '#', icon: BookmarkAltIcon },
-  { name: 'Webinars', href: '#', icon: DesktopComputerIcon },
+  { name: 'Materials', href: '#', icon: DesktopComputerIcon },
 ]
 const blogPosts = [
   {
@@ -86,16 +87,16 @@ export const Header = () => {
     <Popover className="relative bg-white">
       <div className="absolute inset-0 shadow z-30 pointer-events-none" aria-hidden="true" />
       <div className="relative z-20">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2 sm:px-6 sm:py-3 lg:px-8 md:justify-start md:space-x-10">
           <div>
-            <a href="#" className="flex">
+            <NavLink to="/" className="flex">
               <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
                 src="/images/logo.svg"
                 alt=""
               />
-            </a>
+            </NavLink>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
@@ -136,10 +137,10 @@ export const Header = () => {
                       <Popover.Panel className="hidden md:block absolute z-10 top-full inset-x-0 transform shadow-lg bg-white">
                         <div className="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
                           {solutions.map((item) => (
-                            <a
+                            <NavLink
                               key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50"
+                              to={item.href}
+                              className="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-blue-100"
                             >
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
@@ -157,10 +158,10 @@ export const Header = () => {
                                   </p>
                                 </div>
                               </div>
-                            </a>
+                            </NavLink>
                           ))}
                         </div>
-                        <div className="bg-gray-50">
+                        <div className="bg-blue-100 border-t">
                           <div className="max-w-7xl mx-auto space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
                             {callsToAction.map((item) => (
                               <div key={item.name} className="flow-root">
@@ -180,12 +181,12 @@ export const Header = () => {
                   </>
                 )}
               </Popover>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Pricing
-              </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Docs
-              </a>
+              <NavLink to="/blog">
+                Blog
+              </NavLink>
+              <NavLink to="/help-center">
+                Support
+              </NavLink>
               <Popover>
                 {({ open }) => (
                   <>
@@ -226,13 +227,13 @@ export const Header = () => {
                               <ul role="list" className="mt-5 space-y-6">
                                 {company.map((item) => (
                                   <li key={item.name} className="flow-root">
-                                    <a
-                                      href={item.href}
-                                      className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                                    <NavLink
+                                      to={item.href}
+                                      className="-m-3 p-3 flex items-center rounded-md hover:bg-blue-100"
                                     >
                                       <item.icon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
                                       <span className="ml-4">{item.name}</span>
-                                    </a>
+                                    </NavLink>
                                   </li>
                                 ))}
                               </ul>
@@ -242,13 +243,13 @@ export const Header = () => {
                               <ul role="list" className="mt-5 space-y-6">
                                 {resources.map((item) => (
                                   <li key={item.name} className="flow-root">
-                                    <a
-                                      href={item.href}
-                                      className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                                    <NavLink
+                                      to={item.href}
+                                      className="-m-3 p-3 flex items-center rounded-md hover:bg-blue-100"
                                     >
                                       <item.icon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
                                       <span className="ml-4">{item.name}</span>
-                                    </a>
+                                    </NavLink>
                                   </li>
                                 ))}
                               </ul>
@@ -262,7 +263,7 @@ export const Header = () => {
                               <ul role="list" className="mt-6 space-y-6">
                                 {blogPosts.map((post) => (
                                   <li key={post.id} className="flow-root">
-                                    <a href={post.href} className="-m-3 p-3 flex rounded-lg hover:bg-gray-100">
+                                    <NavLink to={post.href} className="-m-3 p-3 flex rounded-lg hover:bg-blue-100">
                                       <div className="hidden sm:block flex-shrink-0">
                                         <img className="w-32 h-20 object-cover rounded-md" src={post.imageUrl} alt="" />
                                       </div>
@@ -270,16 +271,16 @@ export const Header = () => {
                                         <h4 className="text-base font-medium text-gray-900 truncate">{post.name}</h4>
                                         <p className="mt-1 text-sm text-gray-500">{post.preview}</p>
                                       </div>
-                                    </a>
+                                    </NavLink>
                                   </li>
                                 ))}
                               </ul>
                             </div>
                             <div className="mt-6 text-sm font-medium">
-                              <a href="#" className="text-teal-600 hover:text-teal-500">
+                              <NavLink to="/blog" className="text-teal-700 hover:text-teal-500">
                                 {' '}
                                 View all posts <span aria-hidden="true">&rarr;</span>
-                              </a>
+                              </NavLink>
                             </div>
                           </div>
                         </div>
@@ -290,9 +291,9 @@ export const Header = () => {
               </Popover>
             </Popover.Group>
             <div className="flex items-center md:ml-12">
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <NavLink to="/auth">
                 Sign in
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -332,59 +333,55 @@ export const Header = () => {
                 <nav>
                   <div className="grid gap-7 sm:grid-cols-2 sm:gap-y-8 sm:gap-x-4">
                     {solutions.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center p-3 rounded-lg hover:bg-gray-50"
+                        to={item.href}
+                        className="-m-3 flex items-center p-3 rounded-lg hover:bg-blue-100"
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-teal-500 text-white sm:h-12 sm:w-12">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                   <div className="mt-8 text-base">
-                    <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
+                    <NavLink to="/solutions" className="font-medium text-teal-600 hover:text-teal-500">
                       {' '}
-                      View all products <span aria-hidden="true">&rarr;</span>
-                    </a>
+                      Learn More <span aria-hidden="true">&rarr;</span>
+                    </NavLink>
                   </div>
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Pricing
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Docs
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Company
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Resources
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                <NavLink to="#">
                   Blog
-                </a>
+                </NavLink>
 
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                <NavLink to="/support">
+                  Support
+                </NavLink>
+
+                <NavLink to="/about">
+                  About
+                </NavLink>
+
+                <NavLink to="/resources">
+                  Resources
+                </NavLink>
+
+                <NavLink to="/contact">
                   Contact Sales
-                </a>
+                </NavLink>
               </div>
               <div className="mt-6">
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-teal-600 hover:text-teal-500">
+                  <NavLink to="/auth" className="text-teal-600 hover:text-teal-500">
                     Sign in
-                  </a>
+                  </NavLink>
                 </p>
               </div>
             </div>
