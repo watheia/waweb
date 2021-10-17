@@ -1,11 +1,16 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "web",
   "private": true,
-  "description": "A simple starter to get up and develop quickly with Gatsby",
+  "description": "Watheia Labs Web Frontend",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
     "gatsby": "*",
-    "gatsby-plugin-image": "*"
+    "gatsby-plugin-image": "*",
+    "gatsby-plugin-react-helmet": "*",
+    "gatsby-plugin-svgr": "*",
+    "gatsby-plugin-sharp": "*",
+    "gatsby-transformer-sharp": "*",
+    "gatsby-plugin-postcss": "*"
   }
 }
