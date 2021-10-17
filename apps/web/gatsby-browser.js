@@ -1,19 +1,15 @@
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
+ * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-/* eslint-disable import/prefer-default-export */
-import React from 'react'
-import { CacheProvider } from '@emotion/react'
-import getEmotionCache from './src/utils/getEmotionCache'
-import TopLayout from './src/components/TopLayout'
-
+import React from "react"
+import Layout from "./src/components/Layout"
 import "./src/styles/index.css"
 
-const cache = getEmotionCache()
-
-export const wrapRootElement = ({ element }) => {
-  return <CacheProvider value={cache}><TopLayout>{element}</TopLayout></CacheProvider>
+export const wrapPageElement = ({ element, props }) => {
+  // props provide same data to Layout as Page element will get
+  // including location, data, etc - you don't need to pass it
+  return <Layout {...props}>{element}</Layout>
 }

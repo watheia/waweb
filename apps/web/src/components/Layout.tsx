@@ -1,4 +1,4 @@
-import { HtmlHTMLAttributes } from "react"
+import React, { HtmlHTMLAttributes } from "react"
 import clsx from "clsx"
 import Header from "./Header"
 import Footer from "./Footer"

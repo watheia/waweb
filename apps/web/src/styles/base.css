@@ -1,24 +1,24 @@
 :root {
-  --shark-0: #fefeff;
-  --shark-1: #fafbfb;
-  --shark-2: #dbdcdd;
-  --shark-3: #a7a5a6;
-  --shark-4: #656263;
-  --shark-5: #231f20;
-  --shark-6: #201c1d;
-  --shark-7: #1a1718;
-  --shark-8: #151313;
-  --shark-9: #110f10;
-  --aqua-0: "#f2fcfc";
-  --aqua-1: "#e6f9f9";
-  --aqua-2: "#c0efef";
-  --aqua-3: "#9be5e5";
-  --aqua-4: "#4fd2d2";
-  --aqua-5: "#04BFBF";
-  --aqua-6: "#04acac";
-  --aqua-7: "#038f8f";
-  --aqua-8: "#027373";
-  --aqua-9: "#025e5e";
+  --gray-0: #fefeff;
+  --gray-1: #fafbfb;
+  --gray-2: #dbdcdd;
+  --gray-3: #a7a5a6;
+  --gray-4: #656263;
+  --gray-5: #231f20;
+  --gray-6: #201c1d;
+  --gray-7: #1a1718;
+  --gray-8: #151313;
+  --gray-9: #110f10;
+  --teal-0: "#f2fcfc";
+  --teal-1: "#e6f9f9";
+  --teal-2: "#c0efef";
+  --teal-3: "#9be5e5";
+  --teal-4: "#4fd2d2";
+  --teal-5: "#04BFBF";
+  --teal-6: "#04acac";
+  --teal-7: "#038f8f";
+  --teal-8: "#027373";
+  --teal-9: "#025e5e";
   --mulberry-0: "#f7f3f5";
   --mulberry-1: "#eee7eb";
   --mulberry-2: "#d6c2cd";
@@ -29,18 +29,18 @@
   --mulberry-7: "#430828";
   --mulberry-8: "#350720";
   --mulberry-9: "#2c051a";
-  --primary: var(--shark-9);
-  --primary-2: var(--shark-7);
-  --secondary: var(--shark-0);
-  --secondary-2: var(--shark-2);
+  --primary: var(--gray-9);
+  --primary-2: var(--gray-7);
+  --secondary: var(--gray-0);
+  --secondary-2: var(--gray-2);
   --hover: rgba(255, 255, 255, 0.075);
   --hover-1: rgba(255, 255, 255, 0.15);
   --hover-2: rgba(255, 255, 255, 0.25);
   --selection: var(--mulberry-5);
-  --text-base: var(--shark-9);
-  --text-primary: var(--shark-7);
-  --text-secondary: var(--shark-50);
-  --green: var(--aqua-8);
+  --text-base: var(--gray-9);
+  --text-primary: var(--gray-7);
+  --text-secondary: var(--gray-50);
+  --green: var(--teal-8);
   --red: var(--mulberry-5);
   --pink: var(--mulberry-4);
   --purple: var(--mulberry-8);
@@ -71,9 +71,9 @@
   --accents-8: #151313;
   --gray: #231f20;
   --secondary-color: var(--accents-4);
-  --sidebar: var(--shark-9);
+  --sidebar: var(--gray-9);
   --header-height: 72px;
-  --brand: var(--aqua-5);
+  --brand: var(--teal-5);
   --font-sans: -apple-system, system-ui, blinkmacsystemfont, "Helvetica Neue", "Helvetica",
     sans-serif;
   --vh100-offset: calc(100vh - var(--header-height));
@@ -98,7 +98,7 @@ html {
 html,
 body,
 .app {
-  background-color: var(--shark-1);
+  background-color: var(--gray-1);
   color: var(--text-base);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

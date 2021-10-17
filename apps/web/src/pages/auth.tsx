@@ -15,10 +15,11 @@
   ```
 */
 
-import { HtmlHTMLAttributes } from "react"
+import React, { HtmlHTMLAttributes } from "react"
+import * as styles from "./auth.module.css"
 export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className="min-h-screen bg-white flex" {...props}>
+    <div className={styles.page} {...props}>
       <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
@@ -30,7 +31,7 @@ export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
             <p className="mt-2 text-sm text-gray-600">
               Or{' '}
-              <a href="#" className="font-medium text-aqua-600 hover:text-aqua-500">
+              <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
                 Join the early access program
               </a>
             </p>
@@ -111,7 +112,7 @@ export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       type="email"
                       autoComplete="email"
                       required
-                      className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-aqua-500 focus:border-aqua-500 sm:text-sm"
+                      className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -127,7 +128,7 @@ export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       type="password"
                       autoComplete="current-password"
                       required
-                      className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-aqua-500 focus:border-aqua-500 sm:text-sm"
+                      className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -138,7 +139,7 @@ export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       id="remember-me"
                       name="remember-me"
                       type="checkbox"
-                      className="h-4 w-4 text-aqua-600 focus:ring-aqua-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded"
                     />
                     <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                       Remember me
@@ -146,7 +147,7 @@ export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                   </div>
 
                   <div className="text-sm">
-                    <a href="#" className="font-medium text-aqua-600 hover:text-aqua-500">
+                    <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
                       Forgot your password?
                     </a>
                   </div>
@@ -155,7 +156,7 @@ export const AuthPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                 <div>
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-aqua-600 hover:bg-aqua-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-aqua-500"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                   >
                     Sign in
                   </button>

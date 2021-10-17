@@ -1,38 +1,15 @@
-/* eslint-disable import/prefer-default-export */
-import * as React from 'react'
-import { CacheProvider } from '@emotion/react'
-import createEmotionServer from '@emotion/server/create-instance'
-import { renderToString } from 'react-dom/server'
-import getEmotionCache from './src/utils/getEmotionCache'
-import TopLayout from './src/components/TopLayout'
+/**
+ * Implement Gatsby's SSR APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/
+ */
 
-import "./src/styles/index.css"
+import React from "react"
+import Layout from "./src/components/Layout"
 
-
-export const replaceRenderer = ({ bodyComponent, setHeadComponents, replaceBodyHTMLString }) => {
-  const cache = getEmotionCache()
-  const { extractCriticalToChunks } = createEmotionServer(cache)
-
-  const emotionStyles = extractCriticalToChunks(
-    renderToString(<CacheProvider value={cache}>{bodyComponent}</CacheProvider>),
-  )
-
-  setHeadComponents(
-    emotionStyles.styles.map((style) => (
-      <style
-        data-emotion={`${style.key} ${style.ids.join(' ')}`}
-        key={style.key}
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: style.css }}
-      />
-    )),
-  )
-
-  // render the result from `extractCritical`
-  replaceBodyHTMLString(emotionStyles.html)
-}
-
-export const wrapRootElement = ({ element }) => {
-  return <TopLayout>{element}</TopLayout>
+export const wrapPageElement = ({ element, props }) => {
+  // props provide same data to Layout as Page element will get
+  // including location, data, etc - you don't need to pass it
+  return <Layout {...props}>{element}</Layout>
 }
 

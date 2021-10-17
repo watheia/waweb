@@ -15,11 +15,9 @@
   }
   ```
 */
+import React from "react"
 import { InboxIcon, SparklesIcon, UsersIcon, TrashIcon, PencilAltIcon, DocumentReportIcon, ReplyIcon, ChatAltIcon, HeartIcon } from "@heroicons/react/outline"
-import Layout from "../components/Layout"
-
 import * as styles from "./index.module.css"
-
 export const features = [
   {
     name: "Unlimited Inboxes",
@@ -105,14 +103,14 @@ const HeroSection = () => (
             src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
             alt="People working on laptops"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-aqua-800 to-aqua-600 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-r from-teal-800 to-teal-600 mix-blend-multiply" />
         </div>
         <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
           <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
             <span className="block text-white">Take control of your</span>
-            <span className="block text-aqua-200">customer support</span>
+            <span className="block text-teal-200">customer support</span>
           </h1>
-          <p className="mt-6 max-w-lg mx-auto text-center text-xl text-aqua-200 sm:max-w-3xl">
+          <p className="mt-6 max-w-lg mx-auto text-center text-xl text-teal-200 sm:max-w-3xl">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
             commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
           </p>
@@ -120,13 +118,13 @@ const HeroSection = () => (
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-aqua-700 bg-white hover:bg-aqua-50 sm:px-8"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-700 bg-white hover:bg-teal-50 sm:px-8"
               >
                 Get started
               </a>
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-aqua-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
               >
                 Live demo
               </a>
@@ -141,7 +139,7 @@ const HeroSection = () => (
 const LogoCloud = () => (
   <div className="bg-gray-100">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-      <p className="text-center text-sm font-semibold uppercase text-shark-500 tracking-wide">
+      <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
         Trusted by over 5 very average small businesses
       </p>
       <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
@@ -196,15 +194,15 @@ const AlternatingFeatureSections = () => (
         <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
           <div>
             <div>
-              <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-aqua-400 to-aqua-600">
+              <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-teal-400 to-teal-600">
                 <InboxIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </span>
             </div>
             <div className="mt-6">
-              <h2 className="text-3xl font-extrabold tracking-tight text-shark-900">
+              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 Stay on top of customer support
               </h2>
-              <p className="mt-4 text-lg text-shark-500">
+              <p className="mt-4 text-lg text-gray-500">
                 Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum
                 malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
                 duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus
@@ -213,7 +211,7 @@ const AlternatingFeatureSections = () => (
               <div className="mt-6">
                 <a
                   href="#"
-                  className="inline-flex bg-gradient-to-r from-aqua-400 to-aqua-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-aqua-900 hover:to-aqua-700"
+                  className="inline-flex bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
                 >
                   Get started
                 </a>
@@ -223,7 +221,7 @@ const AlternatingFeatureSections = () => (
           <div className="mt-8 border-t border-gray-200 pt-6">
             <blockquote>
               <div>
-                <p className="text-base text-shark-500">
+                <p className="text-base text-gray-500">
                   &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci
                   risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
                 </p>
@@ -237,7 +235,7 @@ const AlternatingFeatureSections = () => (
                       alt=""
                     />
                   </div>
-                  <div className="text-base font-medium text-shark-700">
+                  <div className="text-base font-medium text-gray-700">
                     Marcia Hill, Digital Marketing Manager
                   </div>
                 </div>
@@ -261,15 +259,15 @@ const AlternatingFeatureSections = () => (
         <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
           <div>
             <div>
-              <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-aqua-400 to-aqua-600">
+              <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-teal-400 to-teal-600">
                 <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </span>
             </div>
             <div className="mt-6">
-              <h2 className="text-3xl font-extrabold tracking-tight text-shark-900">
+              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 Better understand your customers
               </h2>
-              <p className="mt-4 text-lg text-shark-500">
+              <p className="mt-4 text-lg text-gray-500">
                 Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum
                 malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
                 duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus
@@ -278,7 +276,7 @@ const AlternatingFeatureSections = () => (
               <div className="mt-6">
                 <a
                   href="#"
-                  className="inline-flex bg-gradient-to-r from-aqua-400 to-aqua-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-aqua-900 hover:to-aqua-700"
+                  className="inline-flex bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
                 >
                   Get started
                 </a>
@@ -320,14 +318,14 @@ const StatsSection = () => (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
       <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
         <h2 className="text-sm font-semibold tracking-wide uppercase">
-          <span className="bg-gradient-to-r from-aqua-300 to-aqua-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-teal-300 to-teal-300 bg-clip-text text-transparent">
             Valuable Metrics
           </span>
         </h2>
         <p className="mt-3 text-3xl font-extrabold text-white">
           Get actionable data that will help grow your business
         </p>
-        <p className="mt-5 text-lg text-shark-300">
+        <p className="mt-5 text-lg text-gray-300">
           Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra
           tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et
           vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate
@@ -337,7 +335,7 @@ const StatsSection = () => (
           {metrics.map((item) => (
             <p key={item.id}>
               <span className="block text-2xl font-bold text-white">{item.stat}</span>
-              <span className="mt-1 block text-base text-shark-300">
+              <span className="mt-1 block text-base text-gray-300">
                 <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
               </span>
             </p>
@@ -349,7 +347,7 @@ const StatsSection = () => (
 )
 
 const GradientFeatureSection = () => (
-  <div className="bg-gradient-to-r from-aqua-800 to-aqua-700">
+  <div className="bg-gradient-to-r from-teal-800 to-teal-700">
     <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
       <h2 className="text-3xl font-extrabold text-white tracking-tight">
         Inbox support built for efficiency
@@ -380,22 +378,22 @@ const GradientFeatureSection = () => (
 const CTASection = () => (
   <div className="bg-white">
     <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
-      <h2 className="text-4xl font-extrabold tracking-tight text-shark-900 sm:text-4xl">
+      <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         <span className="block">Ready to get started?</span>
-        <span className="block bg-gradient-to-r from-aqua-400 to-aqua-600 bg-clip-text text-transparent">
+        <span className="block bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
           Get in touch or create an account.
         </span>
       </h2>
       <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
         <a
           href="#"
-          className="flex items-center justify-center bg-gradient-to-r from-aqua-400 to-aqua-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-aqua-900 hover:to-aqua-700"
+          className="flex items-center justify-center bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
         >
           Learn more
         </a>
         <a
           href="#"
-          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-aqua-800 bg-aqua-50 hover:bg-aqua-100"
+          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-800 bg-teal-50 hover:bg-teal-100"
         >
           Get started
         </a>
@@ -406,13 +404,13 @@ const CTASection = () => (
 
 export default function IndexPage() {
   return (
-    <Layout className={styles.page}>
+    <>
       <HeroSection />
       <LogoCloud />
       <AlternatingFeatureSections />
       <GradientFeatureSection />
       <StatsSection />
       <CTASection />
-    </Layout>
+    </>
   )
 }

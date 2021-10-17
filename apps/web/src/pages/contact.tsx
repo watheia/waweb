@@ -23,7 +23,7 @@
   }
   ```
 */
-import { HtmlHTMLAttributes } from "react"
+import React, { HtmlHTMLAttributes } from "react"
 import { ExternalLinkIcon } from '@heroicons/react/solid'
 
 import * as styles from "./contact.module.css"

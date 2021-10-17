@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 
-import { HtmlHTMLAttributes } from "react"
+import React, { HtmlHTMLAttributes } from "react"
 const navigation = [
   {
     name: 'Facebook',

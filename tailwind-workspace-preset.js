@@ -6,7 +6,7 @@ module.exports = {
         "8xl": "1920px"
       },
       colors: {
-        regal: {
+        blue: {
           50: "#f2f6f8",
           100: "#e6edf1",
           200: "#c0d1dc",
@@ -18,7 +18,7 @@ module.exports = {
           800: "#012b45",
           900: "#012338"
         },
-        aqua: {
+        teal: {
           50: "#f2fcfc",
           100: "#e6f9f9",
           200: "#c0efef",
@@ -30,7 +30,7 @@ module.exports = {
           800: "#027373",
           900: "#025e5e"
         },
-        shark: {
+        gray: {
           50: "#fefeff",
           100: "#fafbfb",
           200: "#dbdcdd",
@@ -42,7 +42,7 @@ module.exports = {
           800: "#151313",
           900: "#110f10"
         },
-        mulberry: {
+        red: {
           50: "#f7f3f5",
           100: "#eee7eb",
           200: "#d6c2cd",
