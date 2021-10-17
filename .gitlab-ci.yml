@@ -104,7 +104,7 @@ pages:
   script:
     - yarn nx run web:export --verbose
     - rm -rf public
-    - copy -r dist/apps/exported public
+    - cp -r dist/apps/exported public
   artifacts:
     paths:
       - public
