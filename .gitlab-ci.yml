@@ -100,7 +100,7 @@ lint: # This job also runs in the test stage.
 
 pages:
   stage: deploy
-  needs: [build]
+  needs: [install]
   script:
     - yarn nx run web:export --verbose
     - rm -rf public
