@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider } from "@mui/material/styles"
 import theme from "../theme"
 import Layout from "./layout"
+import { SessionProvider } from "../lib/auth"
 
 export type TopLayoutProps = HtmlHTMLAttributes<HTMLDivElement>
 
@@ -23,7 +24,9 @@ export default function TopLayout({ children }: TopLayoutProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout>{children}</Layout>
+        <SessionProvider>
+          <Layout>{children}</Layout>
+        </SessionProvider>
       </ThemeProvider>
     </>
   )
