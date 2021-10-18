@@ -1,7 +1,9 @@
-import { DEFAULT_AVATARS_BUCKET } from "@watheia/catalog"
+import { DEFAULT_AVATARS_BUCKET } from "../../../constants"
 import { ChangeEvent, useState } from "react"
-import { AsyncStatus } from "@watheia/catalog"
+// import { AsyncStatus } from "@watheia/catalog"
 import client from "../supabaseClient"
+
+export type AsyncStatus = "idle" | "pending" | "error" | "result"
 
 export type UploadAvatarResult = {
   status: string

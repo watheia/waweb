@@ -1,12 +1,11 @@
-import { Profile } from "@watheia/catalog"
 import client from "../supabaseClient"
 
-export default async function getPublicProfiles(): Promise<Profile[]> {
+export default async function getPublicProfiles(): Promise<any[]> {
   try {
     if (!client) throw new Error("client uninitialized")
 
     const { data, error } = await client
-      .from<Profile>("profiles")
+      .from<any>("profiles")
       .select("id, username, avatar_url, website, updated_at")
       .order("updated_at", { ascending: false })
 

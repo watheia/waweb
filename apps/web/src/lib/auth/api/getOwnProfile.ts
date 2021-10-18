@@ -1,7 +1,6 @@
-import { Profile } from "@watheia/catalog"
 import client from "../supabaseClient"
 
-export default async function getOwnProfile(): Promise<Profile> {
+export default async function getOwnProfile(): Promise<any> {
   try {
     const user = client.auth.user()
 

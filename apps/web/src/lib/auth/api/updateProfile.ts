@@ -1,4 +1,7 @@
-export default async function updateProfile() {
+import { useState } from "react"
+import { supabase } from "../supabaseClient"
+export default async function updateProfile({ username, website }) {
+  const [isLoading, setLoading] = useState<boolean>(false)
   try {
     setLoading(true)
     const user = supabase.auth.user()
