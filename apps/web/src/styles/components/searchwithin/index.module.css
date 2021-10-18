@@ -1,0 +1,74 @@
+/*
+Copyright 2021 Watheia Labs, LLC. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../commons/index.css";
+.wa-SearchWithin {
+  --wa-searchwithin-width: var(--wa-global-dimension-size-3000);
+  --wa-searchwithin-searchfield-width: var(--wa-global-dimension-size-1600);
+
+  /* Force override */
+  --wa-searchwithin-border-radius: 0;
+  --wa-searchwithin-picker-min-width: 0;
+}
+
+.wa-SearchWithin {
+  inline-size: var(--wa-searchwithin-width);
+  min-inline-size: var(--wa-searchwithin-width);
+  display: inline-flex;
+  position: relative;
+}
+
+.wa-SearchWithin-picker {
+  inline-size: auto;
+  min-inline-size: var(--wa-global-dimension-size-900);
+  flex-shrink: 0;
+
+  > button {
+    contain: unset;
+    border-end-start-radius: var(--wa-searchwithin-border-radius);
+    border-start-start-radius: var(--wa-searchwithin-border-radius);
+  }
+}
+
+.wa-SearchWithin-searchfield {
+  min-inline-size: var(--wa-searchwithin-searchfield-width);
+  flex-grow: 1;
+  order: -1;
+  margin-inline-end: calc(-1 * var(--wa-textfield-border-size)); /* hides right border */
+
+  &:focus-within {
+    z-index: 1; /* shows entire focus ring */
+  }
+
+  > input {
+    border-end-end-radius: var(--wa-searchwithin-border-radius);
+    border-start-end-radius: var(--wa-searchwithin-border-radius);
+    flex: 1;
+    box-sizing: border-box;
+    min-inline-size: inherit;
+
+    &:hover,
+    &:focus {
+      position: relative; /* shows right border */
+    }
+  }
+}
+
+/* this is specific to handling default width */
+.wa-SearchWithin-container {
+  /* ensure we have higher specificity than .wa-Field */
+  &.wa-SearchWithin-container {
+    /* override the default width of the field container, only with labelPosition=top. */
+    --wa-field-default-width: var(--wa-global-dimension-size-3000);
+    min-inline-size: var(--wa-global-dimension-size-3000);
+  }
+}

@@ -1,0 +1,349 @@
+/*
+Copyright 2021 Watheia Labs, LLC. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.wa-Card {
+  &.is-drop-target {
+    border-color: var(--wa-card-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+    background-color: var(--wa-alias-highlight-selected);
+  }
+
+  .wa-Card-checkboxWrapper {
+    background-color: var(--wa-quickactions-background-color);
+  }
+
+  .wa-Card-detail {
+    color: var(--wa-card-description-text-color);
+  }
+}
+
+.wa-Card-illustration {
+}
+.wa-Card-image {
+}
+.wa-Card-avatar {
+}
+.wa-Card-heading {
+  color: var(--wa-global-color-gray-900);
+}
+.wa-Card-detail {
+  color: var(--wa-global-color-gray-700);
+}
+.wa-Card-actions {
+}
+.wa-Card-content {
+  color: var(--wa-global-color-gray-700);
+}
+.wa-Card-divider {
+}
+.wa-Card-footer {
+}
+
+.wa-Card--default {
+  border-color: var(--wa-card-border-color);
+  background-color: var(--wa-card-background-color);
+
+  &:hover {
+    border-color: var(--wa-card-border-color-hover);
+    &:before {
+      box-shadow: 0 0 0 1px var(--wa-card-border-color-hover);
+    }
+  }
+
+  &.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    &:before {
+      /* Image needs to go right to the edge, so no border. Adding border on focus causes
+      * a jump in the text and image. So focus ring is only box-shadow
+      */
+      box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+    }
+  }
+
+  &:hover.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    &:before {
+      /* Image needs to go right to the edge, so no border. Adding border on focus causes
+      * a jump in the text and image. So focus ring is only box-shadow
+      */
+      box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+    }
+  }
+
+  &:focus-ring {
+    border-color: var(--wa-card-border-color-key-focus);
+    &:before {
+      box-shadow: 0 0 0 2px var(--wa-card-border-color-key-focus);
+    }
+  }
+
+  &:focus-ring:hover.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    &:before {
+      box-shadow: 0 0 0 2px var(--wa-card-border-color-key-focus);
+    }
+  }
+
+  &.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    &:after {
+      background-color: var(--wa-global-color-blue-400);
+      opacity: 0.15;
+    }
+    &:hover {
+      border-color: var(--wa-card-border-color-key-focus);
+      &:after {
+        background-color: var(--wa-global-color-blue-400);
+        opacity: 0.25;
+      }
+    }
+  }
+  &:before {
+    transition: background-color var(--wa-global-animation-duration-100);
+  }
+  &:after {
+    transition: background-color var(--wa-global-animation-duration-100),
+      opacity var(--wa-global-animation-duration-100);
+    opacity: 0;
+  }
+  .wa-Card-grid {
+    &:before {
+      transition: background-color var(--wa-global-animation-duration-100);
+      background-color: var(--wa-card-quiet-preview-background-color);
+    }
+  }
+
+  .wa-Card-image,
+  .wa-Card-illustration {
+    border-block-end-color: var(--wa-card-coverphoto-border-color);
+  }
+  .wa-Card-image {
+  }
+  .wa-Card-avatar {
+  }
+  .wa-Card-heading {
+  }
+  .wa-Card-detail {
+  }
+  .wa-Card-actions {
+  }
+  .wa-Card-content {
+    color: var(--wa-card-description-text-color);
+  }
+  .wa-Card-divider {
+  }
+  .wa-Card-footer {
+  }
+}
+
+.wa-Card--isQuiet {
+  border-color: transparent;
+  background-color: transparent;
+  &:hover {
+    .wa-Card-grid {
+      &:before {
+        background-color: var(--wa-card-quiet-preview-background-color-hover);
+        /* TODO do we still want this border on the image itself? */
+        box-shadow: 0 0 0 1px var(--wa-card-border-color-hover);
+      }
+    }
+  }
+
+  &.is-selected {
+    .wa-Card-grid {
+      &:after {
+        /* Image needs to go right to the edge, so no border. Adding border on focus causes
+        * a jump in the text and image. So focus ring is only box-shadow
+        */
+        box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &:hover.is-selected {
+    .wa-Card-grid {
+      &:after {
+        /* Image needs to go right to the edge, so no border. Adding border on focus causes
+        * a jump in the text and image. So focus ring is only box-shadow
+        */
+        box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &:focus-ring {
+    .wa-Card-grid {
+      &:after {
+        box-shadow: 0 0 0 2px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &:focus-ring:hover.is-selected {
+    .wa-Card-grid {
+      &:after {
+        box-shadow: 0 0 0 2px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &.is-selected {
+    .wa-Card-grid {
+      .wa-Card-decoration {
+        opacity: 0.15;
+      }
+    }
+    &:hover {
+      .wa-Card-grid {
+        .wa-Card-decoration {
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+
+  .wa-Card-grid {
+    &:before {
+      transition: background-color var(--wa-global-animation-duration-100);
+      background-color: var(--wa-card-quiet-preview-background-color);
+    }
+  }
+  .wa-Card-image,
+  .wa-Card-illustration {
+  }
+  .wa-Card-image {
+  }
+  .wa-Card-avatar {
+  }
+  .wa-Card-heading {
+  }
+  .wa-Card-detail {
+  }
+  .wa-Card-actions {
+  }
+  .wa-Card-content {
+  }
+  .wa-Card-divider {
+  }
+  .wa-Card-footer {
+  }
+  .wa-Card-decoration {
+    transition: background-color var(--wa-global-animation-duration-100),
+      opacity var(--wa-global-animation-duration-100);
+    background-color: var(--wa-global-color-blue-400);
+    opacity: 0;
+  }
+}
+
+.wa-Card--horizontal {
+  border-color: var(--wa-card-border-color);
+  background-color: var(--wa-card-background-color);
+  &:hover {
+    border-color: var(--wa-card-border-color-hover);
+    .wa-Card-grid {
+      &:before {
+        box-shadow: 0 0 0 1px var(--wa-card-border-color-hover);
+      }
+    }
+  }
+
+  &.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    .wa-Card-grid {
+      &:before {
+        /* Image needs to go right to the edge, so no border. Adding border on focus causes
+        * a jump in the text and image. So focus ring is only box-shadow
+        */
+        box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &:hover.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    .wa-Card-grid {
+      &:before {
+        /* Image needs to go right to the edge, so no border. Adding border on focus causes
+        * a jump in the text and image. So focus ring is only box-shadow
+        */
+        box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &:focus-ring {
+    border-color: var(--wa-card-border-color-key-focus);
+    .wa-Card-grid {
+      &:before {
+        box-shadow: 0 0 0 2px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &:focus-ring:hover.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    .wa-Card-grid {
+      &:before {
+        box-shadow: 0 0 0 2px var(--wa-card-border-color-key-focus);
+      }
+    }
+  }
+
+  &.is-selected {
+    border-color: var(--wa-card-border-color-key-focus);
+    .wa-Card-grid {
+      &:after {
+        background-color: var(--wa-global-color-blue-400);
+        opacity: 0.15;
+      }
+    }
+    &:hover {
+      border-color: var(--wa-card-border-color-key-focus);
+      .wa-Card-grid {
+        &:after {
+          background-color: var(--wa-global-color-blue-400);
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+
+  .wa-Card-grid {
+    &:after {
+      transition: background-color var(--wa-global-animation-duration-100),
+        opacity var(--wa-global-animation-duration-100);
+      opacity: 0;
+    }
+  }
+  .wa-Card-image,
+  .wa-Card-illustration {
+    border-inline-end-color: var(--wa-card-coverphoto-border-color);
+  }
+  .wa-Card-image {
+  }
+  .wa-Card-illustration {
+  }
+  .wa-Card-avatar {
+  }
+  .wa-Card-heading {
+  }
+  .wa-Card-detail {
+  }
+  .wa-Card-actions {
+  }
+  .wa-Card-content {
+  }
+  .wa-Card-divider {
+  }
+  .wa-Card-footer {
+  }
+}

@@ -1,0 +1,41 @@
+/*
+ * Copyright 2021 Watheia Labs, LLC. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --wa-helptext-neutral-texticon-text-color: var(--wa-alias-label-text-color);
+  --wa-helptext-neutral-texticon-text-color-disabled: var(--wa-alias-text-color-disabled);
+
+  /* Override: DNA uses --wa-semantic-negative-text-color-small */
+  --wa-helptext-negative-texticon-text-color: var(--wa-semantic-negative-color-text-small);
+  /* Override: DNA uses --wa-semantic-negative-icon-color */
+  --wa-helptext-negative-texticon-icon-color: var(--wa-semantic-negative-color-text-small);
+}
+
+.wa-HelpText--neutral {
+  .wa-HelpText-text {
+    color: var(--wa-helptext-neutral-texticon-text-color);
+  }
+  &.is-disabled {
+    .wa-HelpText-text {
+      color: var(--wa-helptext-neutral-texticon-text-color-disabled);
+    }
+  }
+}
+
+.wa-HelpText--negative {
+  .wa-HelpText-validationIcon {
+    color: var(--wa-helptext-negative-texticon-icon-color);
+  }
+  .wa-HelpText-text {
+    color: var(--wa-helptext-negative-texticon-text-color);
+  }
+}

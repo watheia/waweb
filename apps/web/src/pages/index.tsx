@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /*
-  This example requires Tailwind CSS v2.0+ 
-  
+  This example requires Tailwind CSS v2.0+
+
   This example requires some changes to your config:
-  
+
   ```
   // tailwind.config.js
   module.exports = {
@@ -27,6 +27,9 @@ import {
   ChatAltIcon,
   HeartIcon
 } from "@heroicons/react/outline"
+
+import NavLink from "../components/nav-link"
+
 import styles from "./index.module.css"
 
 export const features = [
@@ -121,20 +124,20 @@ const HeroSection = () => (
             <span className="block text-teal-200">modern web</span>
           </h1>
           <p className="mt-6 max-w-lg mx-auto text-center text-xl text-teal-200 sm:max-w-3xl">
-            Get hands on experience and personilzed training from the best and brightest while
-            contributing to real Open Source Software (OSS) projects used every day by companies
-            like Google, Facebook, Amazon, Apple, and more!
+            Get hands on experience and personilzed training from the best and brightest
+            while contributing to real Open Source Software (OSS) projects used every day by
+            companies like Google, Facebook, Amazon, Apple, and more!
           </p>
           <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-              <a
-                href="#"
+              <NavLink
+                to="/contact/#waitlist"
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-700 bg-white hover:bg-teal-200 sm:px-8"
               >
                 Join Waitlist
-              </a>
+              </NavLink>
               <a
-                href="#"
+                href="/solutions/"
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-500 bg-opacity-70 hover:bg-opacity-100 sm:px-8"
               >
                 Learn More
@@ -162,30 +165,22 @@ const LogoCloud = () => (
           />
         </div>
         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-          <img
-            className="h-12"
-            src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-            alt="Mirage"
-          />
+          <img className="h-12" src="/public/mirage-logo-gray-400.svg" alt="Mirage" />
         </div>
         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-          <img
-            className="h-12"
-            src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-            alt="StaticKit"
-          />
+          <img className="h-12" src="/images/statickit-logo-gray-400.svg" alt="StaticKit" />
         </div>
         <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
           <img
             className="h-12"
-            src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
+            src="/images/transistor-logo-gray-400.svg"
             alt="Transistor"
           />
         </div>
         <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
           <img
             className="h-12"
-            src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
+            src="/images/workcation-logo-gray-400.svg"
             alt="Workcation"
           />
         </div>
@@ -211,21 +206,20 @@ const AlternatingFeatureSections = () => (
             </div>
             <div className="mt-6">
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                Stay on top of customer support
+                Stay on top of the latest trends in tech.
               </h2>
               <p className="mt-4 text-lg text-gray-500">
-                Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum
-                malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
-                duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus
-                ornare pharetra.
+                Watheia Labs stays on top of the quickly changing winds in tech, so your
+                skills will be ahead of the game. As a result, you will be ready for the Job
+                market with next-gen skills that haven't even made it into the lesson plans.
               </p>
               <div className="mt-6">
-                <a
-                  href="#"
+                <NavLink
+                  to="/contact/#waitlist"
                   className="inline-flex bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
                 >
-                  Get started
-                </a>
+                  Join Waitlist
+                </NavLink>
               </div>
             </div>
           </div>
@@ -242,7 +236,7 @@ const AlternatingFeatureSections = () => (
                   <div className="flex-shrink-0">
                     <img
                       className="h-6 w-6 rounded-full"
-                      src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                      src="/images/photo-1509783236416-c9ad59bae472.jpg"
                       alt=""
                     />
                   </div>
@@ -258,7 +252,7 @@ const AlternatingFeatureSections = () => (
           <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
               className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-              src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+              src="/images/inbox-app-screenshot-1.jpg"
               alt="Inbox user interface"
             />
           </div>
@@ -276,21 +270,20 @@ const AlternatingFeatureSections = () => (
             </div>
             <div className="mt-6">
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                Better understand your customers
+                Better understand your customers&apos; needs.
               </h2>
               <p className="mt-4 text-lg text-gray-500">
-                Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum
-                malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
-                duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus
-                ornare pharetra.
+                Most projects that fail do so before a line of code is released.
+                Universities and traditional academia will teach you how to build a thing
+                right. Instead, we focus on how to build the right thing.
               </p>
               <div className="mt-6">
-                <a
-                  href="#"
+                <NavLink
+                  to="/contact/#waitlist"
                   className="inline-flex bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
                 >
-                  Get started
-                </a>
+                  Join Waitlist
+                </NavLink>
               </div>
             </div>
           </div>
@@ -299,7 +292,7 @@ const AlternatingFeatureSections = () => (
           <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
               className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-              src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+              src="/images/inbox-app-screenshot-2.jpg"
               alt="Customer profile user interface"
             />
           </div>
@@ -316,7 +309,7 @@ const StatsSection = () => (
         <div className="h-full xl:relative xl:col-start-2">
           <img
             className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
-            src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+            src="/images/photo-1521737852567-6949f3f9f2b5-2.jpg"
             alt="People working on laptops"
           />
           <div
@@ -396,18 +389,18 @@ const CTASection = () => (
         </span>
       </h2>
       <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-        <a
-          href="#"
+        <NavLink
+          to="/demo/getting-started"
           className="flex items-center justify-center bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
         >
-          Learn more
-        </a>
-        <a
-          href="#"
+          Launch Demo
+        </NavLink>
+        <NavLink
+          to="/contact/#waitlist"
           className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-800 bg-teal-50 hover:bg-teal-100"
         >
-          Get started
-        </a>
+          Join Waitlist
+        </NavLink>
       </div>
     </div>
   </div>

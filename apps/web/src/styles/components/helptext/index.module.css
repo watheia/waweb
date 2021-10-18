@@ -1,0 +1,56 @@
+/*
+ * Copyright 2021 Watheia Labs, LLC. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@import "../commons/index.css";
+
+:root {
+  --wa-helptext-neutral-texticon-text-size: var(--wa-global-dimension-font-size-75);
+  --wa-helptext-neutral-texticon-icon-gap: var(--wa-global-dimension-size-100);
+
+  --wa-helptext-negative-texticon-icon-padding-top: var(--wa-global-dimension-size-40);
+  --wa-helptext-negative-texticon-icon-padding-bottom: var(--wa-global-dimension-size-40);
+
+  --wa-helptext-neutral-textonly-text-padding-top: var(
+    --wa-global-dimension-static-size-50
+  );
+  --wa-helptext-neutral-textonly-text-transform: none;
+  --wa-helptext-neutral-textonly-text-letter-spacing: var(
+    --wa-global-font-letter-spacing-none
+  );
+
+  /* Uses value for DNA variable --wa-helptext-l-neutral-textonly-text-padding-bottom, since m variant doesn't exist */
+  --wa-helptext-neutral-textonly-text-padding-bottom: var(--wa-global-dimension-size-115);
+  /* Override: DNA uses --wa-alias-component-text-line-height */
+  --wa-helptext-neutral-textonly-text-line-height: var(--wa-global-font-line-height-small);
+}
+
+.wa-HelpText {
+  display: flex;
+  font-size: var(--wa-helptext-neutral-texticon-text-size);
+  .wa-HelpText-validationIcon {
+    margin-inline-end: var(--wa-helptext-neutral-texticon-icon-gap);
+    padding-block: var(--wa-helptext-negative-texticon-icon-padding-top)
+      var(--wa-helptext-negative-texticon-icon-padding-bottom);
+    flex-shrink: 0;
+  }
+  .wa-HelpText-text {
+    /* Not in DNA: make text fill up all horizontal space. */
+    flex: 1;
+
+    margin-inline-end: var(--wa-helptext-neutral-texticon-icon-gap);
+    padding-block: var(--wa-helptext-neutral-textonly-text-padding-top)
+      var(--wa-helptext-neutral-textonly-text-padding-bottom);
+    line-height: var(--wa-helptext-neutral-textonly-text-line-height);
+    text-transform: var(--wa-helptext-neutral-textonly-text-transform);
+    letter-spacing: var(--wa-helptext-neutral-textonly-text-letter-spacing);
+  }
+}

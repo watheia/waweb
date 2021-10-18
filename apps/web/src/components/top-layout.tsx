@@ -2,10 +2,9 @@ import React, { HtmlHTMLAttributes } from "react"
 import PropTypes from "prop-types"
 import Head from "next/head"
 import CssBaseline from "@mui/material/CssBaseline"
-import { ThemeProvider } from "@mui/material/styles"
-import theme from "../theme"
+
 import Layout from "./layout"
-import { SessionProvider } from "../lib/auth"
+import { Provider } from "./provider"
 
 export type TopLayoutProps = HtmlHTMLAttributes<HTMLDivElement>
 
@@ -22,12 +21,10 @@ export default function TopLayout({ children }: TopLayoutProps) {
           rel="stylesheet"
         />
       </Head>
-      <ThemeProvider theme={theme}>
+      <Provider>
         <CssBaseline />
-        <SessionProvider>
-          <Layout>{children}</Layout>
-        </SessionProvider>
-      </ThemeProvider>
+        <Layout>{children}</Layout>
+      </Provider>
     </>
   )
 }

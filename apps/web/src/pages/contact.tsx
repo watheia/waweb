@@ -266,7 +266,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             <span className="block text-white">Looking for a new career?</span>
             <span className="block text-teal-900">We’re hiring.</span>
-          </h2>   
+          </h2>
           <a
             href="#"
             className="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-teal-600 hover:bg-teal-50 sm:w-auto"
