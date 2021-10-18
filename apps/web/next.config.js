@@ -9,6 +9,18 @@ const nextConfig = {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
     svgr: false
+  },
+  images: {
+    domains: [
+      "cdn.watheia.org",
+      "www.datocms-assets.com",
+      "a.storyblok.com",
+      "images.ctfassets.net",
+      "images.prismic.io",
+      "cdn.aglty.io",
+      "localhost" // For Strapi
+    ],
+    imageSizes: [24, 64, 300]
   }
 }
 
