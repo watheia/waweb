@@ -388,7 +388,7 @@ export const Header = () => {
             </div>
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
-                <NavLink to="#">Blog</NavLink>
+                <NavLink to="/blog">Blog</NavLink>
 
                 <NavLink to="/support">Support</NavLink>
 

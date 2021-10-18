@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { XIcon } from '@heroicons/react/outline'
+import { XIcon } from "@heroicons/react/outline"
 import { HtmlHTMLAttributes } from "react"
 
 export type AlertProps = { preview?: boolean } & HtmlHTMLAttributes<HTMLDivElement>
@@ -21,9 +21,12 @@ const AlertContent = ({ preview }) => (
       <>
         The source code for this site is{" "}
         <span className="block sm:ml-2 sm:inline-block">
-          <a href="https://github.com/watheia/waweb" className="text-white font-medium underline"
-            target="__blank">
-            {' '}
+          <a
+            href="https://github.com/watheia/waweb"
+            className="text-white font-medium underline"
+            target="__blank"
+          >
+            {" "}
             available on GitHub <span aria-hidden="true">&rarr;</span>
           </a>
         </span>

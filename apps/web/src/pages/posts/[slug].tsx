@@ -1,16 +1,16 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import MoreStories from '../../components/more-stories'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import SectionSeparator from '../../components/section-separator'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/dato'
-import PostTitle from '../../components/post-title'
-import Head from 'next/head'
-import { CMS_NAME } from '../../constants'
-import markdownToHtml from '../../utils/markdownToHtml'
+import { useRouter } from "next/router"
+import ErrorPage from "next/error"
+import Container from "../../components/container"
+import PostBody from "../../components/post-body"
+import MoreStories from "../../components/more-stories"
+import Header from "../../components/header"
+import PostHeader from "../../components/post-header"
+import SectionSeparator from "../../components/section-separator"
+import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/dato"
+import PostTitle from "../../components/post-title"
+import Head from "next/head"
+import { CMS_NAME } from "../../constants"
+import markdownToHtml from "../../utils/markdownToHtml"
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -50,17 +50,17 @@ export default function Post({ post, morePosts, preview }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
-  const content = await markdownToHtml(data?.post?.content || '')
+  const content = await markdownToHtml(data?.post?.content || "")
 
   return {
     props: {
       preview,
       post: {
         ...data?.post,
-        content,
+        content
       },
-      morePosts: data?.morePosts ?? [],
-    },
+      morePosts: data?.morePosts ?? []
+    }
   }
 }
 
@@ -68,6 +68,6 @@ export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug()
   return {
     paths: allPosts?.map((post) => `/posts/${post.slug}`) || [],
-    fallback: true,
+    fallback: true
   }
 }
