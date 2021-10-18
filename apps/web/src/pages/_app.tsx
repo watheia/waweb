@@ -1,6 +1,6 @@
 import * as React from "react"
 import { AppProps } from "next/app"
-import TopLayout from "../components/TopLayout"
+import TopLayout from "../components/top-layout"
 
 import "../styles/index.css"
 

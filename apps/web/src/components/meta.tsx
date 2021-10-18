@@ -16,14 +16,14 @@ export interface SEOProps {
   image?: string
 }
 
-export const SEO = ({ title, url, description, image }: SEOProps): JSX.Element => {
+export const Meta = ({ title, url, description, image }: SEOProps): JSX.Element => {
   const router = useRouter()
   image = image || PREVIEW_IMAGE_FALLBACK
   title = title || SITE_NAME
   url = url || `${getURL()}${router?.asPath}`
   description = description || SITE_NAME
   return (
-    <>
+    <Head>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="robots" content="index, follow" />
@@ -86,8 +86,8 @@ export const SEO = ({ title, url, description, image }: SEOProps): JSX.Element =
         }}
       />
       <link rel="manifest" href="/manifest.json" />
-    </>
+    </Head>
   )
 }
 
-export default SEO
+export default Meta

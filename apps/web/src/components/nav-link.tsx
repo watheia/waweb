@@ -9,7 +9,13 @@ export type NavLinkProps = {
 export const NavLink = ({ to, children, className, ...props }: NavLinkProps) => {
   return (
     <Link href={to}>
-      <a className={clsx("text-base font-medium text-gray-500 hover:text-gray-900", className)} {...props}>
+      <a
+        className={clsx(
+          "text-base font-medium text-gray-500 hover:text-gray-900",
+          className
+        )}
+        {...props}
+      >
         {children}
       </a>
     </Link>

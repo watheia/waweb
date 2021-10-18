@@ -4,18 +4,14 @@ import Head from "next/head"
 import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider } from "@mui/material/styles"
 import theme from "../theme"
-import { SEO, SEOProps } from "../components/SEO"
-import Layout from "apps/web/src/components/Layout"
+import Layout from "./layout"
 
-export type TopLayoutProps = {
-  meta?: SEOProps
-} & HtmlHTMLAttributes<HTMLDivElement>
+export type TopLayoutProps = HtmlHTMLAttributes<HTMLDivElement>
 
-export default function TopLayout({ children, meta }: TopLayoutProps) {
+export default function TopLayout({ children }: TopLayoutProps) {
   return (
     <>
       <Head>
-        <SEO {...meta} />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -27,9 +23,7 @@ export default function TopLayout({ children, meta }: TopLayoutProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout>
-          {children}
-        </Layout>
+        <Layout>{children}</Layout>
       </ThemeProvider>
     </>
   )
