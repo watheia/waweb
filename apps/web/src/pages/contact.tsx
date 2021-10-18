@@ -1,12 +1,12 @@
 /*
-  This example requires Tailwind CSS v2.0+ 
-  
+  This example requires Tailwind CSS v2.0+
+
   This example requires some changes to your config:
-  
+
   ```
   // tailwind.config.js
   const colors = require('tailwindcss/colors')
-  
+
   module.exports = {
     // ...
     theme: {
@@ -31,19 +31,6 @@ import styles from "./contact.module.css"
 export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={styles.page} {...props}>
-      {/* Header */}
-      <div className="py-24 bg-gray-50 sm:py-32">
-        <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
-          <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 text-center sm:text-5xl sm:leading-none lg:text-6xl">
-            Get in touch
-          </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">
-            Convallis feugiat et aliquet pellentesque dictum nisi, velit. Egestas fermentum
-            adipiscing risus quam ac consectetur mattis turpis tristique.
-          </p>
-        </div>
-      </div>
-
       {/* Contact Section */}
       <div className="relative bg-white">
         <div className="lg:absolute lg:inset-0">
@@ -84,7 +71,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md"
+                      className="block w-full shadow-sm sm:text-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -101,7 +88,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md"
+                      className="block w-full shadow-sm sm:text-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -118,7 +105,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md"
+                      className="block w-full shadow-sm sm:text-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -135,7 +122,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       name="company"
                       id="company"
                       autoComplete="organization"
-                      className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md"
+                      className="block w-full shadow-sm sm:text-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -158,7 +145,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       id="phone"
                       autoComplete="tel"
                       aria-describedby="phone-description"
-                      className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md"
+                      className="block w-full shadow-sm sm:text-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -183,7 +170,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       name="how-can-we-help"
                       aria-describedby="how-can-we-help-description"
                       rows={4}
-                      className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border border-gray-300 rounded-md"
+                      className="block w-full shadow-sm sm:text-sm focus:ring-teal-500 focus:border-teal-500 border border-gray-300 rounded-md"
                       defaultValue={""}
                     />
                   </div>
@@ -199,7 +186,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                         name="budget"
                         defaultValue="under_25k"
                         type="radio"
-                        className="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300"
+                        className="focus:ring-teal-500 h-4 w-4 text-teal-600 border-gray-300"
                       />
                       <label htmlFor="budget-under-25k" className="ml-3">
                         <span className="block text-sm text-gray-700">Less than $25K</span>
@@ -211,7 +198,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                         name="budget"
                         defaultValue="25k-50k"
                         type="radio"
-                        className="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300"
+                        className="focus:ring-teal-500 h-4 w-4 text-teal-600 border-gray-300"
                       />
                       <label htmlFor="budget-25k-50k" className="ml-3">
                         <span className="block text-sm text-gray-700">$25K – $50K</span>
@@ -223,7 +210,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                         name="budget"
                         defaultValue="50k-100k"
                         type="radio"
-                        className="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300"
+                        className="focus:ring-teal-500 h-4 w-4 text-teal-600 border-gray-300"
                       />
                       <label htmlFor="budget-50k-100k" className="ml-3">
                         <span className="block text-sm text-gray-700">$50K – $100K</span>
@@ -235,7 +222,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                         name="budget"
                         defaultValue="over_100k"
                         type="radio"
-                        className="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300"
+                        className="focus:ring-teal-500 h-4 w-4 text-teal-600 border-gray-300"
                       />
                       <label htmlFor="budget-over-100k" className="ml-3">
                         <span className="block text-sm text-gray-700">$100K+</span>
@@ -255,14 +242,14 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
                       type="text"
                       name="how-did-you-hear-about-us"
                       id="how-did-you-hear-about-us"
-                      className="shadow-sm focus:ring-grape-500 focus:border-grape-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                      className="shadow-sm focus:ring-teal-500 focus:border-teal-500 block w-full sm:text-sm border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
                 <div className="text-right sm:col-span-2">
                   <button
                     type="submit"
-                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-grape-600 hover:bg-grape-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-grape-500"
+                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                   >
                     Submit
                   </button>
@@ -274,15 +261,15 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-grape-400">
+      <div className="bg-teal-400">
         <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             <span className="block text-white">Looking for a new career?</span>
-            <span className="block text-grape-900">We’re hiring.</span>
-          </h2>
+            <span className="block text-teal-900">We’re hiring.</span>
+          </h2>   
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-grape-50 sm:w-auto"
+            className="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-teal-600 hover:bg-teal-50 sm:w-auto"
           >
             <span>See open positions</span>
             <ExternalLinkIcon
