@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
   &.is-drop-target {
     border-color: var(--wa-card-border-color-key-focus);
     box-shadow: 0 0 0 1px var(--wa-card-border-color-key-focus);
-    background-color: var(--wa-alias-highlight-selected);
+    background-color: var(--wa-highlight-selected);
   }
 
   .wa-Card-checkboxWrapper {

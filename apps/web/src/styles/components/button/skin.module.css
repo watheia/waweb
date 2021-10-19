@@ -219,7 +219,7 @@ governing permissions and limitations under the License.
     color: inherit;
 
     &:after {
-      box-shadow: 0 0 0 var(--wa-alias-focus-ring-size)
+      box-shadow: 0 0 0 var(--wa-focus-ring-size)
         var(--wa-button-over-background-border-color-key-focus);
     }
   }
@@ -257,7 +257,7 @@ governing permissions and limitations under the License.
     box-shadow: none;
 
     &:after {
-      box-shadow: 0 0 0 var(--wa-alias-focus-ring-size)
+      box-shadow: 0 0 0 var(--wa-focus-ring-size)
         var(--wa-button-over-background-border-color-key-focus);
     }
   }

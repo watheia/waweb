@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 @import "../overlay/index.module.css";
 
 :root {
@@ -181,7 +181,7 @@ governing permissions and limitations under the License.
 .wa-Dialog-footer {
   grid-area: footer;
   /* this padding isn't built into the grid because it disappears with this footer */
-  padding-block-start: var(--wa-global-dimension-static-size-500);
+  padding-block-start: var(--wa-size-500);
 
   display: flex;
   flex-wrap: wrap;
@@ -198,7 +198,7 @@ governing permissions and limitations under the License.
 .wa-Dialog-buttonGroup {
   grid-area: buttonGroup;
   /* this padding isn't built into the grid because it disappears with this buttonGroup */
-  padding-block-start: var(--wa-global-dimension-static-size-500);
+  padding-block-start: var(--wa-size-500);
   display: flex;
   justify-content: flex-end;
   /* this padding should be safe as button group is always end aligned */
@@ -212,10 +212,12 @@ governing permissions and limitations under the License.
 }
 
 .wa-Dialog.wa-Dialog--dismissable .wa-Dialog-grid {
-  grid-template-columns: var(--wa-dialog-padding) auto 1fr auto minmax(0, auto) minmax(
+  grid-template-columns:
+    var(--wa-dialog-padding) auto 1fr auto minmax(0, auto) minmax(
       0,
       var(--wa-dialog-close-button-size)
-    ) var(--wa-dialog-padding);
+    )
+    var(--wa-dialog-padding);
   grid-template-rows: auto var(--wa-dialog-padding) auto auto 1fr auto var(
       --wa-dialog-padding
     );
@@ -323,10 +325,12 @@ governing permissions and limitations under the License.
   }
 
   .wa-Dialog.wa-Dialog--dismissable .wa-Dialog-grid {
-    grid-template-columns: var(--wa-dialog-padding) auto 1fr auto minmax(0, auto) minmax(
+    grid-template-columns:
+      var(--wa-dialog-padding) auto 1fr auto minmax(0, auto) minmax(
         0,
         var(--wa-dialog-close-button-size)
-      ) var(--wa-dialog-padding);
+      )
+      var(--wa-dialog-padding);
     grid-template-rows: auto var(--wa-dialog-padding) auto auto auto 1fr auto var(
         --wa-dialog-padding
       );
@@ -364,7 +368,7 @@ governing permissions and limitations under the License.
     }
 
     .wa-Dialog-buttonGroup {
-      padding-block-start: var(--wa-global-dimension-static-size-500);
+      padding-block-start: var(--wa-size-500);
     }
 
     .wa-Dialog-heading {

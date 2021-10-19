@@ -1,8 +1,10 @@
 import { createTheme, responsiveFontSizes } from "@mui/material"
 import { light, dark } from "./palette"
+import { ColorScheme } from "./types"
 
 export const contentWidth = 1236
-const getTheme = (mode) =>
+
+export const makeMuiTheme = (mode: ColorScheme) =>
   responsiveFontSizes(
     createTheme({
       palette: mode === "light" ? light : dark,
@@ -16,4 +18,4 @@ const getTheme = (mode) =>
     })
   )
 
-export default getTheme
+

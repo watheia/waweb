@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 .wa-Rating {
   &.is-focused {
-    box-shadow: 0 0 0 var(--wa-global-dimension-static-size-25)
+    box-shadow: 0 0 0 var(--wa-size-25)
       var(--wa-rating-focus-ring-color);
   }
 
@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
   color: var(--wa-rating-icon-color);
 
   &.is-selected {
-    color: var(--wa-alias-icon-color-selected);
+    color: var(--wa-icon-color-selected);
   }
 
   &:hover {

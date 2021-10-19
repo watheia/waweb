@@ -13,10 +13,10 @@ governing permissions and limitations under the License.
 .wa-TreeView-item {
   &.is-disabled {
     > .wa-TreeView-itemLink {
-      color: var(--wa-alias-text-color-disabled);
+      color: var(--wa-text-color-disabled);
 
       .wa-Icon {
-        color: var(--wa-alias-icon-color-disabled);
+        color: var(--wa-icon-color-disabled);
       }
     }
   }
@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
 
   &.is-drop-target {
     &::before {
-      background-color: var(--wa-alias-highlight-selected);
+      background-color: var(--wa-highlight-selected);
       box-shadow: 0px 0px 0px 2px var(--wa-treeview-item-border-color-key-focus) inset;
     }
   }

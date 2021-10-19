@@ -1,6 +1,6 @@
 :root {
   /* todo: fix this in DNA */
-  --wa-colorwheel-focus-ring-size: var(--wa-global-dimension-static-size-25);
+  --wa-colorwheel-focus-ring-size: var(--wa-size-25);
   --wa-colorwheel-border-radius: 100%;
   --wa-colorwheel-width: calc(var(--wa-global-dimension-size-125) * 16);
   --wa-colorwheel-height: var(--wa-colorwheel-width);

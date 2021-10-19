@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   --wa-radio-radius: calc(var(--wa-radio-circle-diameter) / 2);
@@ -89,7 +89,7 @@ governing permissions and limitations under the License.
   &:focus-ring {
     + .wa-Radio-button {
       &:after {
-        margin: calc(var(--wa-alias-focus-ring-gap) * -1);
+        margin: calc(var(--wa-focus-ring-gap) * -1);
       }
     }
   }
@@ -143,7 +143,7 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: var(--wa-alias-focus-ring-gap);
+    margin: var(--wa-focus-ring-gap);
     transform: translateX(0); /* Forces FF to render on the pixel grid */
 
     transition: box-shadow var(--wa-global-animation-duration-100) ease-out,

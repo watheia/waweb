@@ -62,7 +62,7 @@ governing permissions and limitations under the License.
 
     &.is-range-selection {
       color: var(--wa-calendar-day-text-color-selected-hover);
-      --background: var(--wa-alias-highlight-selected);
+      --background: var(--wa-highlight-selected);
     }
 
     &.is-today {
@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
 
     &.is-range-selection {
       color: var(--wa-calendar-day-text-color-selected-hover);
-      --background: var(--wa-alias-highlight-selected-hover);
+      --background: var(--wa-highlight-selected-hover);
     }
 
     &.is-today {

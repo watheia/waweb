@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
 .wa-Label--green {
   /* this color is not accessible in dark mode */
   /* background-color: var(--wa-label-colored-green-background-color); */
-  background-color: var(--wa-global-color-static-green-700);
+  background-color: var(--wa-color-green-700);
 }
 
 .wa-Label--blue,

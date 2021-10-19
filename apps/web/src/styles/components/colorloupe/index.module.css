@@ -8,10 +8,10 @@
   );
 
   /* Distance between the loupe and the handle */
-  --wa-colorloupe-offset: var(--wa-global-dimension-static-size-200);
+  --wa-colorloupe-offset: var(--wa-size-200);
 
   /* How much to animate up to the offset distance */
-  --wa-colorloupe-animation-distance: var(--wa-global-dimension-static-size-100);
+  --wa-colorloupe-animation-distance: var(--wa-size-100);
 }
 
 .wa-ColorLoupe {

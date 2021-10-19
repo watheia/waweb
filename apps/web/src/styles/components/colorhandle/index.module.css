@@ -1,7 +1,7 @@
 :root {
   /* redefine this var so it can be used in skin.module.css */
-  --wa-colorhandle-background-offset: calc(-1 * var(--wa-global-dimension-static-size-25));
-  --wa-colorhandle-checkerboard-size: var(--wa-global-dimension-static-size-100);
+  --wa-colorhandle-background-offset: calc(-1 * var(--wa-size-25));
+  --wa-colorhandle-checkerboard-size: var(--wa-size-100);
 
   --wa-colorhandle-animation-duration: var(--wa-global-animation-duration-100);
   --wa-colorhandle-animation-easing: ease-in-out;
@@ -33,8 +33,8 @@
   border-width: var(--wa-colorhandle-inner-border-size);
   border-style: solid;
 
-  background-size: var(--wa-global-dimension-static-size-200)
-    var(--wa-global-dimension-static-size-200);
+  background-size: var(--wa-size-200)
+    var(--wa-size-200);
   background-position: var(--wa-colorhandle-background-offset)
       var(--wa-colorhandle-background-offset),
     var(--wa-colorhandle-background-offset)

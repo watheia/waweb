@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 /**
 LAYERS: There are 5 layers to quiet cards
@@ -234,15 +234,12 @@ user-provided
 
   .wa-Card-grid {
     display: grid;
-    grid-template-columns: var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(
-        0,
-        auto
-      ) var(--wa-card-body-padding-right);
-    grid-template-rows: minmax(var(--wa-card-coverphoto-height), auto) var(
-        --wa-global-dimension-size-300
-      ) minmax(var(--wa-actionbutton-height), auto) 1fr auto auto var(
-        --wa-card-body-padding-bottom
-      );
+    grid-template-columns:
+      var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(0, auto)
+      var(--wa-card-body-padding-right);
+    grid-template-rows:
+      minmax(var(--wa-card-coverphoto-height), auto) var(--wa-global-dimension-size-300)
+      minmax(var(--wa-actionbutton-height), auto) 1fr auto auto var(--wa-card-body-padding-bottom);
     /* absolutely position avatar relative to the preview */
     grid-template-areas:
       "preview preview preview preview    preview"
@@ -265,10 +262,9 @@ user-provided
 
   &.wa-Card--noPreview .wa-Card-grid {
     display: grid;
-    grid-template-columns: var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(
-        0,
-        auto
-      ) var(--wa-card-body-padding-right);
+    grid-template-columns:
+      var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(0, auto)
+      var(--wa-card-body-padding-right);
     grid-template-rows: var(--wa-global-dimension-size-300) auto 1fr auto auto var(
         --wa-card-body-padding-bottom
       );
@@ -378,15 +374,12 @@ user-provided
   &:not(.wa-Card--noPreview) .wa-Card-grid {
     display: grid;
     block-size: 100%;
-    grid-template-columns: var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(
-        0,
-        auto
-      ) var(--wa-card-body-padding-right);
-    grid-template-rows: minmax(var(--wa-card-coverphoto-height), 1fr) var(
-        --wa-global-dimension-size-200
-      ) minmax(var(--wa-actionbutton-height), auto) auto auto auto var(
-        --wa-card-body-padding-bottom
-      );
+    grid-template-columns:
+      var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(0, auto)
+      var(--wa-card-body-padding-right);
+    grid-template-rows:
+      minmax(var(--wa-card-coverphoto-height), 1fr) var(--wa-global-dimension-size-200)
+      minmax(var(--wa-actionbutton-height), auto) auto auto auto var(--wa-card-body-padding-bottom);
     /* absolutely position avatar relative to the preview */
     grid-template-areas:
       "preview preview preview preview    preview"
@@ -410,10 +403,9 @@ user-provided
   &.wa-Card--noPreview .wa-Card-grid {
     display: grid;
     block-size: 100%;
-    grid-template-columns: var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(
-        0,
-        auto
-      ) var(--wa-card-body-padding-right);
+    grid-template-columns:
+      var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(0, auto)
+      var(--wa-card-body-padding-right);
     grid-template-rows: var(--wa-global-dimension-size-300) auto 1fr auto auto var(
         --wa-card-body-padding-bottom
       );
@@ -524,15 +516,12 @@ user-provided
 
   &:not(.wa-Card--noPreview) .wa-Card-grid {
     display: grid;
-    grid-template-columns: var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(
-        0,
-        auto
-      ) var(--wa-card-body-padding-right);
-    grid-template-rows: minmax(var(--wa-card-coverphoto-height), auto) var(
-        --wa-global-dimension-size-300
-      ) minmax(var(--wa-actionbutton-height), auto) 1fr auto auto var(
-        --wa-card-body-padding-bottom
-      );
+    grid-template-columns:
+      var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(0, auto)
+      var(--wa-card-body-padding-right);
+    grid-template-rows:
+      minmax(var(--wa-card-coverphoto-height), auto) var(--wa-global-dimension-size-300)
+      minmax(var(--wa-actionbutton-height), auto) 1fr auto auto var(--wa-card-body-padding-bottom);
     /* absolutely position avatar relative to the preview */
     grid-template-areas:
       "preview preview preview preview    preview"
@@ -555,10 +544,9 @@ user-provided
 
   &.wa-Card--noPreview .wa-Card-grid {
     display: grid;
-    grid-template-columns: var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(
-        0,
-        auto
-      ) var(--wa-card-body-padding-right);
+    grid-template-columns:
+      var(--wa-card-body-padding-left) minmax(0, auto) 1fr minmax(0, auto)
+      var(--wa-card-body-padding-right);
     grid-template-rows: var(--wa-global-dimension-size-300) auto 1fr auto auto var(
         --wa-card-body-padding-bottom
       );
@@ -655,9 +643,11 @@ user-provided
     block-size: 100%;
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(30px, 1fr) minmax(0, auto);
-    grid-template-rows: minmax(var(--wa-card-coverphoto-height), auto) var(
+    grid-template-rows:
+      minmax(var(--wa-card-coverphoto-height), auto) var(
         --wa-card-quiet-body-header-margin-top
-      ) minmax(var(--wa-actionbutton-height), auto) 1fr var(--wa-card-body-padding-bottom);
+      )
+      minmax(var(--wa-actionbutton-height), auto) 1fr var(--wa-card-body-padding-bottom);
     grid-template-areas:
       "preview preview preview"
       ".       .       ."
@@ -680,10 +670,10 @@ user-provided
       inset-inline-end: 0;
       inset-block-start: 0;
       inset-block-end: 0;
-      margin: calc(var(--wa-alias-focus-ring-gap) * -2);
+      margin: calc(var(--wa-focus-ring-gap) * -2);
 
       border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-alias-focus-ring-gap)
+        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
       );
     }
     .wa-Card-decoration {
@@ -758,10 +748,12 @@ user-provided
     block-size: 100%;
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(30px, 1fr) minmax(0, auto);
-    grid-template-rows: 1fr var(--wa-card-quiet-body-header-margin-top) minmax(
+    grid-template-rows:
+      1fr var(--wa-card-quiet-body-header-margin-top) minmax(
         var(--wa-actionbutton-height),
         auto
-      ) minmax(auto, var(--wa-global-dimension-size-600)) var(--wa-card-body-padding-bottom);
+      )
+      minmax(auto, var(--wa-global-dimension-size-600)) var(--wa-card-body-padding-bottom);
     grid-template-areas:
       "preview preview preview"
       ".       .       ."
@@ -784,10 +776,10 @@ user-provided
       inset-inline-end: 0;
       inset-block-start: 0;
       inset-block-end: 0;
-      margin: calc(var(--wa-alias-focus-ring-gap) * -2);
+      margin: calc(var(--wa-focus-ring-gap) * -2);
 
       border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-alias-focus-ring-gap)
+        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
       );
     }
     .wa-Card-decoration {
@@ -868,10 +860,12 @@ user-provided
     block-size: 100%;
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(30px, 1fr) minmax(0, auto);
-    grid-template-rows: auto var(--wa-card-quiet-body-header-margin-top) minmax(
+    grid-template-rows:
+      auto var(--wa-card-quiet-body-header-margin-top) minmax(
         var(--wa-actionbutton-height),
         auto
-      ) 1fr var(--wa-card-body-padding-bottom);
+      )
+      1fr var(--wa-card-body-padding-bottom);
     grid-template-areas:
       "preview preview preview"
       ".       .       ."
@@ -900,10 +894,10 @@ user-provided
       inset-inline-end: 0;
       inset-block-start: 0;
       inset-block-end: 0;
-      margin: calc(var(--wa-alias-focus-ring-gap) * -2);
+      margin: calc(var(--wa-focus-ring-gap) * -2);
 
       border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-alias-focus-ring-gap)
+        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
       );
     }
     .wa-Card-decoration {
@@ -996,10 +990,12 @@ user-provided
     block-size: 100%;
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(30px, 1fr) minmax(0, auto);
-    grid-template-rows: auto var(--wa-card-quiet-body-header-margin-top) minmax(
+    grid-template-rows:
+      auto var(--wa-card-quiet-body-header-margin-top) minmax(
         var(--wa-actionbutton-height),
         auto
-      ) auto var(--wa-card-body-padding-bottom);
+      )
+      auto var(--wa-card-body-padding-bottom);
     grid-template-areas:
       "preview preview preview"
       ".       .       ."
@@ -1022,12 +1018,12 @@ user-provided
       inset-inline-end: 0;
       inset-block-start: 0;
       inset-block-end: 0;
-      margin: calc(var(--wa-alias-focus-ring-gap) * -2);
-      padding: calc(var(--wa-alias-focus-ring-gap) * 2);
+      margin: calc(var(--wa-focus-ring-gap) * -2);
+      padding: calc(var(--wa-focus-ring-gap) * 2);
       background-clip: content-box;
 
       border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-alias-focus-ring-gap)
+        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
       );
     }
     .wa-Card-decoration {

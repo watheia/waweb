@@ -1,4 +1,4 @@
-import { Theme, Scale } from "../model"
+import { Theme, Scale } from "./types"
 import { useMediaQuery } from "@react-spectrum/utils"
 
 export default function useScale(theme: Theme): Scale {

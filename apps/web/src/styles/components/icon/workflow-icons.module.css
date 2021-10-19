@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --wa-icon-size-s: var(--wa-alias-workflow-icon-size);
+  --wa-icon-size-s: var(--wa-workflow-icon-size);
   --wa-icon-size-m: var(--wa-global-dimension-size-300);
   --wa-icon-size-xxs: calc(var(--wa-icon-size-s) / 2);
   --wa-icon-size-xs: calc(var(--wa-icon-size-m) / 2);

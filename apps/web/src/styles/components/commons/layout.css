@@ -15,6 +15,6 @@ governing permissions and limitations under the License.
   --wa-margin: var(--wa-padding);
   --wa-border-radius: var(--wa-global-dimension-size-50);
 
-  --wa-component-single-line-height: var(--wa-alias-single-line-height);
-  --wa-component-single-line-width: var(--wa-alias-single-line-width);
+  --wa-component-single-line-height: var(--wa-single-line-height);
+  --wa-component-single-line-width: var(--wa-single-line-width);
 }

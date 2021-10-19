@@ -144,7 +144,7 @@ governing permissions and limitations under the License.
   .wa-Tags-itemClearButton {
     &.is-focused {
       border: 2px solid var(--wa-tag-removable-border-color-key-focus);
-      border-radius: var(--wa-alias-border-radius-regular);
+      border-radius: var(--wa-border-radius-regular);
       background-color: var(--wa-tag-removable-button-background-color-key-focus);
       color: var(--wa-tag-removable-button-icon-color-key-focus);
     }

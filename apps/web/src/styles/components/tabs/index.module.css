@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   --wa-tabs-item-height: calc(var(--wa-tabs-height) - var(--wa-tabs-rule-height));

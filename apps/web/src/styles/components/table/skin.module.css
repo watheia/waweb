@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
 
 .wa-Table-headCell {
   color: var(--wa-table-header-text-color);
-  background-color: var(--wa-alias-background-color-default);
+  background-color: var(--wa-background-color-default);
 
   &.is-sortable {
     .wa-Table-sortedIcon {
@@ -53,11 +53,11 @@ governing permissions and limitations under the License.
 
 /* Helper for shared drop target overlay */
 %drop-target {
-  border-color: var(--wa-alias-border-color-focus);
-  box-shadow: 0 0 0 1px var(--wa-alias-border-color-focus);
+  border-color: var(--wa-border-color-focus);
+  box-shadow: 0 0 0 1px var(--wa-border-color-focus);
 
   &::before {
-    background-color: var(--wa-alias-highlight-selected);
+    background-color: var(--wa-highlight-selected);
   }
 }
 
@@ -77,11 +77,11 @@ governing permissions and limitations under the License.
   background-color: var(--wa-table-background-color);
 
   &.is-drop-target {
-    border-color: var(--wa-alias-border-color-focus);
-    box-shadow: 0 0 0 1px var(--wa-alias-border-color-focus);
+    border-color: var(--wa-border-color-focus);
+    box-shadow: 0 0 0 1px var(--wa-border-color-focus);
 
     &::before {
-      background-color: var(--wa-alias-highlight-selected);
+      background-color: var(--wa-highlight-selected);
     }
   }
 }
@@ -160,8 +160,8 @@ tbody.wa-Table-body {
 
   &.is-drop-target {
     &::before {
-      box-shadow: inset 0 0 0 2px var(--wa-alias-border-color-focus);
-      background-color: var(--wa-alias-highlight-selected);
+      box-shadow: inset 0 0 0 2px var(--wa-border-color-focus);
+      background-color: var(--wa-highlight-selected);
     }
   }
 }
@@ -186,14 +186,14 @@ tbody.wa-Table-body {
       border-color: transparent;
 
       &::before {
-        box-shadow: inset 0 0 0 2px var(--wa-alias-border-color-focus);
+        box-shadow: inset 0 0 0 2px var(--wa-border-color-focus);
       }
     }
   }
 
   .wa-Table-row {
     .wa-Table-cellWrapper {
-      background-color: var(--wa-alias-background-color-default);
+      background-color: var(--wa-background-color-default);
     }
 
     &.is-hovered .wa-Table-cell {

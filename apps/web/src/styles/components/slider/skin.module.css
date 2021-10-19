@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --wa-slider-focus-ring-size-key-focus: var(--wa-alias-focus-ring-size);
+  --wa-slider-focus-ring-size-key-focus: var(--wa-focus-ring-size);
 
   /* todo: remove when fixed */
   --wa-slider-handle-border-color-key-focus: var(--wa-global-color-gray-800);
-  --wa-slider-handle-focus-ring-color-key-focus: var(--wa-alias-focus-color);
+  --wa-slider-handle-focus-ring-color-key-focus: var(--wa-focus-color);
 }
 
 .wa-Slider {
@@ -87,7 +87,7 @@ governing permissions and limitations under the License.
 .wa-Slider--ramp {
   .wa-Slider-handle {
     /* We can't draw this one correctly without this hack : ( */
-    box-shadow: 0 0 0 4px var(--wa-alias-background-color-default);
+    box-shadow: 0 0 0 4px var(--wa-background-color-default);
   }
 }
 
@@ -120,34 +120,34 @@ governing permissions and limitations under the License.
 
 .wa-Slider--color {
   .wa-Slider-controls::before {
-    background-color: var(--wa-global-color-static-white);
+    background-color: var(--wa-color-white);
     /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
     background-image: linear-gradient(
         -45deg,
         transparent 75.5%,
-        var(--wa-global-color-static-gray-500) 75.5%
+        var(--wa-color-gray-500) 75.5%
       ),
       linear-gradient(
         45deg,
         transparent 75.5%,
-        var(--wa-global-color-static-gray-500) 75.5%
+        var(--wa-color-gray-500) 75.5%
       ),
       linear-gradient(
         -45deg,
-        var(--wa-global-color-static-gray-500) 25.5%,
+        var(--wa-color-gray-500) 25.5%,
         transparent 25.5%
       ),
       linear-gradient(
         45deg,
-        var(--wa-global-color-static-gray-500) 25.5%,
+        var(--wa-color-gray-500) 25.5%,
         transparent 25.5%
       );
-    background-size: var(--wa-global-dimension-static-size-200)
-      var(--wa-global-dimension-static-size-200);
-    background-position: 0 0, 0 var(--wa-global-dimension-static-size-100),
-      var(--wa-global-dimension-static-size-100)
-        calc(-1 * var(--wa-global-dimension-static-size-100)),
-      calc(-1 * var(--wa-global-dimension-static-size-100)) 0;
+    background-size: var(--wa-size-200)
+      var(--wa-size-200);
+    background-position: 0 0, 0 var(--wa-size-100),
+      var(--wa-size-100)
+        calc(-1 * var(--wa-size-100)),
+      calc(-1 * var(--wa-size-100)) 0;
     z-index: 0;
   }
   .wa-Slider-track {
@@ -237,7 +237,7 @@ governing permissions and limitations under the License.
     }
     .wa-Dial-handle {
       border-color: var(--wa-slider-handle-border-color-disabled);
-      background: var(--wa-alias-background-color-default);
+      background: var(--wa-background-color-default);
 
       &:hover,
       &:active {
@@ -261,7 +261,7 @@ governing permissions and limitations under the License.
 
     .wa-Slider-handle {
       border-color: var(--wa-slider-handle-border-color-disabled);
-      background: var(--wa-alias-background-color-default);
+      background: var(--wa-background-color-default);
 
       &:hover,
       &:active {

@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 .wa-BarLoader {
   position: relative;
@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  min-inline-size: var(--wa-global-dimension-static-size-600);
+  min-inline-size: var(--wa-size-600);
   inline-size: var(--wa-barloader-large-width);
   vertical-align: top;
   isolation: isolate;
@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
 .wa-BarLoader-track {
   /* Visually apply border radius to child elements */
   overflow: hidden;
-  min-inline-size: var(--wa-global-dimension-static-size-600);
+  min-inline-size: var(--wa-size-600);
   inline-size: 100%;
   height: var(--wa-barloader-large-height);
   border-radius: var(--wa-barloader-large-border-radius);
@@ -93,7 +93,7 @@ governing permissions and limitations under the License.
 }
 
 .wa-BarLoader--small {
-  min-inline-size: var(--wa-global-dimension-static-size-600);
+  min-inline-size: var(--wa-size-600);
 
   .wa-BarLoader-fill {
     height: var(--wa-barloader-small-height);

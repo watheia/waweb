@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline"
 
 import Layout from "./layout"
 import { Provider } from "./provider"
+import { defaultTheme } from "../lib/theme"
 
 export type TopLayoutProps = HtmlHTMLAttributes<HTMLDivElement>
 
@@ -21,7 +22,7 @@ export default function TopLayout({ children }: TopLayoutProps) {
           rel="stylesheet"
         />
       </Head>
-      <Provider>
+      <Provider theme={defaultTheme} defaultColorScheme="light">
         <CssBaseline />
         <Layout>{children}</Layout>
       </Provider>

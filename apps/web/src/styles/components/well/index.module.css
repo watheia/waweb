@@ -10,11 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   --wa-well-padding: var(--wa-global-dimension-size-200);
-  --wa-well-border-width: var(--wa-alias-border-size-thin);
+  --wa-well-border-width: var(--wa-border-size-thin);
   --wa-well-margin-top: var(--wa-global-dimension-size-50);
   --wa-well-min-width: var(--wa-global-dimension-size-2000);
 }

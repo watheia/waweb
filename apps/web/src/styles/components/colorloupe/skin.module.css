@@ -4,8 +4,8 @@
 }
 
 .wa-ColorLoupe-inner-background {
-  fill: var(--wa-global-color-static-white);
+  fill: var(--wa-color-white);
 }
 .wa-ColorLoupe-inner-checker {
-  fill: var(--wa-global-color-static-gray-500);
+  fill: var(--wa-color-gray-500);
 }

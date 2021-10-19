@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   --wa-helptext-neutral-texticon-text-size: var(--wa-global-dimension-font-size-75);
@@ -20,17 +20,17 @@
   --wa-helptext-negative-texticon-icon-padding-bottom: var(--wa-global-dimension-size-40);
 
   --wa-helptext-neutral-textonly-text-padding-top: var(
-    --wa-global-dimension-static-size-50
+    --wa-size-50
   );
   --wa-helptext-neutral-textonly-text-transform: none;
   --wa-helptext-neutral-textonly-text-letter-spacing: var(
-    --wa-global-font-letter-spacing-none
+    --wa-font-letter-spacing-none
   );
 
   /* Uses value for DNA variable --wa-helptext-l-neutral-textonly-text-padding-bottom, since m variant doesn't exist */
   --wa-helptext-neutral-textonly-text-padding-bottom: var(--wa-global-dimension-size-115);
-  /* Override: DNA uses --wa-alias-component-text-line-height */
-  --wa-helptext-neutral-textonly-text-line-height: var(--wa-global-font-line-height-small);
+  /* Override: DNA uses --wa-component-text-line-height */
+  --wa-helptext-neutral-textonly-text-line-height: var(--wa-font-line-height-small);
 }
 
 .wa-HelpText {

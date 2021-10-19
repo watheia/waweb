@@ -25,7 +25,7 @@ governing permissions and limitations under the License.
   &:focus:not(.is-dragged) {
     border-color: var(--wa-dropzone-border-color);
     .wa-IllustratedMessage-illustration {
-      color: var(--wa-global-color-static-gray-500);
+      color: var(--wa-color-gray-500);
     }
     &.focus-ring {
       border-color: var(--wa-dropzone-border-color-selected-hover);

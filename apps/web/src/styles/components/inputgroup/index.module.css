@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   /* Todo: move to DNA */
@@ -23,10 +23,10 @@ governing permissions and limitations under the License.
   );
   --wa-datepicker-datetime-input-width: calc(
     var(--wa-datepicker-input-width) + var(--wa-global-dimension-size-700) -
-      var(--wa-global-dimension-static-font-size-100) / 2
+      var(--wa-font-size-100) / 2
   );
   --wa-datepicker-range-dash-margin-left: calc(
-    -0.5 * var(--wa-global-dimension-static-font-size-100)
+    -0.5 * var(--wa-font-size-100)
   );
   --wa-datepicker-range-dash-padding-top: 0;
   --wa-datepicker-range-dash-line-height: calc(
@@ -193,7 +193,7 @@ governing permissions and limitations under the License.
       overflow: hidden;
       text-align: center;
       vertical-align: middle;
-      width: var(--wa-global-dimension-static-font-size-100);
+      width: var(--wa-font-size-100);
     }
   }
   /* Focus ring */

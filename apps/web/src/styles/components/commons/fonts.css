@@ -43,8 +43,8 @@ governing permissions and limitations under the License.
   --wa-font-family-ja: "adobe-clean-han-japanese", "Yu Gothic", "\30E1 \30A4 \30EA \30AA",
     "\30D2 \30E9 \30AE \30CE \89D2 \30B4  Pro W3", "Hiragino Kaku Gothic Pro W3", "Osaka",
     "\FF2D \FF33 \FF30 \30B4 \30B7 \30C3 \30AF", "MS PGothic", var(--wa-font-fallbacks-sans);
-  --wa-text-size: var(--wa-alias-font-size-default);
-  --wa-text-body-line-height: var(--wa-alias-line-height-medium);
+  --wa-text-size: var(--wa-font-size-default);
+  --wa-text-body-line-height: var(--wa-line-height-medium);
   --wa-text-size-text-label: var(--wa-label-text-size);
   --wa-line-height-text-label: var(--wa-label-text-line-height);
 }

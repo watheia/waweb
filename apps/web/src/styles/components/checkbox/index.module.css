@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   /* Hardcoded for wrapping study.
@@ -76,7 +76,7 @@ governing permissions and limitations under the License.
   &:focus-ring {
     + .wa-Checkbox-box {
       &:after {
-        margin: calc(var(--wa-alias-focus-ring-gap) * -1);
+        margin: calc(var(--wa-focus-ring-gap) * -1);
       }
     }
   }
@@ -156,7 +156,7 @@ governing permissions and limitations under the License.
 
   &:after {
     border-radius: calc(
-      var(--wa-checkbox-box-border-radius) + var(--wa-alias-focus-ring-gap)
+      var(--wa-checkbox-box-border-radius) + var(--wa-focus-ring-gap)
     );
     content: "";
     display: block;
@@ -165,7 +165,7 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: var(--wa-alias-focus-ring-gap);
+    margin: var(--wa-focus-ring-gap);
     transform: translateX(0); /* Forces FF to render on the pixel grid */
 
     transition: opacity var(--wa-global-animation-duration-100) ease-out,

@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 .wa-Tags {
   display: inline-block;
@@ -54,9 +54,9 @@ governing permissions and limitations under the License.
     display: flex;
     margin-inline-end: calc(-0.5 * var(--wa-tag-padding-x));
     margin-inline-start: var(--wa-tag-deletable-border-size-key-focus);
-    block-size: var(--wa-alias-font-size-default);
-    inline-size: var(--wa-alias-font-size-default);
-    border-radius: var(--wa-alias-border-radius-small);
+    block-size: var(--wa-font-size-default);
+    inline-size: var(--wa-font-size-default);
+    border-radius: var(--wa-border-radius-small);
   }
 }
 

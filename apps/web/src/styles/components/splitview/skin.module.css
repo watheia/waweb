@@ -56,13 +56,13 @@ governing permissions and limitations under the License.
     }
 
     &:focus-ring {
-      background-color: var(--wa-alias-focus-color);
+      background-color: var(--wa-focus-color);
 
       .wa-SplitView-gripper {
-        border-color: var(--wa-alias-focus-color);
-        box-shadow: 0 0 0 1px var(--wa-alias-focus-color);
+        border-color: var(--wa-focus-color);
+        box-shadow: 0 0 0 1px var(--wa-focus-color);
         &:before {
-          background-color: var(--wa-alias-focus-color);
+          background-color: var(--wa-focus-color);
         }
       }
     }

@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   /* Todo: fix in DNA, should have been zero */
@@ -113,7 +113,7 @@ governing permissions and limitations under the License.
 %wa-ButtonWithFocusRing {
   &:after {
     border-radius: calc(
-      var(--wa-button-primary-border-radius) + var(--wa-alias-focus-ring-gap)
+      var(--wa-button-primary-border-radius) + var(--wa-focus-ring-gap)
     );
     content: "";
     display: block;
@@ -122,7 +122,7 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: calc(var(--wa-alias-focus-ring-gap) * -1);
+    margin: calc(var(--wa-focus-ring-gap) * -1);
     transform: translateX(0); /* Forces FF to render on the pixel grid */
 
     transition: box-shadow var(--wa-global-animation-duration-100) ease-out,
@@ -131,7 +131,7 @@ governing permissions and limitations under the License.
 
   &:focus-ring {
     &:after {
-      margin: calc(var(--wa-alias-focus-ring-gap) * -2);
+      margin: calc(var(--wa-focus-ring-gap) * -2);
     }
   }
 }
@@ -278,7 +278,7 @@ a.wa-ActionButton {
   &:after {
     /* Override border-radius set in %wa-ButtonWithFocusRing since this is not a pill button */
     border-radius: calc(
-      var(--wa-actionbutton-border-radius) + var(--wa-alias-focus-ring-gap)
+      var(--wa-actionbutton-border-radius) + var(--wa-focus-ring-gap)
     );
   }
 
@@ -286,7 +286,7 @@ a.wa-ActionButton {
     &:after {
       /* action buttons only have a 1px border, not 2px */
       margin: calc(
-        calc(var(--wa-alias-focus-ring-gap) * -1) - var(--wa-actionbutton-quiet-border-size)
+        calc(var(--wa-focus-ring-gap) * -1) - var(--wa-actionbutton-quiet-border-size)
       );
     }
   }
@@ -309,7 +309,7 @@ a.wa-ActionButton {
   &:after {
     /* Override border-radius set in %wa-ButtonWithFocusRing since this is not a pill button */
     border-radius: calc(
-      var(--wa-logicbutton-and-border-radius) + var(--wa-alias-focus-ring-gap)
+      var(--wa-logicbutton-and-border-radius) + var(--wa-focus-ring-gap)
     );
   }
 }
@@ -394,7 +394,7 @@ a.wa-ActionButton {
   &:focus-ring {
     &:after {
       /* Adjust margin because ClearButton does not have a border */
-      margin: calc(var(--wa-alias-focus-ring-gap) * -1);
+      margin: calc(var(--wa-focus-ring-gap) * -1);
     }
   }
 }

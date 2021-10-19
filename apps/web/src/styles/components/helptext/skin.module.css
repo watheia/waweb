@@ -11,13 +11,13 @@
  */
 
 :root {
-  --wa-helptext-neutral-texticon-text-color: var(--wa-alias-label-text-color);
-  --wa-helptext-neutral-texticon-text-color-disabled: var(--wa-alias-text-color-disabled);
+  --wa-helptext-neutral-texticon-text-color: var(--wa-label-text-color);
+  --wa-helptext-neutral-texticon-text-color-disabled: var(--wa-text-color-disabled);
 
   /* Override: DNA uses --wa-semantic-negative-text-color-small */
-  --wa-helptext-negative-texticon-text-color: var(--wa-semantic-negative-color-text-small);
+  --wa-helptext-negative-texticon-text-color: var(--wa-negative-color-text-small);
   /* Override: DNA uses --wa-semantic-negative-icon-color */
-  --wa-helptext-negative-texticon-icon-color: var(--wa-semantic-negative-color-text-small);
+  --wa-helptext-negative-texticon-icon-color: var(--wa-negative-color-text-small);
 }
 
 .wa-HelpText--neutral {

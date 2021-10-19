@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+/* @import "../commons/index.css"; */
 
 :root {
   --wa-calendar-border-radius-reset: 0;
@@ -188,14 +188,14 @@ governing permissions and limitations under the License.
 
   /* focus ring */
   &:before {
-    border-radius: calc(var(--wa-calendar-day-width) + var(--wa-alias-focus-ring-gap));
+    border-radius: calc(var(--wa-calendar-day-width) + var(--wa-focus-ring-gap));
     content: "";
     display: block;
     position: absolute;
     top: calc(50% - calc(var(--wa-calendar-day-width) / 2));
     left: calc(50% - calc(var(--wa-calendar-day-width) / 2));
-    width: calc(var(--wa-calendar-day-width) + var(--wa-alias-focus-ring-gap) * 2);
-    height: calc(var(--wa-calendar-day-height) + var(--wa-alias-focus-ring-gap) * 2);
+    width: calc(var(--wa-calendar-day-width) + var(--wa-focus-ring-gap) * 2);
+    height: calc(var(--wa-calendar-day-height) + var(--wa-focus-ring-gap) * 2);
     margin: 0;
     transform: translateX(0); /* Forces FF to render on the pixel grid */
 
@@ -205,7 +205,7 @@ governing permissions and limitations under the License.
 
   &.is-focused {
     &:before {
-      margin: calc(var(--wa-alias-focus-ring-gap) * -1);
+      margin: calc(var(--wa-focus-ring-gap) * -1);
     }
   }
 

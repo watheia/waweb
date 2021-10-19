@@ -16,7 +16,6 @@ import { ThemeProvider } from "@mui/material/styles"
 
 import {
   BreakpointProvider,
-  shouldKeepSpectrumClassNames,
   useDOMRef,
   useMatchedBreakpoints,
   useStyleProps
@@ -28,15 +27,14 @@ import { filterDOMProps } from "@react-aria/utils"
 import { I18nProvider, useLocale } from "@react-aria/i18n"
 import { ModalProvider, useModalProvider } from "@react-aria/overlays"
 import React, { useContext, useEffect, useRef } from "react"
-import styles from "apps/web/src/styles/components/page/vars.module.css"
-import typographyStyles from "apps/web/src/styles/components/typography/index.module.css"
-import useColorScheme from "../hooks/use-color-scheme"
-import useScale from "../hooks/use-scale"
-import { Breakpoints, Theme, ColorScheme, Scale } from "../model"
+import { useColorScheme, useScale } from "../lib/theme"
+import { Breakpoints, Theme, ColorScheme, Scale } from "../lib/theme"
 // @ts-ignore
-import { version } from "../../../../package.json"
-import getTheme from "../lib/theme"
+import pkg from "package.json"
+import { makeMuiTheme } from "apps/web/src/lib/theme"
 import { DEFAULT_BREAKPOINTS } from "../constants"
+
+import styles from "apps/web/src/styles/components/typography/index.module.css"
 
 const Context = React.createContext<ProviderContext | null>(null)
 Context.displayName = "ProviderContext"
@@ -62,7 +60,7 @@ export interface ProviderProps extends ContextProps, DOMProps, StyleProps {
   /**
    * The theme for your application.
    */
-  theme?: Theme
+  theme: Theme
   /**
    * The color scheme for your application.
    * Defaults to operating system preferences.
@@ -100,6 +98,7 @@ export interface ProviderContext extends ContextProps {
 }
 
 function Provider(props: ProviderProps, ref: DOMRef<HTMLDivElement>) {
+  // console.log("Provider(props)", props)
   const prevContext = useProvider()
   const prevColorScheme = prevContext && prevContext.colorScheme
   const prevBreakpoints = prevContext && prevContext.breakpoints
@@ -110,6 +109,7 @@ function Provider(props: ProviderProps, ref: DOMRef<HTMLDivElement>) {
   const { locale: prevLocale } = useLocale()
   // if the new theme doesn't support the prevColorScheme, we must resort to the auto
   const usePrevColorScheme = !!theme[prevColorScheme]
+  const version = pkg.version
 
   // importance of color scheme props > parent > auto:(OS > default > omitted)
   const {
@@ -185,7 +185,9 @@ function Provider(props: ProviderProps, ref: DOMRef<HTMLDivElement>) {
         <BreakpointProvider matchedBreakpoints={matchedBreakpoints}>
           <ModalProvider>
             <SessionProvider>
-              <ThemeProvider theme={getTheme(colorScheme)}>{contents}</ThemeProvider>
+              <ThemeProvider theme={makeMuiTheme(colorScheme === "" ? defaultColorScheme : colorScheme)}>
+                {contents}
+              </ThemeProvider>
             </SessionProvider>
           </ModalProvider>
         </BreakpointProvider>
@@ -218,17 +220,10 @@ const ProviderWrapper = React.forwardRef(function ProviderWrapper(
 
   const className = clsx(
     styleProps.className,
-    styles["wa"],
-    typographyStyles["wa"],
+    styles.wa,
     theme[colorScheme][themeKey],
     theme[scale][scaleKey],
-    theme.global ? Object.values(theme.global) : null,
-    {
-      "react-spectrum-provider": shouldKeepSpectrumClassNames,
-      spectrum: shouldKeepSpectrumClassNames,
-      [themeKey]: shouldKeepSpectrumClassNames,
-      [scaleKey]: shouldKeepSpectrumClassNames
-    }
+    theme.global ? Object.values(theme.global) : null
   )
 
   const style = {

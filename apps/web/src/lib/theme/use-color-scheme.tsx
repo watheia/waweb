@@ -1,4 +1,4 @@
-import { Theme, ColorScheme } from "../model"
+import { Theme, ColorScheme } from "./types"
 import { useMediaQuery } from "@react-spectrum/utils"
 
 export default function useColorScheme(
