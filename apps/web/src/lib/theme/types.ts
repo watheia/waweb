@@ -14,7 +14,6 @@ export type CSSModule = {
   [className: string]: string
 }
 
-
 /**
  * A theme object defines CSS variables for a theme, across multiple color schemes and scales.
  **/
@@ -30,5 +29,3 @@ export interface Theme {
   /** CSS module defining the variables for the large scale. */
   large?: CSSModule
 }
-
-

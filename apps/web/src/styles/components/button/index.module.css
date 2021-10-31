@@ -112,9 +112,7 @@ governing permissions and limitations under the License.
 
 %wa-ButtonWithFocusRing {
   &:after {
-    border-radius: calc(
-      var(--wa-button-primary-border-radius) + var(--wa-focus-ring-gap)
-    );
+    border-radius: calc(var(--wa-button-primary-border-radius) + var(--wa-focus-ring-gap));
     content: "";
     display: block;
     position: absolute;
@@ -277,9 +275,7 @@ a.wa-ActionButton {
 
   &:after {
     /* Override border-radius set in %wa-ButtonWithFocusRing since this is not a pill button */
-    border-radius: calc(
-      var(--wa-actionbutton-border-radius) + var(--wa-focus-ring-gap)
-    );
+    border-radius: calc(var(--wa-actionbutton-border-radius) + var(--wa-focus-ring-gap));
   }
 
   &:focus-ring {
@@ -308,9 +304,7 @@ a.wa-ActionButton {
 
   &:after {
     /* Override border-radius set in %wa-ButtonWithFocusRing since this is not a pill button */
-    border-radius: calc(
-      var(--wa-logicbutton-and-border-radius) + var(--wa-focus-ring-gap)
-    );
+    border-radius: calc(var(--wa-logicbutton-and-border-radius) + var(--wa-focus-ring-gap));
   }
 }
 

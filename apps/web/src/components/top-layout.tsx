@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 import Head from "next/head"
 import CssBaseline from "@mui/material/CssBaseline"
 
-import Layout from "./layout"
-import { Provider } from "./provider"
-import { defaultTheme } from "../lib/theme"
+import Layout from "apps/web/src/components/layout"
+import { Provider } from "apps/web/src/components/provider"
+import { defaultTheme } from "apps/web/src/lib/theme"
+
+import typogrophy from "apps/web/src/styles/components/typography/vars.module.css"
 
 export type TopLayoutProps = HtmlHTMLAttributes<HTMLDivElement>
 
@@ -24,7 +26,9 @@ export default function TopLayout({ children }: TopLayoutProps) {
       </Head>
       <Provider theme={defaultTheme} defaultColorScheme="light">
         <CssBaseline />
-        <Layout>{children}</Layout>
+        <div className={typogrophy.wa}>
+          <Layout>{children}</Layout>
+        </div>
       </Provider>
     </>
   )

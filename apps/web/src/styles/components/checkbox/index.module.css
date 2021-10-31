@@ -155,9 +155,7 @@ governing permissions and limitations under the License.
   }
 
   &:after {
-    border-radius: calc(
-      var(--wa-checkbox-box-border-radius) + var(--wa-focus-ring-gap)
-    );
+    border-radius: calc(var(--wa-checkbox-box-border-radius) + var(--wa-focus-ring-gap));
     content: "";
     display: block;
     position: absolute;

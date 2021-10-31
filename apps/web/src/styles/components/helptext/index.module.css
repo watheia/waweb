@@ -19,13 +19,9 @@
   --wa-helptext-negative-texticon-icon-padding-top: var(--wa-global-dimension-size-40);
   --wa-helptext-negative-texticon-icon-padding-bottom: var(--wa-global-dimension-size-40);
 
-  --wa-helptext-neutral-textonly-text-padding-top: var(
-    --wa-size-50
-  );
+  --wa-helptext-neutral-textonly-text-padding-top: var(--wa-size-50);
   --wa-helptext-neutral-textonly-text-transform: none;
-  --wa-helptext-neutral-textonly-text-letter-spacing: var(
-    --wa-font-letter-spacing-none
-  );
+  --wa-helptext-neutral-textonly-text-letter-spacing: var(--wa-font-letter-spacing-none);
 
   /* Uses value for DNA variable --wa-helptext-l-neutral-textonly-text-padding-bottom, since m variant doesn't exist */
   --wa-helptext-neutral-textonly-text-padding-bottom: var(--wa-global-dimension-size-115);

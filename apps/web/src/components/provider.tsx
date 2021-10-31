@@ -31,7 +31,7 @@ import { useColorScheme, useScale } from "../lib/theme"
 import { Breakpoints, Theme, ColorScheme, Scale } from "../lib/theme"
 // @ts-ignore
 import pkg from "package.json"
-import { makeMuiTheme } from "apps/web/src/lib/theme"
+import { createMuiTheme } from "apps/web/src/lib/theme"
 import { DEFAULT_BREAKPOINTS } from "../constants"
 
 import styles from "apps/web/src/styles/components/typography/index.module.css"
@@ -185,7 +185,11 @@ function Provider(props: ProviderProps, ref: DOMRef<HTMLDivElement>) {
         <BreakpointProvider matchedBreakpoints={matchedBreakpoints}>
           <ModalProvider>
             <SessionProvider>
-              <ThemeProvider theme={makeMuiTheme(colorScheme === "" ? defaultColorScheme : colorScheme)}>
+              <ThemeProvider
+                theme={createMuiTheme(
+                  colorScheme === "" ? defaultColorScheme : colorScheme
+                )}
+              >
                 {contents}
               </ThemeProvider>
             </SessionProvider>

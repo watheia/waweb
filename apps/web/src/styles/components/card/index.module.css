@@ -672,9 +672,7 @@ user-provided
       inset-block-end: 0;
       margin: calc(var(--wa-focus-ring-gap) * -2);
 
-      border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
-      );
+      border-radius: calc(var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap));
     }
     .wa-Card-decoration {
       display: block;
@@ -778,9 +776,7 @@ user-provided
       inset-block-end: 0;
       margin: calc(var(--wa-focus-ring-gap) * -2);
 
-      border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
-      );
+      border-radius: calc(var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap));
     }
     .wa-Card-decoration {
       display: block;
@@ -896,9 +892,7 @@ user-provided
       inset-block-end: 0;
       margin: calc(var(--wa-focus-ring-gap) * -2);
 
-      border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
-      );
+      border-radius: calc(var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap));
     }
     .wa-Card-decoration {
       display: block;
@@ -1022,9 +1016,7 @@ user-provided
       padding: calc(var(--wa-focus-ring-gap) * 2);
       background-clip: content-box;
 
-      border-radius: calc(
-        var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap)
-      );
+      border-radius: calc(var(--wa-card-quiet-border-radius) + var(--wa-focus-ring-gap));
     }
     .wa-Card-decoration {
       display: block;

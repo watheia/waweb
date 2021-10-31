@@ -25,9 +25,7 @@ governing permissions and limitations under the License.
     var(--wa-datepicker-input-width) + var(--wa-global-dimension-size-700) -
       var(--wa-font-size-100) / 2
   );
-  --wa-datepicker-range-dash-margin-left: calc(
-    -0.5 * var(--wa-font-size-100)
-  );
+  --wa-datepicker-range-dash-margin-left: calc(-0.5 * var(--wa-font-size-100));
   --wa-datepicker-range-dash-padding-top: 0;
   --wa-datepicker-range-dash-line-height: calc(
     var(--wa-textfield-height) - var(--wa-global-dimension-size-100)

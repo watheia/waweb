@@ -246,9 +246,8 @@
   --wa-grid-fixed-max-width: 1280px;
 
   /* wa-fontGlobals.css */
-  --wa-font-family-base: adobe-clean, "Source Sans Pro", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande",
-    sans-serif;
+  --wa-font-family-base: adobe-clean, "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
   --wa-font-family-serif: adobe-clean-serif, "Source Serif Pro", Georgia, serif;
   --wa-font-family-code: "Source Code Pro", Monaco, monospace;
   --wa-font-weight-thin: 100;
@@ -292,21 +291,11 @@
   --wa-grid-margin-medium: var(--wa-size-400);
   --wa-grid-margin-large: var(--wa-size-500);
   --wa-grid-margin-xlarge: var(--wa-size-600);
-  --wa-grid-layout-region-margin-bottom-xsmall: var(
-    --wa-size-200
-  );
-  --wa-grid-layout-region-margin-bottom-small: var(
-    --wa-size-300
-  );
-  --wa-grid-layout-region-margin-bottom-medium: var(
-    --wa-size-400
-  );
-  --wa-grid-layout-region-margin-bottom-large: var(
-    --wa-size-500
-  );
-  --wa-grid-layout-region-margin-bottom-xlarge: var(
-    --wa-size-600
-  );
+  --wa-grid-layout-region-margin-bottom-xsmall: var(--wa-size-200);
+  --wa-grid-layout-region-margin-bottom-small: var(--wa-size-300);
+  --wa-grid-layout-region-margin-bottom-medium: var(--wa-size-400);
+  --wa-grid-layout-region-margin-bottom-large: var(--wa-size-500);
+  --wa-grid-layout-region-margin-bottom-xlarge: var(--wa-size-600);
   --wa-radial-reaction-size-default: var(--wa-size-550);
   --wa-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande",
@@ -316,18 +305,17 @@
     sans-serif;
   --wa-font-family-zh: adobe-clean-han-traditional, source-han-traditional, "MingLiu",
     "Heiti TC Light", "sans-serif";
-  --wa-font-family-zhhans: adobe-clean-han-simplified-c, source-han-simplified-c,
-    "SimSun", "Heiti SC Light", "sans-serif";
+  --wa-font-family-zhhans: adobe-clean-han-simplified-c, source-han-simplified-c, "SimSun",
+    "Heiti SC Light", "sans-serif";
   --wa-font-family-ko: adobe-clean-han-korean, source-han-korean, "Malgun Gothic",
     "Apple Gothic", "sans-serif";
   --wa-font-family-ja: adobe-clean-han-japanese, source-han-japanese, "Yu Gothic",
     "\30E1 \30A4 \30EA \30AA", "\30D2 \30E9 \30AE \30CE \89D2 \30B4  Pro W3",
     "Hiragino Kaku Gothic Pro W3", "Osaka", "\FF2D \FF33 \FF30 \30B4 \30B7 \30C3 \30AF",
     "MS PGothic", "sans-serif";
-  --wa-font-family-condensed: adobe-clean-han-traditional, source-han-traditional,
-    "MingLiu", "Heiti TC Light", adobe-clean, "Source Sans Pro", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande",
-    sans-serif;
+  --wa-font-family-condensed: adobe-clean-han-traditional, source-han-traditional, "MingLiu",
+    "Heiti TC Light", adobe-clean, "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
   --wa-line-height-body: var(--wa-font-line-height-medium);
   --wa-line-height-title: var(--wa-font-line-height-small);
   --wa-body-han-text-line-height: var(--wa-font-line-height-large);
@@ -356,48 +344,32 @@
   --wa-article-heading-text-font-weight: var(--wa-font-weight-bold);
   --wa-article-heading-text-font-weight-strong: var(--wa-font-weight-black);
   --wa-article-heading-text-font-weight-quiet: var(--wa-font-weight-regular);
-  --wa-article-heading-text-font-weight-quiet-strong: var(
-    --wa-font-weight-bold
-  );
+  --wa-article-heading-text-font-weight-quiet-strong: var(--wa-font-weight-bold);
   --wa-article-subheading-text-font-weight: var(--wa-font-weight-bold);
   --wa-article-subheading-text-font-weight-strong: var(--wa-font-weight-black);
   --wa-article-detail-text-font-weight: var(--wa-font-weight-regular);
   --wa-article-detail-text-font-weight-strong: var(--wa-font-weight-bold);
   --wa-code-text-font-family: var(--wa-font-family-code);
   --wa-han-heading-text-font-weight-regular: var(--wa-font-weight-bold);
-  --wa-han-heading-text-font-weight-regular-emphasis: var(
-    --wa-font-weight-extra-bold
-  );
-  --wa-han-heading-text-font-weight-regular-strong: var(
-    --wa-font-weight-black
-  );
+  --wa-han-heading-text-font-weight-regular-emphasis: var(--wa-font-weight-extra-bold);
+  --wa-han-heading-text-font-weight-regular-strong: var(--wa-font-weight-black);
   --wa-han-heading-text-font-weight-quiet: var(--wa-font-weight-light);
-  --wa-han-heading-text-font-weight-quiet-emphasis: var(
-    --wa-font-weight-regular
-  );
+  --wa-han-heading-text-font-weight-quiet-emphasis: var(--wa-font-weight-regular);
   --wa-han-heading-text-font-weight-quiet-strong: var(--wa-font-weight-bold);
   --wa-han-heading-text-font-weight-light: var(--wa-font-weight-light);
-  --wa-han-heading-text-font-weight-light-emphasis: var(
-    --wa-font-weight-regular
-  );
+  --wa-han-heading-text-font-weight-light-emphasis: var(--wa-font-weight-regular);
   --wa-han-heading-text-font-weight-light-strong: var(--wa-font-weight-bold);
   --wa-han-heading-text-font-weight-strong: var(--wa-font-weight-black);
-  --wa-han-heading-text-font-weight-strong-emphasis: var(
-    --wa-font-weight-black
-  );
+  --wa-han-heading-text-font-weight-strong-emphasis: var(--wa-font-weight-black);
   --wa-han-heading-text-font-weight-strong-strong: var(--wa-font-weight-black);
   --wa-han-heading-text-font-weight-heavy: var(--wa-font-weight-black);
-  --wa-han-heading-text-font-weight-heavy-emphasis: var(
-    --wa-font-weight-black
-  );
+  --wa-han-heading-text-font-weight-heavy-emphasis: var(--wa-font-weight-black);
   --wa-han-heading-text-font-weight-heavy-strong: var(--wa-font-weight-black);
   --wa-han-body-text-font-weight-regular: var(--wa-font-weight-regular);
   --wa-han-body-text-font-weight-emphasis: var(--wa-font-weight-bold);
   --wa-han-body-text-font-weight-strong: var(--wa-font-weight-black);
   --wa-han-subheading-text-font-weight-regular: var(--wa-font-weight-bold);
-  --wa-han-subheading-text-font-weight-emphasis: var(
-    --wa-font-weight-extra-bold
-  );
+  --wa-han-subheading-text-font-weight-emphasis: var(--wa-font-weight-extra-bold);
   --wa-han-subheading-text-font-weight-strong: var(--wa-font-weight-black);
   --wa-han-detail-text-font-weight: var(--wa-font-weight-regular);
   --wa-han-detail-text-font-weight-emphasis: var(--wa-font-weight-bold);

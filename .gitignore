@@ -48,3 +48,5 @@ Thumbs.db
 
 .env
 test-report.xml
+apps/web/env.local
+apps/web/.env.local

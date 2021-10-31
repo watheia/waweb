@@ -1,7 +1,10 @@
 {
-  "npmScope": "waweb",
+  "npmScope": "watheia",
   "affected": {
     "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
   },
   "implicitDependencies": {
     "package.json": {
@@ -16,7 +19,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e", "stylelint"],
-        "accessToken": "YTEzNmVjYTgtOWE5OC00M2UzLWI1MzYtMDgyY2Q0ZWJkZDEwfHJlYWQtd3JpdGU="
+        "accessToken": "NTcyZDQ0N2EtNzAyMS00NzM5LWI5YTMtODE3NGZhOWIzOWI2fHJlYWQtd3JpdGU="
       }
     }
   },
@@ -28,13 +31,18 @@
       }
     ]
   },
-  "projects": {
-    "web": {
-      "tags": []
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
     },
-    "web-e2e": {
-      "tags": [],
-      "implicitDependencies": ["web"]
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
-  }
+  },
+  "defaultProject": "web"
 }

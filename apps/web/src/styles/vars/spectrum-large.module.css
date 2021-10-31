@@ -114,9 +114,7 @@
   --wa-button-quiet-over-background-min-width: 90px;
   --wa-button-quiet-over-background-touch-hit-x: var(--wa-size-250);
   --wa-button-quiet-over-background-touch-hit-y: var(--wa-size-50);
-  --wa-button-quiet-over-background-cursor-hit-x: var(
-    --wa-size-250
-  );
+  --wa-button-quiet-over-background-cursor-hit-x: var(--wa-size-250);
   --wa-button-quiet-primary-text-padding-bottom: var(--wa-global-dimension-size-100);
   --wa-button-quiet-primary-min-width: 90px;
   --wa-button-quiet-primary-touch-hit-x: var(--wa-size-250);
@@ -142,53 +140,27 @@
   --wa-button-warning-touch-hit-y: var(--wa-size-50);
   --wa-checkbox-text-gap-key-focus: var(--wa-size-150);
   --wa-checkbox-text-gap-selected-key-focus: var(--wa-size-150);
-  --wa-checkbox-text-gap-indeterminate-key-focus: var(
-    --wa-size-150
-  );
+  --wa-checkbox-text-gap-indeterminate-key-focus: var(--wa-size-150);
   --wa-checkbox-text-gap-error-key-focus: var(--wa-size-150);
-  --wa-checkbox-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-text-gap-error-indeterminate-key-focus: var(
-    --wa-size-150
-  );
+  --wa-checkbox-text-gap-error-selected-key-focus: var(--wa-size-150);
+  --wa-checkbox-text-gap-error-indeterminate-key-focus: var(--wa-size-150);
   --wa-checkbox-touch-hit-y: var(--wa-size-50);
   --wa-checkbox-emphasized-text-gap-key-focus: var(--wa-size-150);
-  --wa-checkbox-emphasized-text-gap-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-emphasized-text-gap-indeterminate-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-emphasized-text-gap-error-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-emphasized-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-emphasized-text-gap-error-indeterminate-key-focus: var(
-    --wa-size-150
-  );
+  --wa-checkbox-emphasized-text-gap-selected-key-focus: var(--wa-size-150);
+  --wa-checkbox-emphasized-text-gap-indeterminate-key-focus: var(--wa-size-150);
+  --wa-checkbox-emphasized-text-gap-error-key-focus: var(--wa-size-150);
+  --wa-checkbox-emphasized-text-gap-error-selected-key-focus: var(--wa-size-150);
+  --wa-checkbox-emphasized-text-gap-error-indeterminate-key-focus: var(--wa-size-150);
   --wa-checkbox-emphasized-touch-hit-y: var(--wa-size-50);
   --wa-checkbox-quiet-text-gap-key-focus: var(--wa-size-150);
-  --wa-checkbox-quiet-text-gap-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-quiet-text-gap-indeterminate-key-focus: var(
-    --wa-size-150
-  );
+  --wa-checkbox-quiet-text-gap-selected-key-focus: var(--wa-size-150);
+  --wa-checkbox-quiet-text-gap-indeterminate-key-focus: var(--wa-size-150);
   --wa-checkbox-quiet-text-gap-error-key-focus: var(--wa-size-150);
-  --wa-checkbox-quiet-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-checkbox-quiet-text-gap-error-indeterminate-key-focus: var(
-    --wa-size-150
-  );
+  --wa-checkbox-quiet-text-gap-error-selected-key-focus: var(--wa-size-150);
+  --wa-checkbox-quiet-text-gap-error-indeterminate-key-focus: var(--wa-size-150);
   --wa-checkbox-quiet-touch-hit-y: var(--wa-size-50);
   --wa-circleloader-medium-border-size: var(--wa-size-50);
-  --wa-circleloader-medium-over-background-border-size: var(
-    --wa-size-50
-  );
+  --wa-circleloader-medium-over-background-border-size: var(--wa-size-50);
   --wa-circleloader-small-border-size: 3px;
   --wa-circleloader-small-over-background-border-size: 3px;
   --wa-colorhandle-loupe-margin: var(--wa-size-100);
@@ -214,9 +186,7 @@
   --wa-dialog-destructive-title-text-size: var(--wa-global-dimension-font-size-200);
   --wa-dialog-destructive-description-text-size: var(--wa-global-dimension-font-size-75);
   --wa-dialog-destructive-padding: var(--wa-size-300);
-  --wa-dialog-destructive-description-margin-bottom: var(
-    --wa-size-500
-  );
+  --wa-dialog-destructive-description-margin-bottom: var(--wa-size-500);
   --wa-dialog-error-max-width: var(--wa-size-5000);
   --wa-dialog-error-title-text-size: var(--wa-global-dimension-font-size-200);
   --wa-dialog-error-description-text-size: var(--wa-global-dimension-font-size-75);
@@ -259,12 +229,8 @@
   --wa-listitem-option-icon-padding-y: var(--wa-size-200);
   --wa-listitem-thumbnail-option-icon-margin-top: var(--wa-size-50);
   --wa-listitem-thumbnail-option-icon-padding-y: var(--wa-size-200);
-  --wa-selectlist-thumbnail-small-option-icon-margin-top: var(
-    --wa-size-50
-  );
-  --wa-selectlist-thumbnail-small-option-icon-padding-y: var(
-    --wa-size-200
-  );
+  --wa-selectlist-thumbnail-small-option-icon-margin-top: var(--wa-size-50);
+  --wa-selectlist-thumbnail-small-option-icon-padding-y: var(--wa-size-200);
   --wa-selectlist-option-icon-size: var(--wa-size-200);
   --wa-selectlist-option-icon-padding-y: var(--wa-size-200);
   --wa-selectlist-option-icon-margin-top: var(--wa-size-50);
@@ -276,17 +242,13 @@
   */
   --wa-selectlist-option-padding-height: var(--wa-size-160);
   /* END RSP PATCH */
-  --wa-selectlist-thumbnail-option-icon-padding-y: var(
-    --wa-size-200
-  );
+  --wa-selectlist-thumbnail-option-icon-padding-y: var(--wa-size-200);
   --wa-loader-bar-large-border-radius: 4px;
   --wa-loader-bar-large-over-background-border-radius: 4px;
   --wa-loader-bar-small-border-radius: 3px;
   --wa-loader-bar-small-over-background-border-radius: 3px;
   --wa-loader-circle-medium-border-size: var(--wa-size-50);
-  --wa-loader-circle-medium-over-background-border-size: var(
-    --wa-size-50
-  );
+  --wa-loader-circle-medium-over-background-border-size: var(--wa-size-50);
   --wa-loader-circle-small-border-size: 3px;
   --wa-loader-circle-small-over-background-border-size: 3px;
   --wa-meter-large-border-radius: 4px;
@@ -310,15 +272,11 @@
   --wa-progressbar-small-indeterminate-border-radius: 3px;
   --wa-progressbar-small-over-background-border-radius: 3px;
   --wa-progresscircle-medium-border-size: var(--wa-size-50);
-  --wa-progresscircle-medium-over-background-border-size: var(
-    --wa-size-50
-  );
+  --wa-progresscircle-medium-over-background-border-size: var(--wa-size-50);
   --wa-progresscircle-small-border-size: 3px;
   --wa-progresscircle-small-indeterminate-border-size: 3px;
   --wa-progresscircle-small-over-background-border-size: 3px;
-  --wa-progresscircle-medium-indeterminate-border-size: var(
-    --wa-size-50
-  );
+  --wa-progresscircle-medium-indeterminate-border-size: var(--wa-size-50);
   --wa-radio-text-gap-key-focus: var(--wa-size-150);
   --wa-radio-text-gap-selected-key-focus: var(--wa-size-150);
   --wa-radio-text-gap-error-key-focus: var(--wa-size-150);
@@ -326,23 +284,15 @@
   --wa-radio-margin-bottom: var(--wa-size-100);
   --wa-radio-touch-hit-y: var(--wa-size-50);
   --wa-radio-emphasized-text-gap-key-focus: var(--wa-size-150);
-  --wa-radio-emphasized-text-gap-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-radio-emphasized-text-gap-error-key-focus: var(
-    --wa-size-150
-  );
-  --wa-radio-emphasized-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
+  --wa-radio-emphasized-text-gap-selected-key-focus: var(--wa-size-150);
+  --wa-radio-emphasized-text-gap-error-key-focus: var(--wa-size-150);
+  --wa-radio-emphasized-text-gap-error-selected-key-focus: var(--wa-size-150);
   --wa-radio-emphasized-margin-bottom: var(--wa-size-100);
   --wa-radio-emphasized-touch-hit-y: var(--wa-size-50);
   --wa-radio-quiet-text-gap-key-focus: var(--wa-size-150);
   --wa-radio-quiet-text-gap-selected-key-focus: var(--wa-size-150);
   --wa-radio-quiet-text-gap-error-key-focus: var(--wa-size-150);
-  --wa-radio-quiet-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
+  --wa-radio-quiet-text-gap-error-selected-key-focus: var(--wa-size-150);
   --wa-radio-quiet-margin-bottom: var(--wa-size-100);
   --wa-radio-quiet-touch-hit-y: var(--wa-size-50);
   --wa-rating-icon-width: 30px;
@@ -371,9 +321,7 @@
   --wa-slider-fill-track-touch-hit-y: var(--wa-size-50);
   --wa-slider-fill-handle-touch-hit-x: var(--wa-size-175);
   --wa-slider-fill-handle-touch-hit-y: var(--wa-size-175);
-  --wa-switch-focus-ring-border-radius-key-focus: var(
-    --wa-size-160
-  );
+  --wa-switch-focus-ring-border-radius-key-focus: var(--wa-size-160);
   --wa-switch-text-gap-key-focus: var(--wa-size-150);
   --wa-switch-text-gap-selected-key-focus: var(--wa-size-150);
   --wa-switch-text-gap-error-key-focus: var(--wa-size-150);
@@ -386,31 +334,19 @@
   --wa-switch-handle-transform-x-rtl: -18px;
   /* END RSP PATCH */
   --wa-switch-touch-hit-y: var(--wa-size-50);
-  --wa-switch-emphasized-focus-ring-border-radius-key-focus: var(
-    --wa-size-160
-  );
+  --wa-switch-emphasized-focus-ring-border-radius-key-focus: var(--wa-size-160);
   --wa-switch-emphasized-text-gap-key-focus: var(--wa-size-150);
-  --wa-switch-emphasized-text-gap-selected-key-focus: var(
-    --wa-size-150
-  );
-  --wa-switch-emphasized-text-gap-error-key-focus: var(
-    --wa-size-150
-  );
-  --wa-switch-emphasized-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
+  --wa-switch-emphasized-text-gap-selected-key-focus: var(--wa-size-150);
+  --wa-switch-emphasized-text-gap-error-key-focus: var(--wa-size-150);
+  --wa-switch-emphasized-text-gap-error-selected-key-focus: var(--wa-size-150);
   --wa-switch-emphasized-track-width: var(--wa-size-450);
   --wa-switch-emphasized-handle-border-radius: 9px;
   --wa-switch-emphasized-touch-hit-y: var(--wa-size-50);
-  --wa-switch-quiet-focus-ring-border-radius-key-focus: var(
-    --wa-size-160
-  );
+  --wa-switch-quiet-focus-ring-border-radius-key-focus: var(--wa-size-160);
   --wa-switch-quiet-text-gap-key-focus: var(--wa-size-150);
   --wa-switch-quiet-text-gap-selected-key-focus: var(--wa-size-150);
   --wa-switch-quiet-text-gap-error-key-focus: var(--wa-size-150);
-  --wa-switch-quiet-text-gap-error-selected-key-focus: var(
-    --wa-size-150
-  );
+  --wa-switch-quiet-text-gap-error-selected-key-focus: var(--wa-size-150);
   --wa-switch-quiet-track-width: var(--wa-size-450);
   --wa-switch-quiet-handle-border-radius: 9px;
   --wa-switch-quiet-touch-hit-y: var(--wa-size-50);

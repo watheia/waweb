@@ -127,27 +127,12 @@ governing permissions and limitations under the License.
         transparent 75.5%,
         var(--wa-color-gray-500) 75.5%
       ),
-      linear-gradient(
-        45deg,
-        transparent 75.5%,
-        var(--wa-color-gray-500) 75.5%
-      ),
-      linear-gradient(
-        -45deg,
-        var(--wa-color-gray-500) 25.5%,
-        transparent 25.5%
-      ),
-      linear-gradient(
-        45deg,
-        var(--wa-color-gray-500) 25.5%,
-        transparent 25.5%
-      );
-    background-size: var(--wa-size-200)
-      var(--wa-size-200);
+      linear-gradient(45deg, transparent 75.5%, var(--wa-color-gray-500) 75.5%),
+      linear-gradient(-45deg, var(--wa-color-gray-500) 25.5%, transparent 25.5%),
+      linear-gradient(45deg, var(--wa-color-gray-500) 25.5%, transparent 25.5%);
+    background-size: var(--wa-size-200) var(--wa-size-200);
     background-position: 0 0, 0 var(--wa-size-100),
-      var(--wa-size-100)
-        calc(-1 * var(--wa-size-100)),
-      calc(-1 * var(--wa-size-100)) 0;
+      var(--wa-size-100) calc(-1 * var(--wa-size-100)), calc(-1 * var(--wa-size-100)) 0;
     z-index: 0;
   }
   .wa-Slider-track {

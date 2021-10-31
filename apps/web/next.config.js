@@ -8,19 +8,24 @@ const nextConfig = {
   nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
-    svgr: false
+    svgr: true
   },
-  images: {
-    domains: [
-      "cdn.watheia.org",
-      "www.datocms-assets.com",
-      "a.storyblok.com",
-      "images.ctfassets.net",
-      "images.prismic.io",
-      "cdn.aglty.io",
-      "localhost" // For Strapi
-    ],
-    imageSizes: [24, 64, 300]
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // config.module.rules.push({
+    //   test: /\.module\.css/,
+    //   use: [
+    //     defaultLoaders.babel,
+    //     {
+    //       loader: "css-loader",
+    //       options: {
+
+    //       }
+    //     }
+    //   ]
+    // })
+
+    // Important: return the modified config
+    return config
   }
 }
 

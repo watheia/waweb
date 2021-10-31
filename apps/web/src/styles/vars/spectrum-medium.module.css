@@ -82,22 +82,14 @@
   --wa-actionbutton-emphasized-touch-hit-y: var(--wa-size-100);
   --wa-actionbutton-quiet-touch-hit-x: var(--wa-size-100);
   --wa-actionbutton-quiet-touch-hit-y: var(--wa-size-100);
-  --wa-actionbutton-quiet-emphasized-touch-hit-x: var(
-    --wa-size-100
-  );
-  --wa-actionbutton-quiet-emphasized-touch-hit-y: var(
-    --wa-size-100
-  );
+  --wa-actionbutton-quiet-emphasized-touch-hit-x: var(--wa-size-100);
+  --wa-actionbutton-quiet-emphasized-touch-hit-y: var(--wa-size-100);
   --wa-barloader-large-border-radius: 3px;
   --wa-barloader-large-indeterminate-border-radius: 3px;
   --wa-barloader-large-over-background-border-radius: 3px;
   --wa-barloader-small-border-radius: var(--wa-size-25);
-  --wa-barloader-small-indeterminate-border-radius: var(
-    --wa-size-25
-  );
-  --wa-barloader-small-over-background-border-radius: var(
-    --wa-size-25
-  );
+  --wa-barloader-small-indeterminate-border-radius: var(--wa-size-25);
+  --wa-barloader-small-over-background-border-radius: var(--wa-size-25);
   --wa-breadcrumb-compact-item-touch-hit-y: var(--wa-size-100);
   --wa-breadcrumb-compact-button-touch-hit-y: var(--wa-size-100);
   --wa-breadcrumb-item-touch-hit-y: var(--wa-size-100);
@@ -120,9 +112,7 @@
   --wa-button-quiet-over-background-min-width: var(--wa-global-dimension-size-900);
   --wa-button-quiet-over-background-touch-hit-x: var(--wa-size-200);
   --wa-button-quiet-over-background-touch-hit-y: var(--wa-size-100);
-  --wa-button-quiet-over-background-cursor-hit-x: var(
-    --wa-size-200
-  );
+  --wa-button-quiet-over-background-cursor-hit-x: var(--wa-size-200);
   --wa-button-quiet-primary-text-padding-bottom: var(--wa-global-dimension-size-85);
   --wa-button-quiet-primary-min-width: var(--wa-global-dimension-size-900);
   --wa-button-quiet-primary-touch-hit-x: var(--wa-size-200);
@@ -148,55 +138,29 @@
   --wa-button-warning-touch-hit-y: var(--wa-size-100);
   --wa-checkbox-text-gap-key-focus: var(--wa-size-115);
   --wa-checkbox-text-gap-selected-key-focus: var(--wa-size-115);
-  --wa-checkbox-text-gap-indeterminate-key-focus: var(
-    --wa-size-115
-  );
+  --wa-checkbox-text-gap-indeterminate-key-focus: var(--wa-size-115);
   --wa-checkbox-text-gap-error-key-focus: var(--wa-size-115);
-  --wa-checkbox-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-text-gap-error-indeterminate-key-focus: var(
-    --wa-size-115
-  );
+  --wa-checkbox-text-gap-error-selected-key-focus: var(--wa-size-115);
+  --wa-checkbox-text-gap-error-indeterminate-key-focus: var(--wa-size-115);
   --wa-checkbox-touch-hit-y: var(--wa-size-100);
   --wa-checkbox-emphasized-text-gap-key-focus: var(--wa-size-115);
-  --wa-checkbox-emphasized-text-gap-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-emphasized-text-gap-indeterminate-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-emphasized-text-gap-error-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-emphasized-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-emphasized-text-gap-error-indeterminate-key-focus: var(
-    --wa-size-115
-  );
+  --wa-checkbox-emphasized-text-gap-selected-key-focus: var(--wa-size-115);
+  --wa-checkbox-emphasized-text-gap-indeterminate-key-focus: var(--wa-size-115);
+  --wa-checkbox-emphasized-text-gap-error-key-focus: var(--wa-size-115);
+  --wa-checkbox-emphasized-text-gap-error-selected-key-focus: var(--wa-size-115);
+  --wa-checkbox-emphasized-text-gap-error-indeterminate-key-focus: var(--wa-size-115);
   --wa-checkbox-emphasized-touch-hit-y: var(--wa-size-100);
   --wa-checkbox-quiet-text-gap-key-focus: var(--wa-size-115);
-  --wa-checkbox-quiet-text-gap-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-quiet-text-gap-indeterminate-key-focus: var(
-    --wa-size-115
-  );
+  --wa-checkbox-quiet-text-gap-selected-key-focus: var(--wa-size-115);
+  --wa-checkbox-quiet-text-gap-indeterminate-key-focus: var(--wa-size-115);
   --wa-checkbox-quiet-text-gap-error-key-focus: var(--wa-size-115);
-  --wa-checkbox-quiet-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-checkbox-quiet-text-gap-error-indeterminate-key-focus: var(
-    --wa-size-115
-  );
+  --wa-checkbox-quiet-text-gap-error-selected-key-focus: var(--wa-size-115);
+  --wa-checkbox-quiet-text-gap-error-indeterminate-key-focus: var(--wa-size-115);
   --wa-checkbox-quiet-touch-hit-y: var(--wa-size-100);
   --wa-circleloader-medium-border-size: 3px;
   --wa-circleloader-medium-over-background-border-size: 3px;
   --wa-circleloader-small-border-size: var(--wa-size-25);
-  --wa-circleloader-small-over-background-border-size: var(
-    --wa-size-25
-  );
+  --wa-circleloader-small-over-background-border-size: var(--wa-size-25);
   --wa-colorhandle-loupe-margin: var(--wa-size-125);
   --wa-colorloupe-colorhandle-gap: var(--wa-size-125);
   --wa-colorslider-touch-hit-y: var(--wa-global-dimension-size-150);
@@ -220,9 +184,7 @@
   --wa-dialog-destructive-title-text-size: var(--wa-global-dimension-font-size-300);
   --wa-dialog-destructive-description-text-size: var(--wa-global-dimension-font-size-100);
   --wa-dialog-destructive-padding: var(--wa-size-500);
-  --wa-dialog-destructive-description-margin-bottom: var(
-    --wa-size-600
-  );
+  --wa-dialog-destructive-description-margin-bottom: var(--wa-size-600);
   --wa-dialog-error-max-width: var(--wa-size-6000);
   --wa-dialog-error-title-text-size: var(--wa-global-dimension-font-size-300);
   --wa-dialog-error-description-text-size: var(--wa-global-dimension-font-size-100);
@@ -265,12 +227,8 @@
   --wa-listitem-option-icon-padding-y: var(--wa-size-125);
   --wa-listitem-thumbnail-option-icon-margin-top: var(--wa-size-65);
   --wa-listitem-thumbnail-option-icon-padding-y: var(--wa-size-125);
-  --wa-selectlist-thumbnail-small-option-icon-margin-top: var(
-    --wa-size-65
-  );
-  --wa-selectlist-thumbnail-small-option-icon-padding-y: var(
-    --wa-size-125
-  );
+  --wa-selectlist-thumbnail-small-option-icon-margin-top: var(--wa-size-65);
+  --wa-selectlist-thumbnail-small-option-icon-padding-y: var(--wa-size-125);
   --wa-selectlist-option-icon-size: var(--wa-size-150);
   --wa-selectlist-option-icon-padding-y: var(--wa-size-125);
   --wa-selectlist-option-icon-margin-top: var(--wa-size-65);
@@ -283,21 +241,15 @@
   */
   --wa-selectlist-option-padding-height: 7px;
   /* END RSP PATCH */
-  --wa-selectlist-thumbnail-option-icon-padding-y: var(
-    --wa-size-125
-  );
+  --wa-selectlist-thumbnail-option-icon-padding-y: var(--wa-size-125);
   --wa-loader-bar-large-border-radius: 3px;
   --wa-loader-bar-large-over-background-border-radius: 3px;
   --wa-loader-bar-small-border-radius: var(--wa-size-25);
-  --wa-loader-bar-small-over-background-border-radius: var(
-    --wa-size-25
-  );
+  --wa-loader-bar-small-over-background-border-radius: var(--wa-size-25);
   --wa-loader-circle-medium-border-size: 3px;
   --wa-loader-circle-medium-over-background-border-size: 3px;
   --wa-loader-circle-small-border-size: var(--wa-size-25);
-  --wa-loader-circle-small-over-background-border-size: var(
-    --wa-size-25
-  );
+  --wa-loader-circle-small-over-background-border-size: var(--wa-size-25);
   --wa-meter-large-border-radius: 3px;
   --wa-meter-small-border-radius: var(--wa-size-25);
   --wa-pagination-page-button-line-height: 26px;
@@ -316,21 +268,13 @@
   --wa-progressbar-large-indeterminate-border-radius: 3px;
   --wa-progressbar-large-over-background-border-radius: 3px;
   --wa-progressbar-small-border-radius: var(--wa-size-25);
-  --wa-progressbar-small-indeterminate-border-radius: var(
-    --wa-size-25
-  );
-  --wa-progressbar-small-over-background-border-radius: var(
-    --wa-size-25
-  );
+  --wa-progressbar-small-indeterminate-border-radius: var(--wa-size-25);
+  --wa-progressbar-small-over-background-border-radius: var(--wa-size-25);
   --wa-progresscircle-medium-border-size: 3px;
   --wa-progresscircle-medium-over-background-border-size: 3px;
   --wa-progresscircle-small-border-size: var(--wa-size-25);
-  --wa-progresscircle-small-indeterminate-border-size: var(
-    --wa-size-25
-  );
-  --wa-progresscircle-small-over-background-border-size: var(
-    --wa-size-25
-  );
+  --wa-progresscircle-small-indeterminate-border-size: var(--wa-size-25);
+  --wa-progresscircle-small-over-background-border-size: var(--wa-size-25);
   --wa-progresscircle-medium-indeterminate-border-size: 3px;
   --wa-radio-text-gap-key-focus: var(--wa-size-115);
   --wa-radio-text-gap-selected-key-focus: var(--wa-size-115);
@@ -339,23 +283,15 @@
   --wa-radio-margin-bottom: 0px;
   --wa-radio-touch-hit-y: var(--wa-size-100);
   --wa-radio-emphasized-text-gap-key-focus: var(--wa-size-115);
-  --wa-radio-emphasized-text-gap-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-radio-emphasized-text-gap-error-key-focus: var(
-    --wa-size-115
-  );
-  --wa-radio-emphasized-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
+  --wa-radio-emphasized-text-gap-selected-key-focus: var(--wa-size-115);
+  --wa-radio-emphasized-text-gap-error-key-focus: var(--wa-size-115);
+  --wa-radio-emphasized-text-gap-error-selected-key-focus: var(--wa-size-115);
   --wa-radio-emphasized-margin-bottom: 0px;
   --wa-radio-emphasized-touch-hit-y: var(--wa-size-100);
   --wa-radio-quiet-text-gap-key-focus: var(--wa-size-115);
   --wa-radio-quiet-text-gap-selected-key-focus: var(--wa-size-115);
   --wa-radio-quiet-text-gap-error-key-focus: var(--wa-size-115);
-  --wa-radio-quiet-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
+  --wa-radio-quiet-text-gap-error-selected-key-focus: var(--wa-size-115);
   --wa-radio-quiet-margin-bottom: 0px;
   --wa-radio-quiet-touch-hit-y: var(--wa-size-100);
   --wa-rating-icon-width: 24px;
@@ -384,9 +320,7 @@
   --wa-slider-fill-track-touch-hit-y: var(--wa-size-100);
   --wa-slider-fill-handle-touch-hit-x: var(--wa-size-200);
   --wa-slider-fill-handle-touch-hit-y: var(--wa-size-200);
-  --wa-switch-focus-ring-border-radius-key-focus: var(
-    --wa-size-130
-  );
+  --wa-switch-focus-ring-border-radius-key-focus: var(--wa-size-130);
   --wa-switch-text-gap-key-focus: var(--wa-size-115);
   --wa-switch-text-gap-selected-key-focus: var(--wa-size-115);
   --wa-switch-text-gap-error-key-focus: var(--wa-size-115);
@@ -399,31 +333,19 @@
   --wa-switch-handle-transform-x-rtl: -12px;
   /* END RSP PATCH */
   --wa-switch-touch-hit-y: var(--wa-size-100);
-  --wa-switch-emphasized-focus-ring-border-radius-key-focus: var(
-    --wa-size-130
-  );
+  --wa-switch-emphasized-focus-ring-border-radius-key-focus: var(--wa-size-130);
   --wa-switch-emphasized-text-gap-key-focus: var(--wa-size-115);
-  --wa-switch-emphasized-text-gap-selected-key-focus: var(
-    --wa-size-115
-  );
-  --wa-switch-emphasized-text-gap-error-key-focus: var(
-    --wa-size-115
-  );
-  --wa-switch-emphasized-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
+  --wa-switch-emphasized-text-gap-selected-key-focus: var(--wa-size-115);
+  --wa-switch-emphasized-text-gap-error-key-focus: var(--wa-size-115);
+  --wa-switch-emphasized-text-gap-error-selected-key-focus: var(--wa-size-115);
   --wa-switch-emphasized-track-width: 26px;
   --wa-switch-emphasized-handle-border-radius: 7px;
   --wa-switch-emphasized-touch-hit-y: var(--wa-size-100);
-  --wa-switch-quiet-focus-ring-border-radius-key-focus: var(
-    --wa-size-130
-  );
+  --wa-switch-quiet-focus-ring-border-radius-key-focus: var(--wa-size-130);
   --wa-switch-quiet-text-gap-key-focus: var(--wa-size-115);
   --wa-switch-quiet-text-gap-selected-key-focus: var(--wa-size-115);
   --wa-switch-quiet-text-gap-error-key-focus: var(--wa-size-115);
-  --wa-switch-quiet-text-gap-error-selected-key-focus: var(
-    --wa-size-115
-  );
+  --wa-switch-quiet-text-gap-error-selected-key-focus: var(--wa-size-115);
   --wa-switch-quiet-track-width: 26px;
   --wa-switch-quiet-handle-border-radius: 7px;
   --wa-switch-quiet-touch-hit-y: var(--wa-size-100);

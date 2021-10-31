@@ -33,8 +33,7 @@
   border-width: var(--wa-colorhandle-inner-border-size);
   border-style: solid;
 
-  background-size: var(--wa-size-200)
-    var(--wa-size-200);
+  background-size: var(--wa-size-200) var(--wa-size-200);
   background-position: var(--wa-colorhandle-background-offset)
       var(--wa-colorhandle-background-offset),
     var(--wa-colorhandle-background-offset)

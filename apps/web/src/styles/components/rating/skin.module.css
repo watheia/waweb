@@ -12,8 +12,7 @@ governing permissions and limitations under the License.
 
 .wa-Rating {
   &.is-focused {
-    box-shadow: 0 0 0 var(--wa-size-25)
-      var(--wa-rating-focus-ring-color);
+    box-shadow: 0 0 0 var(--wa-size-25) var(--wa-rating-focus-ring-color);
   }
 
   &:hover {

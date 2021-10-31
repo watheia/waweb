@@ -208,10 +208,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1 em {
-  font-size: var(
-    --wa-heading-1-emphasis-text-size,
-    var(--wa-heading-display2-margin-top)
-  );
+  font-size: var(--wa-heading-1-emphasis-text-size, var(--wa-heading-display2-margin-top));
   font-weight: var(--wa-heading-1-emphasis-text-font-weight, 700);
   line-height: var(--wa-heading-1-emphasis-text-line-height, 1.3);
   font-style: var(--wa-heading-1-emphasis-text-font-style, italic);
@@ -221,10 +218,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1 strong {
-  font-size: var(
-    --wa-heading-1-strong-text-size,
-    var(--wa-heading-display2-margin-top)
-  );
+  font-size: var(--wa-heading-1-strong-text-size, var(--wa-heading-display2-margin-top));
   font-weight: var(--wa-heading-1-strong-text-font-weight, 900);
   line-height: var(--wa-heading-1-strong-text-line-height, 1.3);
   font-style: var(--wa-heading-1-strong-text-font-style, normal);
@@ -462,10 +456,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1--quiet {
-  font-size: var(
-    --wa-heading-quiet-1-text-size,
-    var(--wa-heading-display2-margin-top)
-  );
+  font-size: var(--wa-heading-quiet-1-text-size, var(--wa-heading-display2-margin-top));
   font-weight: var(--wa-heading-quiet-1-text-font-weight, 300);
   line-height: var(--wa-heading-quiet-1-text-line-height, 1.3);
   font-style: var(--wa-heading-quiet-1-text-font-style, normal);
@@ -513,10 +504,7 @@
 }
 .wa-Heading2--quiet em,
 .wa-Heading--pageTitle em {
-  font-size: var(
-    --wa-heading-quiet-2-emphasis-text-size,
-    var(--wa-heading2-text-size)
-  );
+  font-size: var(--wa-heading-quiet-2-emphasis-text-size, var(--wa-heading2-text-size));
   font-weight: var(--wa-heading-quiet-2-emphasis-text-font-weight, 300);
   line-height: var(--wa-heading-quiet-2-emphasis-text-line-height, 1.3);
   font-style: var(--wa-heading-quiet-2-emphasis-text-font-style, italic);
@@ -537,10 +525,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1--strong {
-  font-size: var(
-    --wa-heading-strong-1-text-size,
-    var(--wa-heading-display2-margin-top)
-  );
+  font-size: var(--wa-heading-strong-1-text-size, var(--wa-heading-display2-margin-top));
   font-weight: var(--wa-heading-strong-1-text-font-weight, 900);
   line-height: var(--wa-heading-strong-1-text-line-height, 1.3);
   font-style: var(--wa-heading-strong-1-text-font-style, normal);
@@ -586,10 +571,7 @@
   margin-bottom: 0;
 }
 .wa-Heading2--strong em {
-  font-size: var(
-    --wa-heading-strong-2-emphasis-text-size,
-    var(--wa-heading2-text-size)
-  );
+  font-size: var(--wa-heading-strong-2-emphasis-text-size, var(--wa-heading2-text-size));
   font-weight: var(--wa-heading-strong-2-emphasis-text-font-weight, 900);
   line-height: var(--wa-heading-strong-2-emphasis-text-line-height, 1.3);
   font-style: var(--wa-heading-strong-2-emphasis-text-font-style, italic);
@@ -599,10 +581,7 @@
   margin-bottom: 0;
 }
 .wa-Heading2--strong strong {
-  font-size: var(
-    --wa-heading-strong-2-strong-text-size,
-    var(--wa-heading2-text-size)
-  );
+  font-size: var(--wa-heading-strong-2-strong-text-size, var(--wa-heading2-text-size));
   font-weight: var(--wa-heading-strong-2-strong-text-font-weight, 900);
   line-height: var(--wa-heading-strong-2-strong-text-line-height, 1.3);
   font-style: var(--wa-heading-strong-2-strong-text-font-style, normal);
@@ -622,10 +601,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1--display em {
-  font-size: var(
-    --wa-display-1-emphasis-text-size,
-    var(--wa-heading-display1-text-size)
-  );
+  font-size: var(--wa-display-1-emphasis-text-size, var(--wa-heading-display1-text-size));
   font-weight: var(--wa-display-1-emphasis-text-font-weight, 700);
   line-height: var(--wa-display-1-emphasis-text-line-height, 1.3);
   font-style: var(--wa-display-1-emphasis-text-font-style, italic);
@@ -635,10 +611,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1--display strong {
-  font-size: var(
-    --wa-display-1-strong-text-size,
-    var(--wa-heading-display1-text-size)
-  );
+  font-size: var(--wa-display-1-strong-text-size, var(--wa-heading-display1-text-size));
   font-weight: var(--wa-display-1-strong-text-font-weight, 900);
   line-height: var(--wa-display-1-strong-text-line-height, 1.3);
   font-style: var(--wa-display-1-strong-text-font-style, normal);
@@ -658,10 +631,7 @@
   margin-bottom: 0;
 }
 .wa-Heading2--display em {
-  font-size: var(
-    --wa-display-2-emphasis-text-size,
-    var(--wa-heading-display1-margin-top)
-  );
+  font-size: var(--wa-display-2-emphasis-text-size, var(--wa-heading-display1-margin-top));
   font-weight: var(--wa-display-2-emphasis-text-font-weight, 700);
   line-height: var(--wa-display-2-emphasis-text-line-height, 1.3);
   font-style: var(--wa-display-2-emphasis-text-font-style, italic);
@@ -671,10 +641,7 @@
   margin-bottom: 0;
 }
 .wa-Heading2--display strong {
-  font-size: var(
-    --wa-display-2-strong-text-size,
-    var(--wa-heading-display1-margin-top)
-  );
+  font-size: var(--wa-display-2-strong-text-size, var(--wa-heading-display1-margin-top));
   font-weight: var(--wa-display-2-strong-text-font-weight, 900);
   line-height: var(--wa-display-2-strong-text-line-height, 1.3);
   font-style: var(--wa-display-2-strong-text-font-style, normal);
@@ -684,10 +651,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1--display.wa-Heading1--strong {
-  font-size: var(
-    --wa-display-strong-1-text-size,
-    var(--wa-heading-display1-text-size)
-  );
+  font-size: var(--wa-display-strong-1-text-size, var(--wa-heading-display1-text-size));
   font-weight: var(--wa-display-strong-1-text-font-weight, 900);
   line-height: var(--wa-display-strong-1-text-line-height, 1.3);
   font-style: var(--wa-display-strong-1-text-font-style, normal);
@@ -723,10 +687,7 @@
   margin-bottom: 0;
 }
 .wa-Heading2--display.wa-Heading2--strong {
-  font-size: var(
-    --wa-display-strong-2-text-size,
-    var(--wa-heading-display1-margin-top)
-  );
+  font-size: var(--wa-display-strong-2-text-size, var(--wa-heading-display1-margin-top));
   font-weight: var(--wa-display-strong-2-text-font-weight, 900);
   line-height: var(--wa-display-strong-2-text-line-height, 1.3);
   font-style: var(--wa-display-strong-2-text-font-style, normal);
@@ -762,10 +723,7 @@
   margin-bottom: 0;
 }
 .wa-Heading1--display.wa-Heading1--quiet {
-  font-size: var(
-    --wa-display-quiet-1-text-size,
-    var(--wa-heading-display1-text-size)
-  );
+  font-size: var(--wa-display-quiet-1-text-size, var(--wa-heading-display1-text-size));
   font-weight: var(--wa-display-quiet-1-text-font-weight, 300);
   line-height: var(--wa-display-quiet-1-text-line-height, 1.3);
   font-style: var(--wa-display-quiet-1-text-font-style, normal);
@@ -802,10 +760,7 @@
 }
 .wa-Heading2--display.wa-Heading2--quiet,
 .wa-Heading--display {
-  font-size: var(
-    --wa-display-quiet-2-text-size,
-    var(--wa-heading-display1-margin-top)
-  );
+  font-size: var(--wa-display-quiet-2-text-size, var(--wa-heading-display1-margin-top));
   font-weight: var(--wa-display-quiet-2-text-font-weight, 300);
   line-height: var(--wa-display-quiet-2-text-line-height, 1.3);
   font-style: var(--wa-display-quiet-2-text-font-style, normal);
@@ -938,30 +893,21 @@
   margin-bottom: var(--wa-display-2-margin-bottom, var(--wa-global-dimension-size-125));
 }
 .wa-Typography .wa-Heading1--display.wa-Heading1--strong {
-  margin-top: var(
-    --wa-display-strong-1-margin-top,
-    var(--wa-heading-display1-margin-top)
-  );
+  margin-top: var(--wa-display-strong-1-margin-top, var(--wa-heading-display1-margin-top));
   margin-bottom: var(
     --wa-display-strong-1-margin-bottom,
     var(--wa-global-dimension-size-130)
   );
 }
 .wa-Typography .wa-Heading2--display.wa-Heading2--strong {
-  margin-top: var(
-    --wa-display-strong-2-margin-top,
-    var(--wa-heading-display2-margin-top)
-  );
+  margin-top: var(--wa-display-strong-2-margin-top, var(--wa-heading-display2-margin-top));
   margin-bottom: var(
     --wa-display-strong-2-margin-bottom,
     var(--wa-global-dimension-size-125)
   );
 }
 .wa-Typography .wa-Heading1--display.wa-Heading1--quiet {
-  margin-top: var(
-    --wa-display-quiet-1-margin-top,
-    var(--wa-heading-display1-margin-top)
-  );
+  margin-top: var(--wa-display-quiet-1-margin-top, var(--wa-heading-display1-margin-top));
   margin-bottom: var(
     --wa-display-quiet-1-margin-bottom,
     var(--wa-global-dimension-size-130)
@@ -969,10 +915,7 @@
 }
 .wa-Typography .wa-Heading2--display.wa-Heading2--quiet,
 .wa-Typography .wa-Heading--display {
-  margin-top: var(
-    --wa-display-quiet-2-margin-top,
-    var(--wa-heading-display2-margin-top)
-  );
+  margin-top: var(--wa-display-quiet-2-margin-top, var(--wa-heading-display2-margin-top));
   margin-bottom: var(
     --wa-display-quiet-2-margin-bottom,
     var(--wa-global-dimension-size-125)
@@ -1171,10 +1114,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading1 {
-  font-size: var(
-    --wa-heading-article-1-text-size,
-    var(--wa-heading-display2-margin-top)
-  );
+  font-size: var(--wa-heading-article-1-text-size, var(--wa-heading-display2-margin-top));
   font-weight: var(--wa-heading-article-1-text-font-weight, 700);
   line-height: var(--wa-heading-article-1-text-line-height, 1.3);
   font-style: var(--wa-heading-article-1-text-font-style, normal);
@@ -1220,10 +1160,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading2 em {
-  font-size: var(
-    --wa-heading-article-2-emphasis-text-size,
-    var(--wa-heading2-text-size)
-  );
+  font-size: var(--wa-heading-article-2-emphasis-text-size, var(--wa-heading2-text-size));
   font-weight: var(--wa-heading-article-2-emphasis-text-font-weight, 700);
   line-height: var(--wa-heading-article-2-emphasis-text-line-height, 1.3);
   font-style: var(--wa-heading-article-2-emphasis-text-font-style, italic);
@@ -1233,10 +1170,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading2 strong {
-  font-size: var(
-    --wa-heading-article-2-strong-text-size,
-    var(--wa-heading2-text-size)
-  );
+  font-size: var(--wa-heading-article-2-strong-text-size, var(--wa-heading2-text-size));
   font-weight: var(--wa-heading-article-2-strong-text-font-weight, 900);
   line-height: var(--wa-heading-article-2-strong-text-line-height, 1.3);
   font-style: var(--wa-heading-article-2-strong-text-font-style, normal);
@@ -1256,10 +1190,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading3 em {
-  font-size: var(
-    --wa-heading-article-3-emphasis-text-size,
-    var(--wa-heading3-text-size)
-  );
+  font-size: var(--wa-heading-article-3-emphasis-text-size, var(--wa-heading3-text-size));
   font-weight: var(--wa-heading-article-3-emphasis-text-font-weight, 700);
   line-height: var(--wa-heading-article-3-emphasis-text-line-height, 1.3);
   font-style: var(--wa-heading-article-3-emphasis-text-font-style, italic);
@@ -1269,10 +1200,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading3 strong {
-  font-size: var(
-    --wa-heading-article-3-strong-text-size,
-    var(--wa-heading3-text-size)
-  );
+  font-size: var(--wa-heading-article-3-strong-text-size, var(--wa-heading3-text-size));
   font-weight: var(--wa-heading-article-3-strong-text-font-weight, 900);
   line-height: var(--wa-heading-article-3-strong-text-line-height, 1.3);
   font-style: var(--wa-heading-article-3-strong-text-font-style, normal);
@@ -1520,10 +1448,7 @@
 }
 .wa-Article .wa-Heading2--quiet,
 .wa-Article .wa-Heading--pageTitle {
-  font-size: var(
-    --wa-heading-quiet-article-2-text-size,
-    var(--wa-heading2-text-size)
-  );
+  font-size: var(--wa-heading-quiet-article-2-text-size, var(--wa-heading2-text-size));
   font-weight: var(--wa-heading-quiet-article-2-text-font-weight, 400);
   line-height: var(--wa-heading-quiet-article-2-text-line-height, 1.3);
   font-style: var(--wa-heading-quiet-article-2-text-font-style, normal);
@@ -1561,10 +1486,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading1--display {
-  font-size: var(
-    --wa-display-article-1-text-size,
-    var(--wa-heading-display1-text-size)
-  );
+  font-size: var(--wa-display-article-1-text-size, var(--wa-heading-display1-text-size));
   font-weight: var(--wa-display-article-1-text-font-weight, 700);
   line-height: var(--wa-display-article-1-text-line-height, 1.3);
   font-style: var(--wa-display-article-1-text-font-style, normal);
@@ -1600,10 +1522,7 @@
   margin-bottom: 0;
 }
 .wa-Article .wa-Heading2--display {
-  font-size: var(
-    --wa-display-article-2-text-size,
-    var(--wa-heading-display1-margin-top)
-  );
+  font-size: var(--wa-display-article-2-text-size, var(--wa-heading-display1-margin-top));
   font-weight: var(--wa-display-article-2-text-font-weight, 700);
   line-height: var(--wa-display-article-2-text-line-height, 1.3);
   font-style: var(--wa-display-article-2-text-font-style, normal);
@@ -2913,54 +2832,17 @@
   margin-bottom: 0;
 }
 .wa-Code5 strong {
+  letter-spacing: var(--wa-body-code-5-strong-text-letter-spacing, 0);
+  margin-top: 0;
   font-size: var(--wa-body-code-5-strong-text-size, var(--wa-global-dimension-size-150));
   font-weight: var(--wa-body-code-5-strong-text-font-weight, 700);
   line-height: var(--wa-body-code-5-strong-text-line-height, 1.5);
   font-style: var(--wa-body-code-5-strong-text-font-style, normal);
-  letter-spacing: var(--wa-body-code-5-strong-text-letter-spacing, 0);
-  margin-top: 0;
   margin-bottom: 0;
 }
-/* topdoc
-{{ typography/typography-default.yml }}
-*/
-/* topdoc
-{{ typography/typography-deprecated.yml }}
-*/
-/* topdoc
-{{ typography/typography-article.yml }}
-*/
-/* topdoc
-{{ typography/typography-han.yml }}
-*/
-/* topdoc
-{{ typography/typography-heading.yml }}
-*/
-/* topdoc
-{{ typography/typography-heading-quiet.yml }}
-*/
-/* topdoc
-{{ typography/typography-heading-strong.yml }}
-*/
-/* topdoc
-{{ typography/typography-display.yml }}
-*/
-/* topdoc
-{{ typography/typography-display-quiet.yml }}
-*/
-/* topdoc
-{{ typography/typography-display-strong.yml }}
-*/
-/* topdoc
-{{ typography/typography-body.yml }}
-*/
-/* topdoc
-{{ typography/typography-code.yml }}
-*/
-/*
-  The &.wa makes it so users can do <div class="wa wa--large"> and still get the right font sizes
-  Without this, they would have to do <div class="wa--large"><div class="wa">, which makes no sense
-*/
+
+/* The &.wa makes it so users can do <div class="wa wa--large"> and still get the right font sizes
+   Without this, they would have to do <div class="wa--large"><div class="wa">, which makes no sense */
 &.wa,
 &.wa-Body,
 .wa,
@@ -3269,7 +3151,6 @@
 .wa-Code5 {
   color: var(--wa-body-code-5-text-color, var(--wa-global-color-gray-800));
 }
-&,
 .wa-Body {
   color: var(--wa-body-text-color, var(--wa-global-color-gray-800));
 }
