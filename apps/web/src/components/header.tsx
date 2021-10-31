@@ -91,7 +91,7 @@ const blogPosts = [
 
 export const Header = () => {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative bg-teal-100">
       <div
         className="absolute inset-0 shadow z-30 pointer-events-none"
         aria-hidden="true"
@@ -118,7 +118,7 @@ export const Header = () => {
                     <Popover.Button
                       className={clsx(
                         open ? "text-gray-900" : "text-gray-500",
-                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                        "group bg-teal-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                       )}
                     >
                       <span>Solutions</span>
@@ -202,7 +202,7 @@ export const Header = () => {
                     <Popover.Button
                       className={clsx(
                         open ? "text-gray-900" : "text-gray-500",
-                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                        "group bg-teal-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                       )}
                     >
                       <span>More</span>

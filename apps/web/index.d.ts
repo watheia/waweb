@@ -4,3 +4,9 @@ declare module "*.svg" {
   export const ReactComponent: any
   export default content
 }
+
+declare module "*.module.css" {
+  const content: any
+  export const CSSModule: any
+  export default content
+}
