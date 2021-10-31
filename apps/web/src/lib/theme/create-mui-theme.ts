@@ -10,7 +10,7 @@ export const createMuiTheme = (mode: ColorScheme) =>
       palette: mode === "light" ? light : dark,
       typography: {
         fontFamily: [
-          "Adobe Clean",
+          "adobe-clean",
           "-apple-system",
           "BlinkMacSystemFont",
           '"Segoe UI"',

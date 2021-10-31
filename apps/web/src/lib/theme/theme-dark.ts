@@ -10,11 +10,11 @@
  * governing permissions and limitations under the License.
  */
 
-import dark from "apps/web/src/styles/vars/spectrum-dark.module.css"
-import darkest from "apps/web/src/styles/vars/spectrum-darkest.module.css"
-import global from "apps/web/src/styles/vars/spectrum-global.module.css"
-import large from "apps/web/src/styles/vars/spectrum-large.module.css"
-import medium from "apps/web/src/styles/vars/spectrum-medium.module.css"
+import dark from "apps/web/src/styles/vars/wa-dark.module.css"
+import darkest from "apps/web/src/styles/vars/wa-darkest.module.css"
+import global from "apps/web/src/styles/vars/wa-global.module.css"
+import large from "apps/web/src/styles/vars/wa-large.module.css"
+import medium from "apps/web/src/styles/vars/wa-medium.module.css"
 import { Theme } from "./types"
 
 export const theme: Theme = {
