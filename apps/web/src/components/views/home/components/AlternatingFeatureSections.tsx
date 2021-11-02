@@ -1,6 +1,7 @@
 import React from "react"
 import { InboxIcon, SparklesIcon } from "@heroicons/react/solid"
 import NavLink from "apps/web/src/components/nav-link"
+import Image from "next/image"
 
 const AlternatingFeatureSections = () => (
   <div className="relative pt-16 pb-32 overflow-hidden">
@@ -47,7 +48,7 @@ const AlternatingFeatureSections = () => (
               <footer className="mt-3">
                 <div className="flex items-center space-x-3">
                   <div className="flex-shrink-0">
-                    <img
+                    <Image
                       className="h-6 w-6 rounded-full"
                       src="/images/photo-1509783236416-c9ad59bae472.jpg"
                       alt=""
@@ -63,7 +64,7 @@ const AlternatingFeatureSections = () => (
         </div>
         <div className="mt-12 sm:mt-16 lg:mt-0">
           <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-            <img
+            <Image
               className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
               src="/images/inbox-app-screenshot-1.jpg"
               alt="Inbox user interface"
@@ -103,7 +104,7 @@ const AlternatingFeatureSections = () => (
         </div>
         <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
           <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-            <img
+            <Image
               className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
               src="/images/inbox-app-screenshot-2.jpg"
               alt="Customer profile user interface"

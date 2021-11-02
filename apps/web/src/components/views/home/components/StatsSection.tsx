@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export const metrics = [
   {
     id: 1,
@@ -25,7 +27,7 @@ const StatsSection = (pr) => (
     <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
       <div className="h-full w-full xl:grid xl:grid-cols-2">
         <div className="h-full xl:relative xl:col-start-2">
-          <img
+          <Image
             className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
             src="/images/photo-1521737852567-6949f3f9f2b5-2.jpg"
             alt="People working on laptops"

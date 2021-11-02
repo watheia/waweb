@@ -10,6 +10,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: true
   },
+  images: {
+    domains: ["cdn.watheia.org", "www.datocms-assets.com"]
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // config.module.rules.push({
     //   test: /\.module\.css/,
