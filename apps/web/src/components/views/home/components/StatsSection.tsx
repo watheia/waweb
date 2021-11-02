@@ -42,7 +42,7 @@ const StatsSection = (pr) => (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
       <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
         <h2 className="text-sm font-semibold tracking-wide uppercase">
-          <span className="bg-gradient-to-r from-teal-300 to-teal-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-teal-50 to-teal-300 bg-clip-text text-transparent">
             Valuable Metrics
           </span>
         </h2>
@@ -57,10 +57,11 @@ const StatsSection = (pr) => (
         </p>
         <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
           {metrics.map((item) => (
-            <p key={item.id}>
-              <span className="block text-2xl font-bold text-white">{item.stat}</span>
-              <span className="mt-1 block text-base text-gray-300">
-                <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
+            <p key={item.id} className="text-white">
+              <span className="block text-2xl font-bold text-gray-100">{item.stat}</span>
+              <span className="mt-1 block text-gray-300">
+                <span className="font-medium text-gray-100">{item.emphasis}</span>{" "}
+                {item.rest}
               </span>
             </p>
           ))}
