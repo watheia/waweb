@@ -11,7 +11,7 @@ const nextConfig = {
     svgr: true
   },
   images: {
-    domains: ["cdn.watheia.org", "www.datocms-assets.com"]
+    domains: ["cdn.watheia.org", "datocms-assets.com"]
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // config.module.rules.push({

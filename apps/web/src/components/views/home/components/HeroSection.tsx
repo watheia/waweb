@@ -1,7 +1,7 @@
 import React from "react"
 import NavLink from "apps/web/src/components/nav-link"
-import coverImage from "apps/web/public/images/photo-1521737852567-6949f3f9f2b5.jpg"
-import Image from "next/image"
+// import coverImage from "apps/web/public/images/photo-1521737852567-6949f3f9f2b5.jpg"
+// import Image from "next/image"
 
 const HeroSection = () => (
   <div className="relative">
@@ -9,9 +9,9 @@ const HeroSection = () => (
     <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <img
             className="h-full w-full object-cover"
-            src={coverImage}
+            src="/images/photo-1521737852567-6949f3f9f2b5.jpg"
             alt="People working on laptops"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-teal-800 to-teal-600 mix-blend-multiply" />
