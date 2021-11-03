@@ -1,10 +1,10 @@
-import client from "../supabaseClient"
+import { supabase } from "@watheia/app.context"
 
 export default async function getOwnProfile(): Promise<any> {
   try {
-    const user = client.auth.user()
+    const user = supabase.auth.user()
 
-    const { data, error } = await client
+    const { data, error } = await supabase
       .from("profiles")
       .select(`username, website, avatar_url`)
       .eq("id", user?.id)

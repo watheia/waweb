@@ -23,10 +23,12 @@ import GradientFeatureSection from "./components/GradientFeatureSection"
 import StatsSection from "./components/StatsSection"
 import CTASection from "./components/CTASection"
 import styles from "./Home.module.css"
+import clsx from "clsx"
 
 export default function Home() {
+  const className = clsx(styles.page, "mt-0 sm:mt-2 md:mt-4")
   return (
-    <div className={styles.page}>
+    <div className={className}>
       <HeroSection />
       <LogoCloud />
       <AlternatingFeatureSections />

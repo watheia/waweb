@@ -10,11 +10,11 @@
  * governing permissions and limitations under the License.
  */
 
-import darkest from "apps/web/src/styles/vars/wa-darkest.module.css"
-import global from "apps/web/src/styles/vars/wa-global.module.css"
-import large from "apps/web/src/styles/vars/wa-large.module.css"
-import lightest from "apps/web/src/styles/vars/wa-lightest.module.css"
-import medium from "apps/web/src/styles/vars/wa-medium.module.css"
+import darkest from "../styles/vars/wa-darkest.module.css"
+import global from "../styles/vars/wa-global.module.css"
+import large from "../styles/vars/wa-large.module.css"
+import lightest from "../styles/vars/wa-lightest.module.css"
+import medium from "../styles/vars/wa-medium.module.css"
 import { Theme } from "./types"
 
 export const theme: Theme = {

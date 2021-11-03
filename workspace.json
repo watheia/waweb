@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "app-context": "libs/app/context",
+    "app-model": "libs/app/model",
+    "app-theme": "libs/app/theme",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

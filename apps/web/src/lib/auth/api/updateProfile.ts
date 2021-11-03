@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { supabase } from "../supabaseClient"
+import { supabase } from "@watheia/app.context"
+
 export default async function updateProfile({ username, website }) {
   const [isLoading, setLoading] = useState<boolean>(false)
   try {

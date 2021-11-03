@@ -1,8 +1,8 @@
-import client from "../supabaseClient"
+import { supabase } from "@watheia/app.context"
 
 export async function signIn(email: string) {
   try {
-    const { error, user } = await client.auth.signIn({ email })
+    const { error, user } = await supabase.auth.signIn({ email })
     if (error) throw error
     console.log("user", user)
     alert("Check your email for the login link!")

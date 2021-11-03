@@ -1,7 +1,6 @@
 import { DEFAULT_AVATARS_BUCKET } from "../../../constants"
 import { ChangeEvent, useState } from "react"
-// import { AsyncStatus } from "@watheia/catalog"
-import client from "../supabaseClient"
+import { supabase } from "@watheia/app.context"
 
 export type AsyncStatus = "idle" | "pending" | "error" | "result"
 
@@ -21,14 +20,14 @@ export async function useAvatar(
       throw new Error("You must select an image to upload.")
     }
 
-    const user = client.auth.user()
+    const user = supabase.auth.user()
     if (!user) throw new Error("principal user not found. Did your login session expire?")
     const file = event.target.files[0]
     const fileExt = file.name.split(".").pop()
     const fileName = `${user.id}${Math.random()}.${fileExt}`
     const filePath = `${fileName}`
 
-    const { error: uploadError } = await client.storage
+    const { error: uploadError } = await supabase.storage
       .from(DEFAULT_AVATARS_BUCKET)
       .upload(filePath, file)
 
@@ -36,7 +35,7 @@ export async function useAvatar(
       throw uploadError
     }
 
-    const { error: updateError } = await client.from("profiles").upsert({
+    const { error: updateError } = await supabase.from("profiles").upsert({
       id: user.id,
       avatar_url: filePath
     })

@@ -1,10 +1,10 @@
-import client from "../supabaseClient"
+import { supabase } from "@watheia/app.context"
 
 export default async function getPublicProfiles(): Promise<any[]> {
   try {
-    if (!client) throw new Error("client uninitialized")
+    if (!supabase) throw new Error("supabase uninitialized")
 
-    const { data, error } = await client
+    const { data, error } = await supabase
       .from<any>("profiles")
       .select("id, username, avatar_url, website, updated_at")
       .order("updated_at", { ascending: false })

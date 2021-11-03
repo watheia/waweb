@@ -27,12 +27,18 @@ import { filterDOMProps } from "@react-aria/utils"
 import { I18nProvider, useLocale } from "@react-aria/i18n"
 import { ModalProvider, useModalProvider } from "@react-aria/overlays"
 import React, { useContext, useEffect, useRef } from "react"
-import { useColorScheme, useScale } from "../lib/theme"
-import { Breakpoints, Theme, ColorScheme, Scale } from "../lib/theme"
-// @ts-ignore
+import {
+  DEFAULT_BREAKPOINTS,
+  Breakpoints,
+  Theme,
+  ColorScheme,
+  Scale,
+  useColorScheme,
+  useScale,
+  createMuiTheme
+} from "@watheia/app.theme"
+
 import pkg from "package.json"
-import { createMuiTheme } from "apps/web/src/lib/theme"
-import { DEFAULT_BREAKPOINTS } from "../constants"
 
 import styles from "apps/web/src/styles/components/typography/index.module.css"
 
