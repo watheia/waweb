@@ -30,13 +30,13 @@ const HeroSection = () => (
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <NavLink
                 to="/contact/#waitlist"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-700 bg-white hover:bg-teal-200 sm:px-8"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-teal-700 bg-white hover:bg-opacity-80 sm:px-8"
               >
                 Join Waitlist
               </NavLink>
               <a
                 href="/solutions/"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-500 bg-opacity-70 hover:bg-opacity-100 sm:px-8"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-teal-500 bg-opacity-100 hover:bg-opacity-80 sm:px-8"
               >
                 Learn More
               </a>

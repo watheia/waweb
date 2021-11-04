@@ -13,7 +13,7 @@ import clsx from "clsx"
  * @returns
  */
 function isActive(activePath: string, href: string): boolean {
-  if (activePath === "/") return href === "/"
+  if (!activePath || activePath === "/") return href === "/"
   else return href !== "/" && activePath.startsWith(href)
 }
 

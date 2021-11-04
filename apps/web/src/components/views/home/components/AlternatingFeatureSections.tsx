@@ -1,6 +1,7 @@
 import React from "react"
 import { InboxIcon, SparklesIcon } from "@heroicons/react/solid"
 import NavLink from "apps/web/src/components/nav-link"
+import Link from "next/link"
 
 const AlternatingFeatureSections = () => (
   <div className="relative pt-16 pb-32 overflow-hidden">
@@ -27,12 +28,11 @@ const AlternatingFeatureSections = () => (
                 market with next-gen skills that haven't even made it into the lesson plans.
               </p>
               <div className="mt-6">
-                <NavLink
-                  to="/contact/#waitlist"
-                  className="inline-flex bg-gradient-to-r from-teal-400 to-teal-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-teal-900 hover:to-teal-700"
-                >
-                  Join Waitlist
-                </NavLink>
+                <Link href="/contact/#waitlist">
+                  <a className="inline-flex bg-gray-100 hover:text-white hover:bg-gray-700 border-2 border-gray-700 px-4 py-2 border border-transparent text-base font-medium rounded-full shadow-sm">
+                    Join Waitlist
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
