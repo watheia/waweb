@@ -2,11 +2,17 @@
 import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
-import { PlusSmIcon } from "@heroicons/react/solid"
+import { TabNav } from "./tab-nav"
+import clsx from "clsx"
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
+const navigation = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Blog", href: "/blog" }
+]
+
+
 
 export default function Header() {
   return (
@@ -39,33 +45,10 @@ export default function Header() {
                     alt="Workflow"
                   />
                 </div>
-                <div className="hidden md:ml-6 md:flex md:space-x-8">
-                  {/* Current: "border-teal-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <a
-                    href="#"
-                    className="border-teal-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    About
-                  </a>
-                  <a
-                    href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    Solutions
-                  </a>
-                  <a
-                    href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    Blog
-                  </a>
-                </div>
+                <TabNav
+                  className="hidden md:ml-6 md:flex md:space-x-8"
+                  items={navigation}
+                />
               </div>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
@@ -111,7 +94,7 @@ export default function Header() {
                           {({ active }) => (
                             <a
                               href="#"
-                              className={classNames(
+                              className={clsx(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
@@ -124,7 +107,7 @@ export default function Header() {
                           {({ active }) => (
                             <a
                               href="#"
-                              className={classNames(
+                              className={clsx(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
@@ -137,7 +120,7 @@ export default function Header() {
                           {({ active }) => (
                             <a
                               href="#"
-                              className={classNames(
+                              className={clsx(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
