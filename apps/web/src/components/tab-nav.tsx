@@ -46,8 +46,8 @@ export const TabNav = ({ items, ...props }: TabNavProps) => {
   const activePath = router?.asPath ?? "/"
   return (
     <div {...props}>
-      {items.map((it) => (
-        <Tab {...it} active={isActive(activePath, it.href)} />
+      {items.map((it, i) => (
+        <Tab key={i} {...it} active={isActive(activePath, it.href)} />
       ))}
     </div>
   )
