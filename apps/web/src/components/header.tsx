@@ -3,6 +3,7 @@ import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { TabNav } from "./tab-nav"
+import { MenuNav } from "./menu-nav"
 import clsx from "clsx"
 
 const navigation = [
@@ -11,8 +12,6 @@ const navigation = [
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" }
 ]
-
-
 
 export default function Header() {
   return (
@@ -138,37 +137,7 @@ export default function Header() {
           </div>
 
           <Disclosure.Panel className="md:hidden">
-            <div className="pt-2 pb-3 space-y-1">
-              {/* Current: "bg-teal-50 border-teal-500 text-teal-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="bg-teal-50 border-teal-500 text-teal-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-              >
-                Home
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-              >
-                About
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-              >
-                Solutions
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-              >
-                Blog
-              </Disclosure.Button>
-            </div>
+            <MenuNav items={navigation} className="pt-2 pb-3 space-y-1"></MenuNav>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-4 sm:px-6">
                 <div className="flex-shrink-0">

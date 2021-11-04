@@ -1,5 +1,6 @@
 import React, { HtmlHTMLAttributes } from "react"
 import Link from "next/link"
+import { Disclosure } from "@headlessui/react"
 import { useRouter } from "next/router"
 import clsx from "clsx"
 
@@ -17,37 +18,37 @@ function isActive(activePath: string, href: string): boolean {
   else return href !== "/" && activePath.startsWith(href)
 }
 
-export interface TabItem {
+export interface MenuItem {
   label: string
   href: string
   active?: boolean
 }
 
-export type TabNavProps = {
-  items: TabItem[]
+export type MenuNavProps = {
+  items: MenuItem[]
 } & HtmlHTMLAttributes<HTMLDivElement>
 
-const Tab = ({ href, label, active = false }: TabItem) => {
+const Menu = ({ href, label, active = false }: MenuItem) => {
   const className = clsx(
     active
-      ? "border-teal-500 text-gray-900"
-      : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
-    "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+      ? "bg-teal-50 border-teal-500 text-teal-700"
+      : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700",
+    "block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
   )
   return (
-    <Link href={href}>
+    <Disclosure.Button as={Link} href={href}>
       <a className={className}>{label}</a>
-    </Link>
+    </Disclosure.Button>
   )
 }
 
-export const TabNav = ({ items, ...props }: TabNavProps) => {
+export const MenuNav = ({ items, ...props }: MenuNavProps) => {
   const router = useRouter()
   const activePath = router?.asPath ?? "/"
   return (
     <div {...props}>
       {items.map((it, i) => (
-        <Tab key={i} {...it} active={isActive(activePath, it.href)} />
+        <Menu key={i} {...it} active={isActive(activePath, it.href)} />
       ))}
     </div>
   )
