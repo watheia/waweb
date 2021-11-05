@@ -5,6 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { TabNav } from "./tab-nav"
 import { MenuNav } from "./menu-nav"
 import { useAuth } from "@watheia/context"
+import Link from "next/link"
 import clsx from "clsx"
 
 const navigation = [
@@ -13,6 +14,72 @@ const navigation = [
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" }
 ]
+
+const UserMenu = () => (
+  <Menu as="div" className="ml-3 relative">
+    <div>
+      <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+        <span className="sr-only">Open user menu</span>
+        <img
+          className="h-8 w-8 rounded-full"
+          src="https://cdn.watheia.org/assets/icon.png"
+          alt=""
+        />
+      </Menu.Button>
+    </div>
+    <Transition
+      as={Fragment}
+      enter="transition ease-out duration-200"
+      enterFrom="transform opacity-0 scale-95"
+      enterTo="transform opacity-100 scale-100"
+      leave="transition ease-in duration-75"
+      leaveFrom="transform opacity-100 scale-100"
+      leaveTo="transform opacity-0 scale-95"
+    >
+      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+        <Menu.Item disabled>
+          {({ active }) => (
+            <a
+              href="#"
+              className={clsx(
+                active ? "bg-gray-100" : "",
+                "block px-4 py-2 text-sm text-gray-700"
+              )}
+            >
+              Your Profile
+            </a>
+          )}
+        </Menu.Item>
+        <Menu.Item disabled>
+          {({ active }) => (
+            <a
+              href="#"
+              className={clsx(
+                active ? "bg-gray-100" : "",
+                "block px-4 py-2 text-sm text-gray-700"
+              )}
+            >
+              Settings
+            </a>
+          )}
+        </Menu.Item>
+        <Menu.Item>
+          {({ active }) => (
+            <a
+              href="#"
+              className={clsx(
+                active ? "bg-gray-100" : "",
+                "block px-4 py-2 text-sm text-gray-700"
+              )}
+            >
+              Sign out
+            </a>
+          )}
+        </Menu.Item>
+      </Menu.Items>
+    </Transition>
+  </Menu>
+)
 
 export default function Header(props: any) {
   // console.log("Header(props)", props)
@@ -63,78 +130,26 @@ export default function Header(props: any) {
                   </button>
                 </div>
                 <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
-                  <button
-                    type="button"
-                    className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
+                  {user ? (
+                    <>
+                      <button
+                        type="button"
+                        className="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                      >
+                        <span className="sr-only">View notifications</span>
+                        <BellIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
 
-                  {/* Profile dropdown */}
-                  <Menu as="div" className="ml-3 relative">
-                    <div>
-                      <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
-                        <span className="sr-only">Open user menu</span>
-                        <img
-                          className="h-8 w-8 rounded-full"
-                          src="https://cdn.watheia.org/assets/icon.png"
-                          alt=""
-                        />
-                      </Menu.Button>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-200"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                        <Menu.Item disabled>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={clsx(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Your Profile
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item disabled>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={clsx(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Settings
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={clsx(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Sign out
-                            </a>
-                          )}
-                        </Menu.Item>
-                      </Menu.Items>
-                    </Transition>
-                  </Menu>
+                      {/* Profile dropdown */}
+                      <UserMenu />
+                    </>
+                  ) : (
+                    <Link href="/auth">
+                      <a className="p-2 text-gray-400 hover:text-gray-700 rounded-full hover:font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                        Sign in
+                      </a>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

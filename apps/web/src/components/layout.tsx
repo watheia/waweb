@@ -12,7 +12,7 @@ export function Layout({ children, className, preview = false, ...props }: Layou
   return (
     <>
       <Meta />
-      <div className={clsx(className)} {...props}>
+      <div className={clsx("100-vh", className)} {...props}>
         <Alert preview={preview} />
         <Header />
         <main>{children}</main>
