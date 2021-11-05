@@ -20,36 +20,23 @@
     "checkJs": false,
     "baseUrl": ".",
     "paths": {
-      "@watheia/context": ["libs/context/src/index.tsx"],
       "@watheia/atoms": ["libs/ui/atoms/src/index.ts"],
+      "@watheia/context": ["libs/context/src/index.tsx"],
+      "@watheia/layout": ["libs/ui/layout/src/index.ts"],
       "@watheia/theme": ["libs/theme/src/index.ts"],
       "@watheia/theme.styles.common": [
         "libs/theme/src/styles/components/commons/index.css"
       ],
-      "@watheia/theme.styles.typography": [
-        "libs/theme/src/styles/components/typography/index.module.css"
+      "@watheia/theme.styles.button/*": ["libs/theme/src/styles/components/button/*"],
+      "@watheia/theme.styles.icon/*": ["libs/theme/src/styles/components/icon/*"],
+      "@watheia/theme.styles.image/*": ["libs/theme/src/styles/components/image/*"],
+      "@watheia/theme.styles.label/*": ["libs/theme/src/styles/components/label/*"],
+      "@watheia/theme.styles.link/*": ["libs/theme/src/styles/components/link/*"],
+      "@watheia/theme.styles.rule/*": ["libs/theme/src/styles/components/rule/*"],
+      "@watheia/theme.styles.typography/*": [
+        "libs/theme/src/styles/components/typography/*"
       ],
-      "@watheia/theme.styles.button": [
-        "libs/theme/src/styles/components/button/index.module.css"
-      ],
-      "@watheia/theme.styles.icon": [
-        "libs/theme/src/styles/components/icon/index.module.css"
-      ],
-      "@watheia/theme.styles.image": [
-        "libs/theme/src/styles/components/image/index.module.css"
-      ],
-      "@watheia/theme.styles.link": [
-        "libs/theme/src/styles/components/link/index.module.css"
-      ],
-      "@watheia/theme.styles.label": [
-        "libs/theme/src/styles/components/label/index.module.css"
-      ],
-      "@watheia/theme.styles.rule": [
-        "libs/theme/src/styles/components/rule/index.module.css"
-      ],
-      "@watheia/theme.styles.well": [
-        "libs/theme/src/styles/components/well/index.module.css"
-      ],
+      "@watheia/theme.styles.well/*": ["libs/theme/src/styles/components/well/*"],
       "@watheia/types": ["libs/types/src/index.ts"],
       "@watheia/utils": ["libs/utils/src/index.ts"]
     },

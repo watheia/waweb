@@ -1,9 +1,10 @@
 import * as React from "react"
 import { AppProps } from "next/app"
-import { ContextProvider } from "@watheia/context"
+import ContextProvider from "@watheia/context"
 import Head from "next/head"
 import "../styles/global.css"
 import Layout from "../components/layout"
+import { darkTheme } from "@watheia/theme"
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
@@ -15,7 +16,7 @@ export default function MyApp(props: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
       </Head>
-      <ContextProvider>
+      <ContextProvider theme={darkTheme} colorScheme="dark">
         <Layout>
           <Component {...pageProps} />
         </Layout>

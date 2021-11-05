@@ -5,6 +5,7 @@
     "theme": "libs/theme",
     "types": "libs/types",
     "ui-atoms": "libs/ui/atoms",
+    "ui-layout": "libs/ui/layout",
     "utils": "libs/utils",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"

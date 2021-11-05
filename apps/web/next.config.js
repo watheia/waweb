@@ -41,7 +41,7 @@ const nextConfig = {
   },
   pwa: {
     dest: "public",
-    disable: process.env.ANALYZE === "true",
+    disable: process.env.NODE_ENV !== "production",
     register: true,
     scope: "/home"
     // sw: 'service-worker.js',

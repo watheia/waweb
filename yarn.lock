@@ -3064,6 +3064,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-spectrum/provider@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "@react-spectrum/provider@npm:3.2.2"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-aria/i18n": ^3.3.2
+    "@react-aria/overlays": ^3.7.2
+    "@react-aria/utils": ^3.8.2
+    "@react-spectrum/utils": ^3.6.2
+    "@react-types/provider": ^3.3.2
+    "@react-types/shared": ^3.8.0
+    clsx: ^1.1.1
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+    react-dom: ^16.8.0 || ^17.0.0-rc.1
+  checksum: 63754f7e0c60b970e83b5a8f7735aa05ff38d8f72f7cd37a16c54016438c978593e9a4757394bd7ad7cc7739c82ebc9488e0728ca7021f6ce805b26a56dd0c7e
+  languageName: node
+  linkType: hard
+
 "@react-spectrum/utils@npm:^3.6.2":
   version: 3.6.2
   resolution: "@react-spectrum/utils@npm:3.6.2"
@@ -3148,6 +3167,17 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
   checksum: a068dce4cf1f066c5015a2ef1e345815163f8cee005854d0cc1c6fd548447f1ed1afdee5b3b5407bf8f64101f4ce9dd87b65dee4546035a88ed48a7ae693db83
+  languageName: node
+  linkType: hard
+
+"@react-types/provider@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "@react-types/provider@npm:3.3.2"
+  dependencies:
+    "@react-types/shared": ^3.8.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: c781590ef6f5d7fe800f7bd0e14536f11211ccc73249f8f5da66823359548b7e0e3d344d87483b515a8982824567f07438d37de69bf4b50d18d9d7b9a5df223f
   languageName: node
   linkType: hard
 
@@ -19332,6 +19362,7 @@ __metadata:
     "@react-aria/i18n": ^3.3.2
     "@react-aria/overlays": ^3.7.2
     "@react-aria/utils": ^3.9.0
+    "@react-spectrum/provider": ^3.2.2
     "@spectrum-icons/ui": ^3.2.1
     "@spectrum-icons/workflow": ^3.2.1
     "@supabase/supabase-js": ^1.25.2

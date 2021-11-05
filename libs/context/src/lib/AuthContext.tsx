@@ -53,7 +53,7 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const [userRoles, setUserRoles] = useState<string[]>([])
 
   useEffect(() => {
-    // console.log("AuthContext(user)", user)
+    console.log("AuthContext(user)", user)
     const session = supabase.auth.session()
     setSession(session)
     setUser(session?.user ?? null)
@@ -65,13 +65,13 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        console.info("Auth State Changed:", event)
+        // console.info("Auth State Changed:", event)
         setSession(session)
         const currentUser = session?.user
         setUser(currentUser ?? null)
         setUserLoaded(!!currentUser)
         if (currentUser) {
-          // console.log("currentUser", currentUser)
+          // console.log("User Loaded:", currentUser)
           signIn(currentUser.id, currentUser.email)
           // router.push("/channels/[id]", "/channels/1")
         }
