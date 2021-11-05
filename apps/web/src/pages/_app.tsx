@@ -12,7 +12,7 @@ export default function MyApp(props: AppProps) {
       <Head>
         <meta
           name="viewport"
-          content="width=device-width,minimum-scale=1,initial-scale=1"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
       </Head>
       <ContextProvider>

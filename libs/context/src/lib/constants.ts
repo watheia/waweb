@@ -5,6 +5,7 @@ export const DEFAULT_AVATARS_BUCKET = "avatars"
 
 export const BLOG_URL = process.env.BLOG_URL || "http://localhost:4300"
 
+export const DEFAULT_BREAKPOINTS = { S: 640, M: 768, L: 1024, XL: 1280, XXL: 1536 }
 export const EXAMPLE_PATH = ""
 export const CMS_NAME = "DatoCMS"
 export const CMS_URL = "https://www.datocms.com/"
