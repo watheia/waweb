@@ -22,7 +22,7 @@
     "**/*.js",
     "**/*.jsx",
     "next-env.d.ts"
-  ],
+, "../../libs/utils/src/lib/getURL.ts"  ],
   "exclude": [
     "node_modules"
   ]

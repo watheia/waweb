@@ -1,9 +1,11 @@
 {
   "version": 2,
   "projects": {
-    "app-context": "libs/app/context",
-    "app-model": "libs/app/model",
-    "app-theme": "libs/app/theme",
+    "context": "libs/context",
+    "theme": "libs/theme",
+    "types": "libs/types",
+    "ui-atoms": "libs/ui/atoms",
+    "utils": "libs/utils",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

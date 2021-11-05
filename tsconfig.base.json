@@ -8,19 +8,50 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2017",
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
     "baseUrl": ".",
     "paths": {
-      "@watheia/app.context": ["libs/app/context/src/index.ts"],
-      "@watheia/app.model": ["libs/app/model/src/index.ts"],
-      "@watheia/app.theme": ["libs/app/theme/src/index.ts"],
-      "@watheia/app.theme.styles.common": [
-        "libs/app/theme/src/styles/components/commons/index.css"
-      ]
+      "@watheia/app.context": ["libs/context/src/index.tsx"],
+      "@watheia/atoms": ["libs/ui/atoms/src/index.ts"],
+      "@watheia/theme": ["libs/theme/src/index.ts"],
+      "@watheia/theme.styles.common": [
+        "libs/theme/src/styles/components/commons/index.css"
+      ],
+      "@watheia/theme.styles.typography": [
+        "libs/theme/src/styles/components/typography/index.module.css"
+      ],
+      "@watheia/theme.styles.button": [
+        "libs/theme/src/styles/components/button/index.module.css"
+      ],
+      "@watheia/theme.styles.icon": [
+        "libs/theme/src/styles/components/icon/index.module.css"
+      ],
+      "@watheia/theme.styles.image": [
+        "libs/theme/src/styles/components/image/index.module.css"
+      ],
+      "@watheia/theme.styles.link": [
+        "libs/theme/src/styles/components/link/index.module.css"
+      ],
+      "@watheia/theme.styles.label": [
+        "libs/theme/src/styles/components/label/index.module.css"
+      ],
+      "@watheia/theme.styles.rule": [
+        "libs/theme/src/styles/components/rule/index.module.css"
+      ],
+      "@watheia/theme.styles.well": [
+        "libs/theme/src/styles/components/well/index.module.css"
+      ],
+      "@watheia/types": ["libs/types/src/index.ts"],
+      "@watheia/utils": ["libs/utils/src/index.ts"]
     },
     "plugins": [
       {

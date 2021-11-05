@@ -1,5 +1,5 @@
 import Head from "next/head"
-import getURL from "../utils/getURL"
+import getURL from "../../../../libs/utils/src/lib/getURL"
 import { useRouter } from "next/router"
 import {
   LOCALE,
