@@ -1,5 +1,5 @@
 import React from "react"
-import NavLink from "apps/web/src/components/nav-link"
+import NavLink from "../../../nav-link"
 
 const CTASection = () => (
   <div className="bg-white">

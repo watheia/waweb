@@ -4,7 +4,7 @@ import HeroPost from "../../components/hero-post"
 import Intro from "../../components/intro"
 import { getAllPostsForHome } from "../../lib/dato"
 import Head from "next/head"
-import { SITE_NAME } from "../../constants"
+import { SITE_NAME } from "@watheia/context"
 import styles from "./index.module.css"
 
 export default function BlogIndex({ allPosts }) {

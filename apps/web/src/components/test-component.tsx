@@ -1,4 +1,4 @@
-import { styled } from "@mui/system"
+import styled from "@emotion/styled"
 
 const Background = styled("div")({
   color: "darkslategray",

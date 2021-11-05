@@ -15,7 +15,7 @@
   ```
 */
 import { Auth, Card, Typography, Space } from "@supabase/ui"
-import { supabase } from "@watheia/app.context"
+import { supabase } from "@watheia/context"
 import styles from "./auth.module.css"
 
 export default function AuthPage() {

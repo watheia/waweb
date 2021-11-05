@@ -1,6 +1,9 @@
+export const NEXT_PUBLIC_SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
+export const NEXT_PUBLIC_SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+export const DEFAULT_AVATARS_BUCKET = "avatars"
+
 export const BLOG_URL = process.env.BLOG_URL || "http://localhost:4300"
-export const NEXT_PUBLIC_SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
-export const NEXT_PUBLIC_SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 
 export const EXAMPLE_PATH = ""
 export const CMS_NAME = "DatoCMS"
@@ -10,7 +13,6 @@ export const HOME_OG_IMAGE_URL =
 
 export const CDN_URL = "https://cdn.watheia.org/assets"
 export const DEFAULT_AVATAR = `${CDN_URL}/icon.png`
-export const DEFAULT_AVATARS_BUCKET = "avatars"
 export const DEFAULT_USER_NAME = "Guest"
 
 export const PRIMARY_COLOR = "#04BFBF"

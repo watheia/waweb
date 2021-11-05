@@ -13,8 +13,7 @@ import clsx from "clsx"
  * @returns
  */
 function isActive(activePath: string, href: string): boolean {
-  if (!activePath || activePath === "/") return href === "/"
-  else return href !== "/" && activePath.startsWith(href)
+  return activePath.startsWith(href)
 }
 
 export interface TabItem {

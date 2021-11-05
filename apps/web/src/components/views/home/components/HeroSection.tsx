@@ -1,5 +1,5 @@
 import React from "react"
-import NavLink from "apps/web/src/components/nav-link"
+import NavLink from "../../../nav-link"
 // import coverImage from "apps/web/public/images/photo-1521737852567-6949f3f9f2b5.jpg"
 // import Image from "next/image"
 

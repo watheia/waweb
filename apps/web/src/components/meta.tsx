@@ -1,5 +1,5 @@
 import Head from "next/head"
-import getURL from "../../../../libs/utils/src/lib/getURL"
+import { getURL } from "@watheia/utils"
 import { useRouter } from "next/router"
 import {
   LOCALE,
@@ -7,7 +7,7 @@ import {
   SITE_DESCRIPTION,
   SITE_NAME,
   PREVIEW_IMAGE_FALLBACK
-} from "../constants"
+} from "@watheia/context"
 
 export interface SEOProps {
   title?: string

@@ -1,5 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const withPlugins = require("next-compose-plugins")
 const withNx = require("@nrwl/next/plugins/with-nx")
+const withPWA = require("next-pwa")
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true"
+})
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
@@ -29,7 +34,24 @@ const nextConfig = {
 
     // Important: return the modified config
     return config
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: false
+      }
+    ]
+  },
+  pwa: {
+    dest: "public",
+    disable: process.env.NODE_ENV !== "production",
+    register: true
+    // scope: '/app',
+    // sw: 'service-worker.js',
+    //...
   }
 }
 
-module.exports = withNx(nextConfig)
+module.exports = withPlugins([withBundleAnalyzer, withPWA, withNx], nextConfig)
