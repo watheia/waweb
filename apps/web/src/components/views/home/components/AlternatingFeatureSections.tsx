@@ -1,6 +1,6 @@
 import React from "react"
 import { InboxIcon, SparklesIcon } from "@heroicons/react/solid"
-import NavLink from "apps/web/src/components/nav-link"
+import NavLink from "../../../nav-link"
 import Link from "next/link"
 
 const AlternatingFeatureSections = () => (
@@ -25,7 +25,8 @@ const AlternatingFeatureSections = () => (
               <p className="mt-4 text-lg text-gray-500">
                 Watheia Labs stays on top of the quickly changing winds in tech, so your
                 skills will be ahead of the game. As a result, you will be ready for the Job
-                market with next-gen skills that haven't even made it into the lesson plans.
+                market with next-gen skills that haven&apos;t even made it into the lesson
+                plans.
               </p>
               <div className="mt-6">
                 <Link href="/contact/#waitlist">

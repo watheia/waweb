@@ -1,16 +1,25 @@
 import * as React from "react"
 import { AppProps } from "next/app"
-import TopLayout from "../components/top-layout"
-
-import "apps/web/src/styles/global.css"
-// import "apps/web/src/styles/components/page/vars.css"
-// import "apps/web/src/styles/font-awesome.min.css"
+import { ContextProvider } from "@watheia/context"
+import Head from "next/head"
+import "../styles/global.css"
+import Layout from "../components/layout"
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
   return (
-    <TopLayout>
-      <Component {...pageProps} />
-    </TopLayout>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
+      </Head>
+      <ContextProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ContextProvider>
+    </>
   )
 }

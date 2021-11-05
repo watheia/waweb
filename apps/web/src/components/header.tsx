@@ -4,16 +4,20 @@ import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { TabNav } from "./tab-nav"
 import { MenuNav } from "./menu-nav"
+import { useAuth } from "@watheia/context"
 import clsx from "clsx"
 
 const navigation = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/home" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" }
 ]
 
-export default function Header() {
+export default function Header(props: any) {
+  // console.log("Header(props)", props)
+  const { user, session } = useAuth()
+  // console.log("user, session =", user, session)
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
@@ -88,8 +92,8 @@ export default function Header() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-200">
-                        <Menu.Item>
+                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        <Menu.Item disabled>
                           {({ active }) => (
                             <a
                               href="#"
@@ -102,7 +106,7 @@ export default function Header() {
                             </a>
                           )}
                         </Menu.Item>
-                        <Menu.Item>
+                        <Menu.Item disabled>
                           {({ active }) => (
                             <a
                               href="#"

@@ -1,5 +1,21 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const withPlugins = require("next-compose-plugins")
 const withNx = require("@nrwl/next/plugins/with-nx")
+const withPWA = require("next-pwa")
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true"
+})
+
+const DOMAINS = [
+  "localhost:4200",
+  "vercel.app",
+  "watheia.app",
+  "watheia.io",
+  "watheia.org",
+  "datocms-assets.com"
+]
+
+const DEFAULT_BREAKPOINTS = { S: 640, M: 768, L: 1024, XL: 1280, XXL: 1536 }
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
@@ -11,25 +27,26 @@ const nextConfig = {
     svgr: true
   },
   images: {
-    domains: ["cdn.watheia.org", "datocms-assets.com"]
+    domains: DOMAINS,
+    sizes: Object.values(DEFAULT_BREAKPOINTS)
   },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // config.module.rules.push({
-    //   test: /\.module\.css/,
-    //   use: [
-    //     defaultLoaders.babel,
-    //     {
-    //       loader: "css-loader",
-    //       options: {
-
-    //       }
-    //     }
-    //   ]
-    // })
-
-    // Important: return the modified config
-    return config
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: false
+      }
+    ]
+  },
+  pwa: {
+    dest: "public",
+    disable: process.env.ANALYZE === "true",
+    register: true,
+    scope: "/home"
+    // sw: 'service-worker.js',
+    //...
   }
 }
 
-module.exports = withNx(nextConfig)
+module.exports = withPlugins([withBundleAnalyzer, withPWA, withNx], nextConfig)

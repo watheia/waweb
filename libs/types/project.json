@@ -8,7 +8,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/types",
-        "main": "libs/types/src/index.ts",
+        "main": "libs/types/src/index.d.ts",
         "tsConfig": "libs/types/tsconfig.lib.json",
         "assets": ["libs/types/*.md"]
       }
@@ -17,7 +17,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/types/**/*.ts"]
+        "lintFilePatterns": ["libs/types/**/*.d.ts"]
       }
     },
     "test": {

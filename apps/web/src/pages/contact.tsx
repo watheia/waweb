@@ -37,7 +37,7 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
               className="h-56 w-full object-cover lg:absolute lg:h-full"
-              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80"
               alt=""
             />
           </div>
@@ -46,11 +46,11 @@ export const ContactPage = (props: HtmlHTMLAttributes<HTMLDivElement>) => {
           <div className="lg:pr-8">
             <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Let's work together
+                Let&apos;s work together
               </h2>
               <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                We’d love to hear from you! Send us a message using the form opposite, or
-                email us. We’d love to hear from you! Send us a message using the form
+                We&apos;d love to hear from you! Send us a message using the form opposite,
+                or email us. We’d love to hear from you! Send us a message using the form
                 opposite, or email us.
               </p>
               <form

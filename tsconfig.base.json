@@ -1,5 +1,5 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
@@ -20,7 +20,7 @@
     "checkJs": false,
     "baseUrl": ".",
     "paths": {
-      "@watheia/app.context": ["libs/context/src/index.tsx"],
+      "@watheia/context": ["libs/context/src/index.tsx"],
       "@watheia/atoms": ["libs/ui/atoms/src/index.ts"],
       "@watheia/theme": ["libs/theme/src/index.ts"],
       "@watheia/theme.styles.common": [

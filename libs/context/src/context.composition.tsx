@@ -6,7 +6,7 @@ export const MockComponent = () => {
 
 export function MockPage() {
   return (
-    <div data-testid="@watheia/app.context">
+    <div data-testid="@watheia/context">
       <PageContext>
         <MockComponent />
       </PageContext>

@@ -1,19 +1,31 @@
-import React from "react"
+import React, { HtmlHTMLAttributes } from "react"
+import Head from "next/head"
+import NavContext from "./lib/NavigationContext"
+import AuthContext from "./lib/AuthContext"
+import { DefaultSeo } from "next-seo"
+import seo from "./lib/default-seo"
 
-import DocumentContext from "./lib/DocumentContext"
-import PaginationContext from "./lib/PaginationContext"
-
-export * from "./constants"
-export * from "./supabaseClient"
+export * from "./lib/constants"
+export * from "./lib/supabaseClient"
+export * from "./lib/AuthContext"
 
 type ContextProviderProps = {
   children: React.ReactNode | React.ReactNode[] | null
 }
 
-const ContextProvider = ({ children }: ContextProviderProps) => (
-  <DocumentContext>
-    <PaginationContext>{children}</PaginationContext>
-  </DocumentContext>
+export const ContextProvider = ({ children }: ContextProviderProps) => (
+  <>
+    <Head>
+      <DefaultSeo {...seo} />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+    </Head>
+    <AuthContext>
+      <NavContext>{children}</NavContext>
+    </AuthContext>
+  </>
 )
 
 export default ContextProvider
