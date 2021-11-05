@@ -16,7 +16,8 @@
     "format": "nx format:write",
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
-    "help": "nx help"
+    "help": "nx help",
+    "deps:graph": "depcruise --config .dependency-cruiser.js apps/web  --output-type dot  | dot -T svg > dependencygraph.svg"
   },
   "private": true,
   "dependencies": {

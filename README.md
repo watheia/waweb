@@ -6,6 +6,8 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Smart, Extensible Build Framework**
 
+![dependencygraph](./dependencygraph.svg)
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
