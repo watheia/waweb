@@ -70,10 +70,10 @@ test: # This job runs in the test stage.
     when: always
     reports:
       junit:
-        - test-report.xml
+        - junit.xml
     paths:
       - coverage
-      - test-report.xml
+      - junit.xml
 
 lint: # This job also runs in the test stage.
   needs: [install]
@@ -102,9 +102,9 @@ pages:
   stage: deploy
   needs: [install]
   script:
-    - yarn nx run web:export --verbose
     - rm -rf public
-    - cp -r dist/apps/exported public
+    - yarn nx run compendium:build:production --verbose
+    - cp -r dist/apps/compendium public
   artifacts:
     paths:
       - public

@@ -1,0 +1,29 @@
+{
+  "root": "apps/screenplay",
+  "sourceRoot": "apps/screenplay/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/screenplay/cypress.json",
+        "devServerTarget": "pwa:serve",
+        "tsConfig": "apps/screenplay/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "pwa:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/screenplay/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["gatekeeper"]
+}

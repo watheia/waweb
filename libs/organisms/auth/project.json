@@ -1,0 +1,42 @@
+{
+  "root": "libs/organisms/auth",
+  "sourceRoot": "libs/organisms/auth/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/organisms/auth",
+        "tsConfig": "libs/organisms/auth/tsconfig.lib.json",
+        "project": "libs/organisms/auth/package.json",
+        "entryFile": "libs/organisms/auth/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/organisms/auth/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/organisms/auth/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/organisms/auth"],
+      "options": {
+        "jestConfig": "libs/organisms/auth/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

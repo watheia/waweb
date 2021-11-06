@@ -1,5 +1,5 @@
 {
-  "npmScope": "watheia",
+  "npmScope": "waweb",
   "affected": {
     "defaultBase": "main"
   },
@@ -19,7 +19,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e", "stylelint"],
-        "accessToken": "NTcyZDQ0N2EtNzAyMS00NzM5LWI5YTMtODE3NGZhOWIzOWI2fHJlYWQtd3JpdGU="
+        "accessToken": "ZGJkNzIzYzgtYWI4MC00M2UzLTkzZDQtYTM1YTg4ZGY0ZmNlfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -39,10 +39,15 @@
     },
     "@nrwl/next": {
       "application": {
-        "style": "css",
+        "style": "@emotion/styled",
         "linter": "eslint"
+      }
+    },
+    "@nrwl/gatsby": {
+      "application": {
+        "style": "css"
       }
     }
   },
-  "defaultProject": "web"
+  "defaultProject": "gatekeeper"
 }

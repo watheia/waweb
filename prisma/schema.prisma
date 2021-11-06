@@ -3,80 +3,588 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
-model Channel {
+model FeatureElementComponent {
+  id   BigInt  @id @default(autoincrement())
+  name String?
+
+  @@map("components_elements_features")
+}
+
+model LogoElementComponent {
+  id    BigInt  @id @default(autoincrement())
+  title String?
+
+  @@map("components_elements_logos")
+}
+
+model NotificationBannerElement {
+  id   BigInt  @id @default(autoincrement())
+  text String?
+  type String?
+
+  @@map("components_elements_notification_banners")
+}
+
+model PlanElement {
+  id            BigInt               @id @default(autoincrement())
+  name          String?
+  description   String?
+  isRecommended Boolean?
+  price         Float?
+  pricePeriod   String?
+  elements      PlanElementContent[]
+
+  @@map("components_elements_plans")
+}
+
+model PlanElementContent {
+  id            BigInt      @id @default(autoincrement())
+  field         String
+  order         BigInt
+  componentType String      @map("component_type")
+  componentId   BigInt      @map("component_id")
+  planElementId BigInt      @map("components_elements_plan_id")
+  planElement   PlanElement @relation(fields: [planElementId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_elements_plans_components")
+}
+
+model LayoutFooter {
+  id        BigInt                @id @default(autoincrement())
+  smallText String?
+  elements  LayoutFooterContent[]
+
+  @@map("components_layout_footers")
+}
+
+model LayoutFooterContent {
+  id             BigInt       @id @default(autoincrement())
+  field          String
+  order          BigInt
+  component_type String
+  component_id   BigInt
+  layoutFooterId BigInt       @map("components_layout_footer_id")
+  layoutFooter   LayoutFooter @relation(fields: [layoutFooterId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_layout_footers_components")
+}
+
+model LayoutNavbar {
+  id       BigInt             @id @default(autoincrement())
+  elements LayoutNavbarItem[]
+
+  @@map("components_layout_navbars")
+}
+
+model LayoutNavbarItem {
+  id                          BigInt       @id @default(autoincrement())
+  field                       String
+  order                       BigInt
+  component_type              String
+  component_id                BigInt
+  components_layout_navbar_id BigInt
+  layoutNavbar                LayoutNavbar @relation(fields: [components_layout_navbar_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_layout_navbars_components")
+}
+
+model ButtonLink {
+  id     BigInt   @id @default(autoincrement())
+  url    String?
+  newTab Boolean?
+  text   String?
+  type   String?
+
+  @@map("components_links_buttons")
+}
+
+model FooterLinksSection {
+  id       BigInt                      @id @default(autoincrement())
+  title    String?
+  elements FooterLinksSectionContent[]
+
+  @@map("components_links_footer_sections")
+}
+
+model FooterLinksSectionContent {
+  id            BigInt             @id @default(autoincrement())
+  field         String
+  order         BigInt
+  componentType String             @map("component_type")
+  componentId   BigInt             @map("component_id")
+  parentId      BigInt             @map("components_links_footer_section_id")
+  parent        FooterLinksSection @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_links_footer_sections_components")
+}
+
+model NavLink {
+  id     BigInt   @id @default(autoincrement())
+  url    String?
+  newTab Boolean?
+  text   String?
+
+  @@map("components_links_links")
+}
+
+model SimpleButtonLink {
+  id   BigInt  @id @default(autoincrement())
+  text String?
+  type String?
+
+  @@map("components_links_simple_buttons")
+}
+
+model SEOMetadata {
+  id              BigInt  @id @default(autoincrement())
+  metaTitle       String?
+  metaDescription String?
+  twitterCardType String?
+  twitterUsername String?
+
+  @@map("components_meta_metadata")
+}
+
+model LeadFormSection {
+  id               BigInt                   @id @default(autoincrement())
+  title            String?
+  emailPlaceholder String?
+  location         String?
+  elements         LeadFormSectionContent[]
+
+  @@map("components_sections_lead_forms")
+}
+
+model LeadFormSectionContent {
+  id            BigInt          @id @default(autoincrement())
+  field         String
+  order         BigInt
+  componentType String          @map("component_type")
+  componentId   BigInt          @map("component_id")
+  parentId      BigInt          @map("components_sections_lead_form_id")
+  parent        LeadFormSection @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_sections_lead_forms_components")
+}
+
+model PricingSection {
+  id                                      BigInt           @id @default(autoincrement())
+  title                                   String?
+  components_sections_pricings_components PrivacySection[]
+
+  @@map("components_sections_pricings")
+}
+
+model PrivacySection {
+  id                             BigInt         @id @default(autoincrement())
+  field                          String
+  order                          BigInt
+  component_type                 String
+  component_id                   BigInt
+  components_sections_pricing_id BigInt
+  components_sections_pricings   PricingSection @relation(fields: [components_sections_pricing_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_sections_pricings_components")
+}
+
+model RichTextSection {
+  id      BigInt  @id @default(autoincrement())
+  content String?
+
+  @@map("components_sections_rich_texts")
+}
+
+model BottomActions {
+  id                                          BigInt                 @id @default(autoincrement())
+  title                                       String?
+  components_slices_bottom_actions_components BottomActionsContent[]
+
+  @@map("components_slices_bottom_actions")
+}
+
+model BottomActionsContent {
+  id            BigInt        @id @default(autoincrement())
+  field         String
+  order         BigInt
+  componentType String        @map("component_type")
+  componentId   BigInt        @map("component_id")
+  actionsId     BigInt        @map("components_slices_bottom_action_id")
+  actions       BottomActions @relation(fields: [actionsId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_slices_bottom_actions_components")
+}
+
+model FeatureColumns {
+  id          BigInt  @id @default(autoincrement())
+  title       String?
+  description String?
+
+  @@map("components_slices_feature_columns")
+}
+
+model FeatureColumnsGroup {
+  id      BigInt                       @id @default(autoincrement())
+  content FeatureColumnsGroupContent[]
+
+  @@map("components_slices_feature_columns_groups")
+}
+
+model FeatureColumnsGroupContent {
+  id             BigInt              @id @default(autoincrement())
+  field          String
+  order          BigInt
+  component_type String
+  component_id   BigInt
+  parentId       BigInt              @map("components_slices_feature_columns_group_id")
+  parent         FeatureColumnsGroup @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_slices_feature_columns_groups_components")
+}
+
+model FeatureRows {
+  id          BigInt               @id @default(autoincrement())
+  title       String?
+  description String?
+  elements    FeatureRowsContent[]
+
+  @@map("components_slices_feature_rows")
+}
+
+model FeatureRowsContent {
+  id             BigInt      @id @default(autoincrement())
+  field          String
+  order          BigInt
+  component_type String
+  component_id   BigInt
+  parentId       BigInt      @map("components_slices_feature_row_id")
+  parent         FeatureRows @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_slices_feature_rows_components")
+}
+
+model FeatureRowsGroup {
+  id       BigInt                    @id @default(autoincrement())
+  elements FeatureRowsGroupContent[]
+
+  @@map("components_slices_feature_rows_groups")
+}
+
+model FeatureRowsGroupContent {
+  id             BigInt           @id @default(autoincrement())
+  field          String
+  order          BigInt
+  component_type String
+  component_id   BigInt
+  parentId       BigInt           @map("components_slices_feature_rows_group_id")
+  parent         FeatureRowsGroup @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_slices_feature_rows_groups_components")
+}
+
+model Hero {
+  id                BigInt        @id @default(autoincrement())
+  title             String?
+  label             String?
+  description       String?
+  smallTextWithLink String?
+  elements          HeroContent[]
+
+  @@map("components_slices_heroes")
+}
+
+model HeroContent {
+  id             BigInt @id @default(autoincrement())
+  field          String
+  order          BigInt
+  component_type String
+  component_id   BigInt
+  parentId       BigInt @map("components_slices_hero_id")
+  parent         Hero   @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_slices_heroes_components")
+}
+
+model Video {
+  id          BigInt  @id @default(autoincrement())
+  title       String?
+  description String?
+
+  @@map("components_slices_large_videos")
+}
+
+model Testimonial {
+  id          BigInt  @id @default(autoincrement())
+  text        String?
+  authorName  String?
+  authorTitle String?
+  link        String?
+
+  @@map("components_slices_testimonials")
+}
+
+model TestemonialGroup {
+  id          BigInt                    @id @default(autoincrement())
+  title       String?
+  description String?
+  elements    TestemonialGroupContent[]
+
+  @@map("components_slices_testimonials_groups")
+}
+
+model TestemonialGroupContent {
+  id             BigInt           @id @default(autoincrement())
+  field          String
+  order          BigInt
+  component_type String
+  component_id   BigInt
+  parentId       BigInt           @map("components_slices_testimonials_group_id")
+  parent         TestemonialGroup @relation(fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("components_slices_testimonials_groups_components")
+}
+
+model Store {
+  id          BigInt  @id @default(autoincrement())
+  key         String?
+  value       String?
+  type        String?
+  environment String?
+  tag         String?
+
+  @@map("core_store")
+}
+
+model Global {
+  id                BigInt            @id @default(autoincrement())
+  metaTitleSuffix   String
+  locale            String?
+  created_by        BigInt?
+  updated_by        BigInt?
+  created_at        DateTime?         @default(now())
+  updated_at        DateTime?         @default(now())
+  globalsComponents GlobalComponent[]
+
+  @@map("globals")
+}
+
+model GlobalLocale {
+  id              BigInt  @id @default(autoincrement())
+  globalId        BigInt? @map("global_id")
+  relatedGlobalId BigInt? @map("related_global_id")
+
+  @@map("globals__localizations")
+}
+
+model GlobalComponent {
+  id            BigInt @id @default(autoincrement())
+  field         String
+  order         BigInt
+  componentType String @map("component_type")
+  componentId   BigInt @map("component_id")
+  globalId      BigInt @map("global_id")
+  globals       Global @relation(fields: [globalId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("globals_components")
+}
+
+model Locale {
   id         BigInt    @id @default(autoincrement())
-  insertedAt DateTime  @default(dbgenerated("timezone('utc'::text, now())")) @map("inserted_at") @db.Timestamptz(6)
-  slug       String    @unique
-  createdBy  String    @map("created_by") @db.Uuid
-  user       User      @relation(fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  messages   Message[]
+  name       String?
+  code       String?   @unique(map: "i18n_locales_code_unique")
+  created_by BigInt?
+  updated_by BigInt?
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
 
-  @@map("channels")
+  @@map("i18n_locales")
 }
 
-model Message {
-  id         BigInt   @id @default(autoincrement())
-  insertedAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @map("inserted_at") @db.Timestamptz(6)
-  message    String?
-  userId     String   @map("user_id") @db.Uuid
-  channelId  BigInt   @map("channel_id")
-  channel    Channel  @relation(fields: [channelId], references: [id], onDelete: Cascade, onUpdate: NoAction)
-  user       User     @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+model LeadFormSubmission {
+  id        BigInt    @id @default(autoincrement())
+  email     String?
+  status    String?
+  location  String?
+  createdBy BigInt?   @map("created_by")
+  updatedBy BigInt?   @map("updated_by")
+  createdAt DateTime? @default(now()) @map("created_at")
+  updatedAt DateTime? @default(now()) @map("updated_at")
 
-  @@map("messages")
+  @@map("lead_form_submissions")
 }
 
-model RolePermission {
-  id         BigInt        @id @default(autoincrement())
-  role       AppRole
-  permission AppPermission
+model Page {
+  id        BigInt          @id @default(autoincrement())
+  shortName String?
+  status    String
+  slug      String?
+  locale    String?
+  createdBy BigInt?         @map("created_by")
+  updatedBy BigInt?         @map("updated_by")
+  createdAt DateTime?       @default(now()) @map("created_at")
+  updatedAt DateTime?       @default(now()) @map("updated_at")
+  elements  PageComponent[]
 
-  @@unique([role, permission])
-  @@map("role_permissions")
+  @@map("pages")
 }
 
-model UserRole {
-  id     BigInt  @id @default(autoincrement())
-  userId String  @map("user_id") @db.Uuid
-  role   AppRole
-  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+model PageLocale {
+  id            BigInt  @id @default(autoincrement())
+  pageId        BigInt? @map("page_id")
+  relatedPageId BigInt? @map("related_page_id")
 
-  @@unique([userId, role])
-  @@map("user_roles")
+  @@map("pages__localizations")
 }
 
-model User {
-  id       String      @id @db.Uuid
-  username String?
-  status   UserStatus? @default(OFFLINE)
-  channels Channel[]
-  messages Message[]
-  roles    UserRole[]
+model PageComponent {
+  id            BigInt @id @default(autoincrement())
+  field         String
+  order         BigInt
+  componentType String @map("component_type")
+  componentId   BigInt @map("component_id")
+  page_id       BigInt
+  pages         Page   @relation(fields: [page_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
 
-  @@map("users")
+  @@map("pages_components")
 }
 
-enum AppPermission {
-  channelsDelete  @map("channels.delete")
-  messagesDelete  @map("messages.delete")
+model Guest {
+  id                 BigInt   @id @default(autoincrement())
+  firstname          String?
+  lastname           String?
+  username           String?
+  email              String   @unique(map: "strapi_administrator_email_unique")
+  password           String?
+  resetPasswordToken String?
+  registrationToken  String?
+  isActive           Boolean?
+  blocked            Boolean?
+  preferedLanguage   String?
 
-  @@map("app_permission")
+  @@map("strapi_administrator")
 }
 
-enum AppRole {
-  admin
-  moderator
+model UserPermission {
+  id         BigInt    @id @default(autoincrement())
+  action     String
+  subject    String?
+  properties String?
+  conditions String?
+  role       BigInt?
+  createdAt  DateTime? @default(now()) @map("created_at")
+  updatedAt  DateTime? @default(now()) @map("updated_at")
 
-  @@map("app_role")
+  @@map("strapi_permission")
 }
 
-enum UserStatus {
-  ONLINE
-  OFFLINE
+model AppPermissio {
+  id          BigInt    @id @default(autoincrement())
+  name        String    @unique(map: "strapi_role_name_unique")
+  code        String    @unique(map: "strapi_role_code_unique")
+  description String?
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
 
-  @@map("user_status")
+  @@map("strapi_role")
+}
+
+model AppRole {
+  id      BigInt  @id @default(autoincrement())
+  user_id BigInt?
+  role_id BigInt?
+
+  @@map("strapi_users_roles")
+}
+
+model Webhook {
+  id      BigInt   @id @default(autoincrement())
+  name    String?
+  url     String?
+  headers String?
+  events  String?
+  enabled Boolean?
+
+  @@map("strapi_webhooks")
+}
+
+model Attachment {
+  id               BigInt    @id @default(autoincrement())
+  name             String
+  alternativeText  String?
+  caption          String?
+  width            BigInt?
+  height           BigInt?
+  formats          String?
+  hash             String
+  ext              String?
+  mime             String
+  size             Float
+  url              String
+  previewUrl       String?
+  provider         String
+  providerMetadata String?   @map("provider_metadata")
+  createdBy        BigInt?   @map("created_by")
+  updatedBy        BigInt?   @map("updated_by")
+  createdAt        DateTime? @default(now()) @map("created_at")
+  updatedAt        DateTime? @default(now()) @map("updated_at")
+
+  @@map("upload_file")
+}
+
+model AttachmentData {
+  id           BigInt  @id @default(autoincrement())
+  uploadFileId BigInt? @map("upload_file_id")
+  relatedId    BigInt? @map("related_id")
+  relatedType  String? @map("related_type")
+  field        String?
+  order        BigInt?
+
+  @@map("upload_file_morph")
+}
+
+model UserAppPermission {
+  id         BigInt  @id @default(autoincrement())
+  type       String
+  controller String
+  action     String
+  enabled    Boolean
+  policy     String?
+  role       BigInt?
+  createdBy  BigInt? @map("created_by")
+  updatedBy  BigInt? @map("updated_by")
+
+  @@map("users-permissions_permission")
+}
+
+model UserRolePermission {
+  id          BigInt  @id @default(autoincrement())
+  name        String
+  description String?
+  type        String? @unique(map: "users-permissions_role_type_unique")
+  createdBy   BigInt? @map("created_by")
+  updatedBy   BigInt? @map("updated_by")
+
+  @@map("users-permissions_role")
+}
+
+model Member {
+  id                 BigInt    @id @default(autoincrement())
+  username           String    @unique(map: "users-permissions_user_username_unique")
+  email              String
+  provider           String?
+  password           String?
+  resetPasswordToken String?
+  confirmationToken  String?
+  confirmed          Boolean?
+  blocked            Boolean?
+  role               BigInt?
+  createdBy          BigInt?   @map("created_by")
+  updatedBy          BigInt?   @map("updated_by")
+  createdAt          DateTime? @default(now()) @map("created_at")
+  updatedAt          DateTime? @default(now()) @map("updated_at")
+
+  @@map("users-permissions_user")
 }

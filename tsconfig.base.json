@@ -1,5 +1,5 @@
 {
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
@@ -8,56 +8,24 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2017",
+    "target": "es2015",
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": false,
     "baseUrl": ".",
     "paths": {
-      "@watheia/context": ["libs/context/src/index.tsx"],
-      "@watheia/atoms": ["libs/ui/atoms/src/index.ts"],
-      "@watheia/theme": ["libs/theme/src/index.ts"],
-      "@watheia/theme.styles.common": [
-        "libs/theme/src/styles/components/commons/index.css"
-      ],
-      "@watheia/theme.styles.typography": [
-        "libs/theme/src/styles/components/typography/index.module.css"
-      ],
-      "@watheia/theme.styles.button": [
-        "libs/theme/src/styles/components/button/index.module.css"
-      ],
-      "@watheia/theme.styles.icon": [
-        "libs/theme/src/styles/components/icon/index.module.css"
-      ],
-      "@watheia/theme.styles.image": [
-        "libs/theme/src/styles/components/image/index.module.css"
-      ],
-      "@watheia/theme.styles.link": [
-        "libs/theme/src/styles/components/link/index.module.css"
-      ],
-      "@watheia/theme.styles.label": [
-        "libs/theme/src/styles/components/label/index.module.css"
-      ],
-      "@watheia/theme.styles.rule": [
-        "libs/theme/src/styles/components/rule/index.module.css"
-      ],
-      "@watheia/theme.styles.well": [
-        "libs/theme/src/styles/components/well/index.module.css"
-      ],
-      "@watheia/types": ["libs/types/src/index.ts"],
-      "@watheia/utils": ["libs/utils/src/index.ts"]
-    },
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ]
+      "@waweb/atoms.button": ["libs/atoms/button/src/index.ts"],
+      "@waweb/atoms.text": ["libs/atoms/text/src/index.ts"],
+      "@waweb/atoms.view": ["libs/atoms/view/src/index.ts"],
+      "@waweb/molecules.layout": ["libs/molecules/layout/src/index.ts"],
+      "@waweb/organisms.auth": ["libs/organisms/auth/src/index.ts"],
+      "@waweb/organisms.page": ["libs/organisms/page/src/index.ts"],
+      "@waweb/views.account": ["libs/views/account/src/index.ts"],
+      "@waweb/views.blog": ["libs/views/blog/src/index.ts"],
+      "@waweb/views.home": ["libs/views/home/src/index.ts"],
+      "@waweb/views.support": ["libs/views/support/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

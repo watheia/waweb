@@ -1,0 +1,64 @@
+{
+  "root": "apps/gatekeeper",
+  "sourceRoot": "apps/gatekeeper",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/gatekeeper",
+        "outputPath": "dist/apps/gatekeeper"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "pwa:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "pwa:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "pwa:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/gatekeeper"],
+      "options": {
+        "jestConfig": "apps/gatekeeper/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/gatekeeper/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "ci": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "make ci"
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}

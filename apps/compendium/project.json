@@ -1,0 +1,20 @@
+{
+  "projectType": "application",
+  "root": "apps/compendium",
+  "sourceRoot": "apps/compendium/src",
+  "targets": {
+    "build": {
+      "executor": "@nx-plus/docusaurus:browser",
+      "options": {
+        "outputPath": "dist/apps/compendium"
+      }
+    },
+    "serve": {
+      "executor": "@nx-plus/docusaurus:dev-server",
+      "options": {
+        "port": 3000
+      }
+    }
+  },
+  "tags": []
+}

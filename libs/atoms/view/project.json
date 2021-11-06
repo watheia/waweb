@@ -1,0 +1,42 @@
+{
+  "root": "libs/atoms/view",
+  "sourceRoot": "libs/atoms/view/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/atoms/view",
+        "tsConfig": "libs/atoms/view/tsconfig.lib.json",
+        "project": "libs/atoms/view/package.json",
+        "entryFile": "libs/atoms/view/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/atoms/view/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/atoms/view/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/atoms/view"],
+      "options": {
+        "jestConfig": "libs/atoms/view/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
