@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { DOMRef, DOMRefValue, FocusableRef, FocusableRefValue } from "@react-types/shared"
+import { DOMRef, DOMRefValue, FocusableRef, FocusableRefValue } from "@watheia/types"
 import { RefObject, useImperativeHandle, useMemo, useRef } from "react"
 
 export function createDOMRef<T extends HTMLElement = HTMLElement>(

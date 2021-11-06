@@ -1,4 +1,4 @@
-import { supabase } from "@watheia/context"
+import { supabase } from "@watheia/app.context"
 import { NextApiRequest, NextApiResponse } from "next"
 
 // Example of how to verify and get user data server-side.

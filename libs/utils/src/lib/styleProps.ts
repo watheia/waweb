@@ -22,7 +22,7 @@ import {
   ResponsiveProp,
   StyleProps,
   ViewStyleProps
-} from "@react-types/shared"
+} from "@watheia/types"
 import { CSSProperties, HTMLAttributes } from "react"
 import { useBreakpoint } from "./BreakpointProvider"
 import { useLocale } from "@react-aria/i18n"
@@ -157,11 +157,11 @@ export function dimensionValue(value: DimensionValue) {
   if (FUNC_RE.test(value)) {
     return value.replace(
       SPECTRUM_VARIABLE_RE,
-      "var(--spectrum-global-dimension-$&, var(--spectrum-alias-$&))"
+      "var(--wa-global-dimension-$&, var(--wa-alias-$&))"
     )
   }
 
-  return `var(--spectrum-global-dimension-${value}, var(--spectrum-alias-${value}))`
+  return `var(--wa-global-dimension-${value}, var(--wa-alias-${value}))`
 }
 
 export function responsiveDimensionValue(
@@ -174,11 +174,11 @@ export function responsiveDimensionValue(
 
 type ColorType = "default" | "background" | "border" | "icon" | "status"
 function colorValue(value: ColorValue, type: ColorType = "default") {
-  return `var(--spectrum-global-color-${value}, var(--spectrum-semantic-${value}-color-${type}))`
+  return `var(--wa-global-color-${value}, var(--wa-semantic-${value}-color-${type}))`
 }
 
 function backgroundColorValue(value: BackgroundColorValue) {
-  return `var(--spectrum-alias-background-color-${value}, ${colorValue(
+  return `var(--wa-alias-background-color-${value}, ${colorValue(
     value as ColorValue,
     "background"
   )})`
@@ -186,21 +186,21 @@ function backgroundColorValue(value: BackgroundColorValue) {
 
 function borderColorValue(value: BorderColorValue) {
   if (value === "default") {
-    return "var(--spectrum-alias-border-color)"
+    return "var(--wa-alias-border-color)"
   }
 
-  return `var(--spectrum-alias-border-color-${value}, ${colorValue(
+  return `var(--wa-alias-border-color-${value}, ${colorValue(
     value as ColorValue,
     "border"
   )})`
 }
 
 function borderSizeValue(value: BorderSizeValue) {
-  return `var(--spectrum-alias-border-size-${value})`
+  return `var(--wa-alias-border-size-${value})`
 }
 
 function borderRadiusValue(value: BorderRadiusValue) {
-  return `var(--spectrum-alias-border-radius-${value})`
+  return `var(--wa-alias-border-radius-${value})`
 }
 
 function hiddenValue(value: boolean) {
@@ -225,23 +225,25 @@ export function convertStyleProps(
   direction: Direction,
   matchedBreakpoints: Breakpoint[]
 ) {
-  let style: CSSProperties = {}
-  for (let key in props) {
-    let styleProp = handlers[key]
+  const style: CSSProperties = {}
+  for (const key in props) {
+    const styleProp = handlers[key]
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     if (!styleProp || props[key] == null) {
       continue
     }
 
+    // eslint-disable-next-line prefer-const
     let [name, convert] = styleProp
     if (typeof name === "function") {
       name = name(direction)
     }
 
-    let prop = getResponsiveProp(props[key], matchedBreakpoints)
-    let value = convert(prop)
+    const prop = getResponsiveProp(props[key], matchedBreakpoints)
+    const value = convert(prop)
     if (Array.isArray(name)) {
-      for (let k of name) {
+      for (const k of name) {
         style[k] = value
       }
     } else {
@@ -249,7 +251,7 @@ export function convertStyleProps(
     }
   }
 
-  for (let prop in borderStyleProps) {
+  for (const prop in borderStyleProps) {
     if (style[prop]) {
       style[borderStyleProps[prop]] = "solid"
       style.boxSizing = "border-box"
@@ -268,32 +270,35 @@ export function useStyleProps<T extends StyleProps>(
   handlers: StyleHandlers = baseStyleProps,
   options: StylePropsOptions = {}
 ) {
-  let { UNSAFE_className, UNSAFE_style, ...otherProps } = props
-  let breakpointProvider = useBreakpoint()
-  let { direction } = useLocale()
-  let { matchedBreakpoints = breakpointProvider?.matchedBreakpoints || ["base"] } = options
-  let styles = convertStyleProps(props, handlers, direction, matchedBreakpoints)
-  let style = { ...UNSAFE_style, ...styles }
+  const { UNSAFE_className, UNSAFE_style, ...otherProps } = props
+  const breakpointProvider = useBreakpoint()
+  const { direction } = useLocale()
+  const { matchedBreakpoints = breakpointProvider?.matchedBreakpoints || ["base"] } =
+    options
+  const styles = convertStyleProps(props, handlers, direction, matchedBreakpoints)
+  const style = { ...UNSAFE_style, ...styles }
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   if (otherProps.className) {
     console.warn(
-      "The className prop is unsafe and is unsupported in React Spectrum v3. " +
-        "Please use style props with Spectrum variables, or UNSAFE_className if you absolutely must do something custom. " +
+      "The className prop is unsafe and is unsupported in React Wa v3. " +
+        "Please use style props with Wa variables, or UNSAFE_className if you absolutely must do something custom. " +
         "Note that this may break in future versions due to DOM structure changes."
     )
   }
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   if (otherProps.style) {
     console.warn(
-      "The style prop is unsafe and is unsupported in React Spectrum v3. " +
-        "Please use style props with Spectrum variables, or UNSAFE_style if you absolutely must do something custom. " +
+      "The style prop is unsafe and is unsupported in React Wa v3. " +
+        "Please use style props with Wa variables, or UNSAFE_style if you absolutely must do something custom. " +
         "Note that this may break in future versions due to DOM structure changes."
     )
   }
 
-  let styleProps: HTMLAttributes<HTMLElement> = {
+  const styleProps: HTMLAttributes<HTMLElement> = {
     style,
     className: UNSAFE_className
   }
@@ -317,7 +322,7 @@ export function getResponsiveProp<T>(
 ): T {
   if (prop && typeof prop === "object" && !Array.isArray(prop)) {
     for (let i = 0; i < matchedBreakpoints.length; i++) {
-      let breakpoint = matchedBreakpoints[i]
+      const breakpoint = matchedBreakpoints[i]
       if (prop[breakpoint] != null) {
         return prop[breakpoint]
       }

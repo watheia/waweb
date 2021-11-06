@@ -296,6 +296,8 @@ export interface FlexStyleProps extends BoxAlignmentStyleProps, StyleProps {
    * @default false
    */
   wrap?: Responsive<boolean | "wrap" | "nowrap" | "wrap-reverse">
+
+  gap?: number | string
 }
 
 export interface GridStyleProps extends BoxAlignmentStyleProps, StyleProps {

@@ -11,7 +11,7 @@
  */
 
 import { ColorScheme, Scale, Theme } from "@watheia/types"
-import { useMediaQuery } from "@react-spectrum/utils"
+import { useMediaQuery } from "@watheia/utils"
 
 export function useColorScheme(
   theme: Theme,

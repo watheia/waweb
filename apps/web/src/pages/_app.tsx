@@ -1,10 +1,10 @@
 import * as React from "react"
 import { AppProps } from "next/app"
-import ContextProvider from "@watheia/context"
+import ContextProvider from "@watheia/app.context"
 import Head from "next/head"
-import "../styles/global.css"
 import Layout from "../components/layout"
 import { darkTheme } from "@watheia/theme"
+import "@watheia/theme.styles/index.css"
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props

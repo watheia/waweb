@@ -1,4 +1,4 @@
-# @watheia/context
+# @watheia/app.context
 
 This library was generated with [Nx](https://nx.dev).
 
@@ -11,19 +11,19 @@ Run `nx test context` to execute the unit tests via [Jest](https://jestjs.io).
 import {Layout} from '@react-spectrum/docs';
 export default Layout;
 
-import docs from 'docs:@react-spectrum/provider';
+import docs from 'docs:@watheia/app.context';
 import {HeaderInfo, PropTable} from '@react-spectrum/docs';
-import packageData from '@react-spectrum/provider/package.json';
+import packageData from '@watheia/app.context/package.json';
 
 ```jsx import
 import { Checkbox } from "@react-spectrum/checkbox"
 import { Form } from "@react-spectrum/form"
-import { TextField } from "@react-spectrum/textfield"
-import { Flex } from "@react-spectrum/layout"
+import { TextField } from "@watheia/app.ui.atoms.textfield"
+import { Flex } from "@watheia/app.ui.organisms.layout"
 import { Picker, Item } from "@react-spectrum/picker"
 import { ActionButton } from "@react-spectrum/button"
 import { RadioGroup, Radio } from "@react-spectrum/radio"
-import { View } from "@react-spectrum/view"
+import { View } from "@watheia/app.ui.atoms.view"
 ```
 
 ---
@@ -44,7 +44,7 @@ componentNames={['Provider']} />
 ## Example
 
 ```tsx example
-import { Provider } from "@react-spectrum/provider"
+import { Provider } from "@watheia/app.context"
 import { theme } from "@react-spectrum/theme-default"
 import { Button } from "@react-spectrum/button"
 

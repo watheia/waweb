@@ -1,0 +1,28 @@
+{
+  "root": "apps/ui-atoms-text-e2e",
+  "sourceRoot": "apps/ui-atoms-text-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ui-atoms-text-e2e/cypress.json",
+        "devServerTarget": "ui-atoms-text:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "ui-atoms-text:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ui-atoms-text-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ui-atoms-text"]
+}

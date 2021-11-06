@@ -1,8 +1,0 @@
-export * from "./lib/image/Image"
-export * from "./lib/icon/Icon"
-export * from "./lib/container/Container"
-export * from "./lib/link/Link"
-export * from "./lib/heading/Heading"
-export * from "./lib/text/Text"
-export type { ButtonProps } from "./lib/button"
-export { Button } from "./lib/button"

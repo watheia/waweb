@@ -42,8 +42,8 @@ const nextConfig = {
   pwa: {
     dest: "public",
     disable: process.env.NODE_ENV !== "production",
-    register: true,
-    scope: "/home"
+    register: true
+    // scope: "/home"
     // sw: 'service-worker.js',
     //...
   }

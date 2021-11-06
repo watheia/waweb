@@ -3,30 +3,20 @@ import { Session, User } from "@supabase/supabase-js"
 import { supabase } from "./supabaseClient"
 import { Auth } from "@supabase/ui"
 
-const defaultUser = {
-  id: "8d0fd2b3-9ca7-4d9e-a95f-9e13dded323e",
-  email: "admin@watheia.org",
-  username: "supabot",
-  app_metadata: {},
-  user_metadata: {},
-  aud: "",
-  created_at: ""
-}
-
 /**
  * Fetch all roles for the current user
  * @param {function} setState Optionally pass in a hook or callback to set the state
  */
-// const fetchUserRoles = async (setState: (arg0: any[] | null) => void) => {
-//   try {
-//     let { body } = await supabase.from("user_roles").select(`*`)
-//     if (setState) setState(body)
-//     return body
-//   } catch (error) {
-//     console.log("error", error)
-//     return void 0
-//   }
-// }
+const fetchUserRoles = async (setState: (arg0: any[] | null) => void) => {
+  try {
+    let { body } = await supabase.from("user_roles").select(`*`)
+    if (setState) setState(body)
+    return body
+  } catch (error) {
+    console.log("error", error)
+    return void 0
+  }
+}
 
 interface IAuthContext {
   userLoaded: boolean
@@ -71,8 +61,8 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
         setUser(currentUser ?? null)
         setUserLoaded(!!currentUser)
         if (currentUser) {
-          // console.log("User Loaded:", currentUser)
-          signIn(currentUser.id, currentUser.email)
+          console.log("User Loaded:", currentUser)
+          signIn(currentUser)
           // router.push("/channels/[id]", "/channels/1")
         }
       }
@@ -83,12 +73,11 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [user])
 
-  const signIn = async (email: string = "", pass: string = "") => {
-    // console.log("signIn(email, pass)", email, pass)
-    setUser(defaultUser)
-    // await fetchUserRoles((userRoles) =>
-    //   setUserRoles(userRoles.map((userRole) => userRole.role))
-    // )
+  const signIn = async (props: any) => {
+    console.log("signIn(props)", props)
+    await fetchUserRoles((userRoles) =>
+      setUserRoles(userRoles?.map((userRole) => userRole.role) ?? [])
+    )
   }
 
   const signOut = async () => {

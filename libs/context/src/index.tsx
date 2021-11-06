@@ -12,13 +12,13 @@ import {
   useStyleProps
 } from "@watheia/utils"
 import clsx from "clsx"
-import { DOMRef } from "@react-types/shared"
-import { filterDOMProps } from "@react-aria/utils"
+import { DOMRef } from "@watheia/types"
+import { filterDOMProps } from "@watheia/utils"
 import { I18nProvider, useLocale } from "@react-aria/i18n"
 import { ModalProvider, useModalProvider } from "@react-aria/overlays"
 import { ProviderContext, ProviderProps } from "@watheia/types"
-// import styles from "@adobe/spectrum-css-temp/components/page/vars.css"
-import typographyStyles from "@watheia/theme.styles.typography/vars.module.css"
+// import { styles } from "@watheia/app.ui.atoms.text"
+import { styles as typographyStyles } from "@watheia/app.ui.atoms.text"
 import { useColorScheme, useScale } from "./lib/mediaQueries"
 // import { version } from "../package.json"
 const version = "0.1.0"
@@ -150,7 +150,7 @@ const ProviderWrapper = React.forwardRef(function ProviderWrapper(
   const { theme, colorScheme, scale } = useProvider()
   const { modalProviderProps } = useModalProvider()
   const { styleProps } = useStyleProps(otherProps)
-  const domRef = useDOMRef(ref)
+  const domRef = useDOMRef<HTMLDivElement>(ref)
 
   const themeKey = Object.keys(theme[colorScheme] ?? {})[0]
   const scaleKey = Object.keys(theme[scale] ?? {})[0]

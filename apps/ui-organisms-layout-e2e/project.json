@@ -1,0 +1,28 @@
+{
+  "root": "apps/ui-organisms-layout-e2e",
+  "sourceRoot": "apps/ui-organisms-layout-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ui-organisms-layout-e2e/cypress.json",
+        "devServerTarget": "ui-organisms-layout:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "ui-organisms-layout:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ui-organisms-layout-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ui-organisms-layout"]
+}

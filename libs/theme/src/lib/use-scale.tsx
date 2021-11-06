@@ -1,5 +1,5 @@
 import { Theme, Scale } from "./types"
-import { useMediaQuery } from "@react-spectrum/utils"
+import { useMediaQuery } from "@watheia/utils"
 
 export default function useScale(theme: Theme): Scale {
   let matchesFine = useMediaQuery("(any-pointer: fine)")

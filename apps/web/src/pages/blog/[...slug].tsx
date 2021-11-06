@@ -8,7 +8,7 @@ import SectionSeparator from "../../components/section-separator"
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/dato"
 import PostTitle from "../../components/post-title"
 import Head from "next/head"
-import { CMS_NAME } from "@watheia/context"
+import { CMS_NAME } from "@watheia/app.context"
 import { markdownToHtml } from "@watheia/utils"
 
 export default function Post({ post, morePosts, preview }) {

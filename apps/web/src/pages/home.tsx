@@ -1,4 +1,4 @@
-import { useAuth } from "@watheia/context"
+import { useAuth } from "@watheia/app.context"
 import Head from "next/head"
 import Home from "../components/views/home"
 
