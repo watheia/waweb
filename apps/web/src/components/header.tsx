@@ -81,7 +81,7 @@ const UserMenu = () => (
   </Menu>
 )
 
-export default function Header(props: any) {
+export default function Header() {
   // console.log("Header(props)", props)
   const { user, session } = useAuth()
   // console.log("user, session =", user, session)

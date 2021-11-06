@@ -1,14 +1,9 @@
 module.exports = {
-  displayName: "context",
+  displayName: "ui-layout",
   preset: "../../jest.preset.js",
-  globals: {
-    "ts-jest": {
-      tsconfig: "<rootDir>/tsconfig.spec.json"
-    }
-  },
   transform: {
-    "^.+\\.[tj]sx?$": "ts-jest"
+    "^.+\\.[tj]sx?$": "babel-jest"
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  coverageDirectory: "../../coverage/libs/context"
+  coverageDirectory: "../../coverage/libs/ui/layout"
 }

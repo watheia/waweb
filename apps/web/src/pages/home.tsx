@@ -2,7 +2,7 @@ import { useAuth } from "@watheia/context"
 import Head from "next/head"
 import Home from "../components/views/home"
 
-const HomePage = (props: any) => {
+const HomePage = (props) => {
   const { user, userLoaded, session } = useAuth()
   return (
     <>

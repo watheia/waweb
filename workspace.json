@@ -5,19 +5,16 @@
     "atoms-text": "libs/atoms/text",
     "atoms-view": "libs/atoms/view",
     "compendium": "apps/compendium",
-    "corporate": "apps/corporate",
-    "corporate-e2e": "apps/corporate-e2e",
-    "gatekeeper": "apps/gatekeeper",
+    "context": "libs/context",
+    "utils": "libs/utils",
+    "theme": "libs/theme",
+    "types": "libs/types",
     "molecules-layout": "libs/molecules/layout",
     "organisms-auth": "libs/organisms/auth",
     "organisms-page": "libs/organisms/page",
-    "screenplay": "apps/screenplay",
     "views-account": "libs/views/account",
-    "views-account-e2e": "apps/views-account-e2e",
     "views-blog": "libs/views/blog",
-    "views-blog-e2e": "apps/views-blog-e2e",
     "views-home": "libs/views/home",
-    "views-home-e2e": "apps/views-home-e2e",
     "views-support": "libs/views/support"
   }
 }

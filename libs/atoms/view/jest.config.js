@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: "atoms-view",
+  displayName: "ui-atoms-view",
   preset: "../../../jest.preset.js",
   transform: {
     "^.+\\.[tj]sx?$": "babel-jest"
