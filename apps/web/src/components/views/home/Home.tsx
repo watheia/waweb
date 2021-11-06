@@ -32,8 +32,8 @@ export default function Home() {
       <HeroSection />
       <LogoCloud />
       <AlternatingFeatureSections />
-      <GradientFeatureSection />
-      <StatsSection />
+      {/* <GradientFeatureSection />
+      <StatsSection /> */}
       <CTASection />
     </div>
   )

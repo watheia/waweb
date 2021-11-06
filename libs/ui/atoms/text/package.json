@@ -1,0 +1,5 @@
+{
+  "name": "@watheia/app.ui.atoms.text",
+  "version": "0.0.1",
+  "types": "src/@types"
+}

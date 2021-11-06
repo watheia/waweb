@@ -5,6 +5,6 @@ import { MockPage } from "./context.composition"
 describe("ContextProvider", () => {
   it("should render successfully", () => {
     const { getByTestId } = render(<MockPage />)
-    expect(getByTestId("@watheia/context")).toBeTruthy()
+    expect(getByTestId("@watheia/app.context")).toBeTruthy()
   })
 })

@@ -1,7 +1,7 @@
 import React from "react"
 import Document, { Html, Head, Main, NextScript } from "next/document"
 import createEmotionServer from "@emotion/server/create-instance"
-import { HOME_OG_IMAGE_URL } from "@watheia/context"
+import { HOME_OG_IMAGE_URL } from "@watheia/app.context"
 import { createEmotionCache } from "@watheia/utils"
 
 export default class MyDocument extends Document {

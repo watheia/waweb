@@ -2,9 +2,17 @@
   "version": 2,
   "projects": {
     "context": "libs/context",
+    "testing-utils": "libs/testing/utils",
     "theme": "libs/theme",
     "types": "libs/types",
-    "ui-atoms": "libs/ui/atoms",
+    "ui-atoms-button": "libs/ui/atoms/button",
+    "ui-atoms-button-e2e": "apps/ui-atoms-button-e2e",
+    "ui-atoms-text": "libs/ui/atoms/text",
+    "ui-atoms-text-e2e": "apps/ui-atoms-text-e2e",
+    "ui-atoms-view": "libs/ui/atoms/view",
+    "ui-atoms-view-e2e": "apps/ui-atoms-view-e2e",
+    "ui-organisms-layout": "libs/ui/organisms/layout",
+    "ui-organisms-layout-e2e": "apps/ui-organisms-layout-e2e",
     "utils": "libs/utils",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"

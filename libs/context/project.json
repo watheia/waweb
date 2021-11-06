@@ -4,20 +4,29 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/workspace:tsc",
+      "executor": "@nrwl/web:package",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/context",
-        "main": "libs/context/src/index.ts",
         "tsConfig": "libs/context/tsconfig.lib.json",
-        "assets": ["libs/context/*.md"]
+        "project": "libs/context/package.json",
+        "entryFile": "libs/context/src/index.tsx",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/context/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/context/**/*.ts"]
+        "lintFilePatterns": ["libs/context/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {

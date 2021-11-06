@@ -7,7 +7,7 @@ import {
   SITE_DESCRIPTION,
   SITE_NAME,
   PREVIEW_IMAGE_FALLBACK
-} from "@watheia/context"
+} from "@watheia/app.context"
 
 export interface SEOProps {
   title?: string
