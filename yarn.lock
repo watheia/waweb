@@ -13085,6 +13085,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cuid@npm:^2.1.8":
+  version: 2.1.8
+  resolution: "cuid@npm:2.1.8"
+  checksum: 12b85b3f5150a6f0b9e4f345c8d98299d74647419151751fa1132f6702fe2b5388ceceb1c9b49bad7cab1b3ac033c7cedea8ffc034930f90005b8a4345025288
+  languageName: node
+  linkType: hard
+
 "cyclist@npm:^1.0.1":
   version: 1.0.1
   resolution: "cyclist@npm:1.0.1"
@@ -31931,6 +31938,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tiny-types@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "tiny-types@npm:1.16.1"
+  checksum: 26175ef112a76503906608b29440edce8830704b6646bd8259c73029c02d100e8dc7fd11c457e2b37f518b217e68ef08d05b7db238641d54f53c72a0b6b68ff5
+  languageName: node
+  linkType: hard
+
 "tiny-warning@npm:^1.0.0, tiny-warning@npm:^1.0.3":
   version: 1.0.3
   resolution: "tiny-warning@npm:1.0.3"
@@ -33718,6 +33732,7 @@ __metadata:
     core-js: ^3.19.1
     cross-env: ^7.0.3
     css-loader: ^6.5.1
+    cuid: ^2.1.8
     cypress: ^8.7.0
     date-fns: ^2.25.0
     dependency-cruiser: ^10.6.0
@@ -33795,6 +33810,7 @@ __metadata:
     svelte-preprocess: ^4.9.8
     swr: ^1.0.1
     tailwindcss: ^2.2.19
+    tiny-types: ^1.16.1
     ts-jest: 27.0.7
     tslib: ^2.3.1
     typescript: ~4.4.4
