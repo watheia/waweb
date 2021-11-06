@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useRef } from "react"
 import Head from "next/head"
 import NavContext from "./lib/NavigationContext"
-import AuthContext from "./lib/AuthContext"
+import AuthContext from "./AuthContext"
 import { DefaultSeo } from "next-seo"
 import seo from "./lib/default-seo"
 import {
@@ -231,7 +231,7 @@ export function useProviderProps<T>(props: T): T {
   )
 }
 
-export * from "./lib/AuthContext"
+export * from "./AuthContext"
 export * from "./lib/supabaseClient"
 export * from "./lib/constants"
 

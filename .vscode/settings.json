@@ -1,5 +1,6 @@
 {
   "WillLuke.nextjs.addTypesOnSave": true,
   "WillLuke.nextjs.hasPrompted": true,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "jest.jestCommandLine": "yarn jest --config jest.config.js --coverage"
 }
