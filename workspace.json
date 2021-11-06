@@ -13,6 +13,7 @@
     "molecules-layout": "libs/molecules/layout",
     "organisms-auth": "libs/organisms/auth",
     "organisms-page": "libs/organisms/page",
+    "screenplay": "apps/screenplay",
     "theme": "libs/theme",
     "types": "libs/types",
     "utils": "libs/utils",

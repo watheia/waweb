@@ -1,0 +1,52 @@
+{
+  "root": "apps/screenplay",
+  "sourceRoot": "apps/screenplay/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/screenplay",
+        "main": "apps/screenplay/src/main.ts",
+        "tsConfig": "apps/screenplay/tsconfig.app.json",
+        "assets": ["apps/screenplay/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/screenplay/src/environments/environment.ts",
+              "with": "apps/screenplay/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "screenplay:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/screenplay/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/screenplay"],
+      "options": {
+        "jestConfig": "apps/screenplay/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
