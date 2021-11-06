@@ -11,7 +11,17 @@
  */
 
 export { default as styles } from "./styles/vars.module.css"
-export * from "./@types"
+export type {
+  AriaButtonElementTypeProps,
+  AriaButtonProps,
+  AriaToggleButtonProps,
+  ButtonProps,
+  ToggleButtonProps,
+  WaButtonProps,
+  WaActionButtonProps,
+  WaLogicButtonProps,
+  WaToggleButtonProps
+} from "./@types"
 export * from "./Button"
 export * from "./ActionButton"
 export * from "./FieldButton"

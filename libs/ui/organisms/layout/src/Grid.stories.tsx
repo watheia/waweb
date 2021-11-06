@@ -93,7 +93,7 @@ storiesOf("Grid", module)
 
 // function render(props: GridProps) {
 //   return (
-//     <Grid {...props} UNSAFE_className={styles['spectrum-Card']}>
+//     <Grid {...props} UNSAFE_className={styles['wa-Card']}>
 //       <SlotProvider slots={cssModuleToSlots(styles)}>
 //         <Image slot="preview" objectFit="cover" src="https://scontent-sjc3-1.cdninstagram.com/vp/061c1b0fa69e3f36c24710f8d5603655/5E500437/t51.2885-15/sh0.08/e35/s640x640/72625830_117633199385660_495143751973844448_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=108" alt="" />
 //         <Image slot="avatar" src="https://a5.behance.net/a9758425f0eaa6f4064d20ba73dfb7946a48f067/img/profile/no-image-138.png?cb=264615658" alt="" />

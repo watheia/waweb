@@ -10,6 +10,14 @@
  * governing permissions and limitations under the License.
  */
 
+import { useButton } from "@react-aria/button"
+import { FocusRing } from "@react-aria/focus"
+import { useHover } from "@react-aria/interactions"
+import { mergeProps } from "@react-aria/utils"
+import { useProviderProps } from "@watheia/app.context"
+import { WaButtonProps } from "@watheia/app.ui.atoms.button"
+import { Text } from "@watheia/app.ui.atoms.text"
+import { FocusableRef } from "@watheia/types"
 import {
   classNames,
   SlotProvider,
@@ -17,16 +25,8 @@ import {
   useSlotProps,
   useStyleProps
 } from "@watheia/utils"
-import { FocusableRef } from "@watheia/types"
-import { FocusRing } from "@react-aria/focus"
-import { mergeProps } from "@react-aria/utils"
 import React, { ElementType, ReactElement } from "react"
-import { WaButtonProps } from "@watheia/app.ui.atoms.button"
 import styles from "./styles/vars.module.css"
-import { Text } from "@watheia/app.ui.atoms.text"
-import { useButton } from "@react-aria/button"
-import { useHover } from "@react-aria/interactions"
-import { useProviderProps } from "@watheia/app.context"
 
 // todo: CSS hasn't caught up yet, map
 const VARIANT_MAPPING = {
@@ -66,10 +66,10 @@ function Button<T extends ElementType = "button">(
         ref={domRef}
         className={classNames(
           styles,
-          "spectrum-Button",
-          `spectrum-Button--${buttonVariant}`,
+          "wa-Button",
+          `wa-Button--${buttonVariant}`,
           {
-            "spectrum-Button--quiet": isQuiet,
+            "wa-Button--quiet": isQuiet,
             "is-disabled": isDisabled,
             "is-active": isPressed,
             "is-hovered": isHovered
@@ -81,10 +81,10 @@ function Button<T extends ElementType = "button">(
           slots={{
             icon: {
               size: "S",
-              UNSAFE_className: classNames(styles, "spectrum-Icon")
+              UNSAFE_className: classNames(styles, "wa-Icon")
             },
             text: {
-              UNSAFE_className: classNames(styles, "spectrum-Button-label")
+              UNSAFE_className: classNames(styles, "wa-Button-label")
             }
           }}
         >

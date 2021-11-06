@@ -15,7 +15,7 @@ import { FocusableRef } from "@watheia/types"
 import { FocusRing } from "@react-aria/focus"
 import { mergeProps } from "@react-aria/utils"
 import React from "react"
-import { WaLogicButtonProps } from "@watheia/app.ui.atoms.button"
+import { WaLogicButtonProps } from "./@types"
 import styles from "./styles/vars.module.css"
 import { useButton } from "@react-aria/button"
 import { useHover } from "@react-aria/interactions"
@@ -37,9 +37,9 @@ function LogicButton(props: WaLogicButtonProps, ref: FocusableRef<HTMLButtonElem
         ref={domRef}
         className={classNames(
           styles,
-          "spectrum-LogicButton",
+          "wa-LogicButton",
           {
-            [`spectrum-LogicButton--${variant}`]: variant,
+            [`wa-LogicButton--${variant}`]: variant,
             "is-disabled": isDisabled,
             "is-active": isPressed,
             "is-hovered": isHovered
@@ -47,7 +47,7 @@ function LogicButton(props: WaLogicButtonProps, ref: FocusableRef<HTMLButtonElem
           styleProps.className
         )}
       >
-        <span className={classNames(styles, "spectrum-Button-label")}>{children}</span>
+        <span className={classNames(styles, "wa-Button-label")}>{children}</span>
       </button>
     </FocusRing>
   )

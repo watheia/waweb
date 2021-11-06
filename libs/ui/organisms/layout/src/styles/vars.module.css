@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-Card {
+.wa-Card {
   max-width: 300px;
   border: 1px solid rgb(25 25 25);
   background: rgb(50 50 50);
@@ -22,7 +22,7 @@
   margin: 0;
 }
 
-.spectrum-Card {
+.wa-Card {
   display: grid;
   grid-template-areas:
     "preview preview    preview  preview   preview"

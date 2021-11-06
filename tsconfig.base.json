@@ -22,9 +22,9 @@
     "paths": {
       "@watheia/app.context": ["libs/context/src/index.tsx"],
       "@watheia/app.testing.utils": ["libs/testing/utils/src/index.ts"],
+      "@watheia/app.ui.atoms.button": ["libs/ui/atoms/button/src/index.ts"],
       "@watheia/app.ui.atoms.text": ["libs/ui/atoms/text/src/index.ts"],
       "@watheia/app.ui.atoms.view": ["libs/ui/atoms/view/src/index.ts"],
-      "@watheia/app.ui.atoms.button": ["libs/ui/atoms/button/src/index.ts"],
       "@watheia/app.ui.organisms.layout": ["libs/ui/organisms/layout/src/index.ts"],
       "@watheia/atoms": ["libs/ui/atoms/src/index.ts"],
       "@watheia/layout": ["libs/ui/layout/src/index.ts"],

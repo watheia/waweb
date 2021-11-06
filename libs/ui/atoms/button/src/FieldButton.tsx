@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { ButtonProps } from "@watheia/app.ui.atoms.button"
+import { ButtonProps } from "./@types"
 import {
   classNames,
   SlotProvider,
@@ -37,7 +37,7 @@ interface FieldButtonProps extends ButtonProps, DOMProps, StyleProps {
 // @private
 function FieldButton(props: FieldButtonProps, ref: FocusableRef<HTMLButtonElement>) {
   props = useSlotProps(props, "button")
-  let {
+  const {
     isQuiet,
     isDisabled,
     validationState,
@@ -47,10 +47,10 @@ function FieldButton(props: FieldButtonProps, ref: FocusableRef<HTMLButtonElemen
     focusRingClass,
     ...otherProps
   } = props
-  let domRef = useFocusableRef(ref) as RefObject<HTMLButtonElement>
-  let { buttonProps, isPressed } = useButton(props, domRef)
-  let { hoverProps, isHovered } = useHover({ isDisabled })
-  let { styleProps } = useStyleProps(otherProps)
+  const domRef = useFocusableRef(ref) as RefObject<HTMLButtonElement>
+  const { buttonProps, isPressed } = useButton(props, domRef)
+  const { hoverProps, isHovered } = useHover({ isDisabled })
+  const { styleProps } = useStyleProps(otherProps)
 
   return (
     <FocusRing
@@ -61,14 +61,13 @@ function FieldButton(props: FieldButtonProps, ref: FocusableRef<HTMLButtonElemen
         {...mergeProps(buttonProps, hoverProps)}
         ref={domRef}
         className={classNames(
-          styles,
-          "spectrum-FieldButton",
+          styles["wa-FieldButton"],
           {
-            "spectrum-FieldButton--quiet": isQuiet,
-            "is-active": isActive || isPressed,
-            "is-disabled": isDisabled,
-            "spectrum-FieldButton--invalid": validationState === "invalid",
-            "is-hovered": isHovered
+            [styles["wa-FieldButton--quiet"]]: isQuiet,
+            [styles["is-active"]]: isActive || isPressed,
+            [styles["is-disabled"]]: isDisabled,
+            [styles["wa-FieldButton--invalid"]]: validationState === "invalid",
+            [styles["is-hovered"]]: isHovered
           },
           styleProps.className
         )}
@@ -77,7 +76,7 @@ function FieldButton(props: FieldButtonProps, ref: FocusableRef<HTMLButtonElemen
           slots={{
             icon: {
               size: "S",
-              UNSAFE_className: classNames(styles, "spectrum-Icon")
+              UNSAFE_className: classNames(styles, "wa-Icon")
             }
           }}
         >
@@ -88,5 +87,5 @@ function FieldButton(props: FieldButtonProps, ref: FocusableRef<HTMLButtonElemen
   )
 }
 
-let _FieldButton = React.forwardRef(FieldButton)
+const _FieldButton = React.forwardRef(FieldButton)
 export { _FieldButton as FieldButton }

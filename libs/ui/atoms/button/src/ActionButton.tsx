@@ -21,7 +21,7 @@ import { FocusableRef } from "@watheia/types"
 import { FocusRing } from "@react-aria/focus"
 import { mergeProps } from "@react-aria/utils"
 import React from "react"
-import { WaActionButtonProps } from "@watheia/app.ui.atoms.button"
+import { WaActionButtonProps } from "./@types"
 import styles from "./styles/vars.module.css"
 import { Text } from "@watheia/app.ui.atoms.text"
 import { useButton } from "@react-aria/button"
@@ -31,8 +31,8 @@ import { useProviderProps } from "@watheia/app.context"
 function ActionButton(props: WaActionButtonProps, ref: FocusableRef<HTMLButtonElement>) {
   props = useProviderProps(props)
   props = useSlotProps(props, "actionButton")
-  const { isQuiet, isDisabled, staticColor, children, autoFocus, ...otherProps } = props
 
+  const { isQuiet, isDisabled, staticColor, children, autoFocus, ...otherProps } = props
   const domRef = useFocusableRef<HTMLButtonElement>(ref)
   const { buttonProps, isPressed } = useButton(props, domRef)
   const { hoverProps, isHovered } = useHover({ isDisabled })
@@ -49,12 +49,12 @@ function ActionButton(props: WaActionButtonProps, ref: FocusableRef<HTMLButtonEl
         ref={domRef}
         className={classNames(
           styles,
-          "spectrum-ActionButton",
+          "wa-ActionButton",
           {
-            "spectrum-ActionButton--quiet": isQuiet,
-            "spectrum-ActionButton--staticColor": !!staticColor,
-            "spectrum-ActionButton--staticWhite": staticColor === "white",
-            "spectrum-ActionButton--staticBlack": staticColor === "black",
+            "wa-ActionButton--quiet": isQuiet,
+            "wa-ActionButton--staticColor": !!staticColor,
+            "wa-ActionButton--staticWhite": staticColor === "white",
+            "wa-ActionButton--staticBlack": staticColor === "black",
             "is-active": isPressed,
             "is-disabled": isDisabled,
             "is-hovered": isHovered
@@ -66,10 +66,10 @@ function ActionButton(props: WaActionButtonProps, ref: FocusableRef<HTMLButtonEl
           slots={{
             icon: {
               size: "S",
-              UNSAFE_className: classNames(styles, "spectrum-Icon")
+              UNSAFE_className: classNames(styles, "wa-Icon")
             },
             text: {
-              UNSAFE_className: classNames(styles, "spectrum-ActionButton-label")
+              UNSAFE_className: classNames(styles, "wa-ActionButton-label")
             }
           }}
         >

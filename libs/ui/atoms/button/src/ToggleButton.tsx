@@ -52,13 +52,13 @@ function ToggleButton(props: WaToggleButtonProps, ref: FocusableRef<HTMLButtonEl
         ref={domRef}
         className={classNames(
           styles,
-          "spectrum-ActionButton",
+          "wa-ActionButton",
           {
-            "spectrum-ActionButton--quiet": isQuiet,
-            "spectrum-ActionButton--emphasized": isEmphasized,
-            "spectrum-ActionButton--staticColor": !!staticColor,
-            "spectrum-ActionButton--staticWhite": staticColor === "white",
-            "spectrum-ActionButton--staticBlack": staticColor === "black",
+            "wa-ActionButton--quiet": isQuiet,
+            "wa-ActionButton--emphasized": isEmphasized,
+            "wa-ActionButton--staticColor": !!staticColor,
+            "wa-ActionButton--staticWhite": staticColor === "white",
+            "wa-ActionButton--staticBlack": staticColor === "black",
             "is-active": isPressed,
             "is-disabled": isDisabled,
             "is-hovered": isHovered,
@@ -71,10 +71,10 @@ function ToggleButton(props: WaToggleButtonProps, ref: FocusableRef<HTMLButtonEl
           slots={{
             icon: {
               size: "S",
-              UNSAFE_className: classNames(styles, "spectrum-Icon")
+              UNSAFE_className: classNames(styles, "wa-Icon")
             },
             text: {
-              UNSAFE_className: classNames(styles, "spectrum-ActionButton-label")
+              UNSAFE_className: classNames(styles, "wa-ActionButton-label")
             }
           }}
         >

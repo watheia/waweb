@@ -26,10 +26,10 @@ import userEvent from "@testing-library/user-event"
 
 let theme = {
   global: {},
-  light: { "spectrum--light": "spectrum--light" },
-  dark: { "spectrum--dark": "spectrum--dark" },
-  medium: { "spectrum--medium": "spectrum--medium" },
-  large: { "spectrum--large": "spectrum--large" }
+  light: { "wa--light": "wa--light" },
+  dark: { "wa--dark": "wa--dark" },
+  medium: { "wa--medium": "wa--medium" },
+  large: { "wa--large": "wa--large" }
 }
 let mediaQueryLight = "(prefers-color-scheme: light)"
 let mediaQueryDark = "(prefers-color-scheme: dark)"
@@ -55,7 +55,7 @@ describe("Provider", () => {
       </Provider>
     )
     let provider = getByTestId("testid")
-    expect(provider.classList.contains("spectrum--dark")).toBeTruthy()
+    expect(provider.classList.contains("wa--dark")).toBeTruthy()
   })
 
   it("Uses OS theme by default - light", () => {
@@ -66,7 +66,7 @@ describe("Provider", () => {
       </Provider>
     )
     let provider = getByTestId("testid")
-    expect(provider.classList.contains("spectrum--light")).toBeTruthy()
+    expect(provider.classList.contains("wa--light")).toBeTruthy()
   })
 
   it("Can be set to dark regardless of OS setting", () => {
@@ -77,7 +77,7 @@ describe("Provider", () => {
       </Provider>
     )
     let provider = getByTestId("testid")
-    expect(provider.classList.contains("spectrum--dark")).toBeTruthy()
+    expect(provider.classList.contains("wa--dark")).toBeTruthy()
   })
 
   it("Provider passes props to children", () => {
@@ -115,8 +115,8 @@ describe("Provider", () => {
     )
     let provider1 = getByTestId("testid1")
     let provider2 = getByTestId("testid2")
-    expect(provider1.classList.contains("spectrum--dark")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--dark")).toBeTruthy()
+    expect(provider1.classList.contains("wa--dark")).toBeTruthy()
+    expect(provider2.classList.contains("wa--dark")).toBeTruthy()
   })
 
   it("Nested providers can update to follow their ancestors", () => {
@@ -131,14 +131,14 @@ describe("Provider", () => {
     let { getByTestId, rerender } = render(<NestedProviders />)
     let provider1 = getByTestId("testid1")
     let provider2 = getByTestId("testid2")
-    expect(provider1.classList.contains("spectrum--dark")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--dark")).toBeTruthy()
+    expect(provider1.classList.contains("wa--dark")).toBeTruthy()
+    expect(provider2.classList.contains("wa--dark")).toBeTruthy()
 
     rerender(<NestedProviders colorScheme="light" />)
     provider1 = getByTestId("testid1")
     provider2 = getByTestId("testid2")
-    expect(provider1.classList.contains("spectrum--light")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--light")).toBeTruthy()
+    expect(provider1.classList.contains("wa--light")).toBeTruthy()
+    expect(provider2.classList.contains("wa--light")).toBeTruthy()
   })
 
   it("Nested providers can be explicitly set to something else", () => {
@@ -152,8 +152,8 @@ describe("Provider", () => {
     )
     let provider1 = getByTestId("testid1")
     let provider2 = getByTestId("testid2")
-    expect(provider1.classList.contains("spectrum--dark")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--light")).toBeTruthy()
+    expect(provider1.classList.contains("wa--dark")).toBeTruthy()
+    expect(provider2.classList.contains("wa--light")).toBeTruthy()
   })
 
   it("Nested providers pass props to children", () => {
@@ -168,7 +168,7 @@ describe("Provider", () => {
     let button = getByRole("button")
     triggerPress(button)
     expect(onPressSpy).not.toHaveBeenCalled()
-    expect(button.classList.contains("spectrum-Button--quiet")).toBeTruthy()
+    expect(button.classList.contains("wa-Button--quiet")).toBeTruthy()
     onPressSpy.mockClear()
   })
 
@@ -179,9 +179,9 @@ describe("Provider", () => {
         <Provider
           theme={{
             global: {},
-            light: { "spectrum--light": "spectrum--light" },
-            medium: { "spectrum--medium": "spectrum--medium" },
-            large: { "spectrum--large": "spectrum--large" }
+            light: { "wa--light": "wa--light" },
+            medium: { "wa--medium": "wa--medium" },
+            large: { "wa--large": "wa--large" }
           }}
           data-testid="testid2"
         >
@@ -191,8 +191,8 @@ describe("Provider", () => {
     )
     let provider1 = getByTestId("testid1")
     let provider2 = getByTestId("testid2")
-    expect(provider1.classList.contains("spectrum--dark")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--light")).toBeTruthy()
+    expect(provider1.classList.contains("wa--dark")).toBeTruthy()
+    expect(provider2.classList.contains("wa--light")).toBeTruthy()
   })
 
   it("Provider will rerender if the OS preferred changes and it is on auto", () => {
@@ -206,15 +206,15 @@ describe("Provider", () => {
     )
     let provider1 = getByTestId("testid1")
     let provider2 = getByTestId("testid2")
-    expect(provider1.classList.contains("spectrum--light")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--light")).toBeTruthy()
+    expect(provider1.classList.contains("wa--light")).toBeTruthy()
+    expect(provider2.classList.contains("wa--light")).toBeTruthy()
 
     act(() => {
       matchMedia.useMediaQuery(mediaQueryDark)
     })
 
-    expect(provider1.classList.contains("spectrum--dark")).toBeTruthy()
-    expect(provider2.classList.contains("spectrum--dark")).toBeTruthy()
+    expect(provider1.classList.contains("wa--dark")).toBeTruthy()
+    expect(provider2.classList.contains("wa--dark")).toBeTruthy()
   })
 
   describe("responsive styles", function () {

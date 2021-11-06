@@ -19,14 +19,14 @@ import {
 } from "@watheia/types"
 import { ElementType, JSXElementConstructor, ReactNode } from "react"
 
-interface ButtonProps extends PressEvents, FocusableProps {
+export interface ButtonProps extends PressEvents, FocusableProps {
   /** Whether the button is disabled. */
   isDisabled?: boolean
   /** The content to display in the button. */
   children?: ReactNode
 }
 
-interface ToggleButtonProps extends ButtonProps {
+export interface ToggleButtonProps extends ButtonProps {
   /** Whether the element should be selected (controlled). */
   isSelected?: boolean
   /** Whether the element should be selected (uncontrolled). */
@@ -83,7 +83,7 @@ export interface WaButtonProps<T extends ElementType = "button">
     ButtonProps,
     LinkButtonProps<T>,
     StyleProps {
-  /** The [visual style](https://spectrum.adobe.com/page/button/#Options) of the button. */
+  /** The [visual style](https://watheia.app/docs/button/#Options) of the button. */
   variant: "cta" | "overBackground" | "primary" | "secondary" | "negative"
   /** Whether the button should be displayed with a quiet style. */
   isQuiet?: boolean
@@ -92,7 +92,7 @@ export interface WaButtonProps<T extends ElementType = "button">
 }
 
 export interface WaActionButtonProps extends AriaBaseButtonProps, ButtonProps, StyleProps {
-  /** Whether the button should be displayed with a [quiet style](https://spectrum.adobe.com/page/action-button/#Quiet). */
+  /** Whether the button should be displayed with a [quiet style](https://watheia.app/docs/action-button/#Quiet). */
   isQuiet?: boolean
   /** The static color style to apply. Useful when the button appears over a color background. */
   staticColor?: "white" | "black"
@@ -107,6 +107,6 @@ export interface WaLogicButtonProps extends AriaBaseButtonProps, ButtonProps, St
 }
 
 export interface WaToggleButtonProps extends ToggleButtonProps, WaActionButtonProps {
-  /** Whether the button should be displayed with an [emphasized style](https://spectrum.adobe.com/page/action-button/#Emphasis). */
+  /** Whether the button should be displayed with an [emphasized style](https://watheia.app/docs/action-button/#Emphasis). */
   isEmphasized?: boolean
 }

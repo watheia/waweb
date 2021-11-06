@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { AriaButtonElementTypeProps, ButtonProps } from "@watheia/app.ui.atoms.button"
+import { AriaButtonElementTypeProps, ButtonProps } from "./@types"
 import { classNames, useFocusableRef, useStyleProps } from "@watheia/utils"
 import CrossSmall from "@spectrum-icons/ui/CrossSmall"
 import { DOMProps, FocusableRef, StyleProps } from "@watheia/types"
@@ -35,7 +35,7 @@ interface ClearButtonProps<T extends ElementType = "button">
 
 function ClearButton(props: ClearButtonProps, ref: FocusableRef<HTMLButtonElement>) {
   let {
-    children = <CrossSmall UNSAFE_className={styles["spectrum-Icon"]} />,
+    children = <CrossSmall UNSAFE_className={styles["wa-Icon"]} />,
     focusClassName,
     variant,
     autoFocus,
@@ -68,9 +68,9 @@ function ClearButton(props: ClearButtonProps, ref: FocusableRef<HTMLButtonElemen
         ref={domRef}
         className={classNames(
           styles,
-          "spectrum-ClearButton",
+          "wa-ClearButton",
           {
-            [`spectrum-ClearButton--${variant}`]: variant,
+            [`wa-ClearButton--${variant}`]: variant,
             "is-disabled": isDisabled,
             "is-active": isPressed,
             "is-hovered": isHovered
