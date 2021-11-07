@@ -1,0 +1,13 @@
+{
+  "name": "screenplay",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf target",
+    "lint": "eslint --ext ts --config ../../.eslintrc.js",
+    "test:update-serenity": "serenity-bdd update --ignoreSSL",
+    "test:acceptance": "cucumber-js",
+    "test:report": "serenity-bdd run",
+    "test": "failsafe clean test:update-serenity test:acceptance test:report",
+    "verify": "npm test"
+  }
+}

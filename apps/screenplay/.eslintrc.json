@@ -4,9 +4,7 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "parserOptions": {
-        "project": ["apps/screenplay/tsconfig.*?.json"]
-      },
+      "parserOptions": {},
       "rules": {}
     },
     {

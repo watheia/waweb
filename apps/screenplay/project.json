@@ -46,6 +46,12 @@
         "jestConfig": "apps/screenplay/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "e2e": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "rimraf target && serenity-bdd update --ignoreSSL && cucumber-js && serenity-bdd run"
+      }
     }
   },
   "tags": []
