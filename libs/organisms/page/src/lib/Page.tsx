@@ -25,7 +25,7 @@ Context.displayName = "ProviderContext"
 
 const DEFAULT_BREAKPOINTS = { S: 640, M: 768, L: 1024, XL: 1280, XXL: 1536 }
 
-function Page(props: ProviderProps, ref: DOMRef<HTMLDivElement>) {
+export function Page(props: ProviderProps, ref: DOMRef<HTMLDivElement>) {
   const prevContext = usePage()
   const prevColorScheme = prevContext && prevContext.colorScheme
   const prevBreakpoints = prevContext && prevContext.breakpoints

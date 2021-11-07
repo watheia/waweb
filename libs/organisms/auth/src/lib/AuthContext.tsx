@@ -1,7 +1,7 @@
 import React, { createContext, useContext, ReactNode, useState, useEffect } from "react"
+import { Auth, Card, Typography, Space } from "@supabase/ui"
 import { Session, User } from "@supabase/supabase-js"
-import { supabase } from "./supabaseClient"
-import { Auth } from "@supabase/ui"
+import { supabase } from "./supabase"
 
 /**
  * Fetch all roles for the current user
@@ -9,7 +9,7 @@ import { Auth } from "@supabase/ui"
  */
 const fetchUserRoles = async (setState: (arg0: any[] | null) => void) => {
   try {
-    let { body } = await supabase.from("user_roles").select(`*`)
+    const { body } = await supabase.from("user_roles").select(`*`)
     if (setState) setState(body)
     return body
   } catch (error) {

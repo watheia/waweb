@@ -26,10 +26,10 @@ import styles from "./styles/vars.module.css"
 import { Text } from "@waweb/atoms.text"
 import { useButton } from "@react-aria/button"
 import { useHover } from "@react-aria/interactions"
-import { useProviderProps } from "@watheia/context"
+// import { usePageProps } from "@watheia/context"
 
 function ActionButton(props: WaActionButtonProps, ref: FocusableRef<HTMLButtonElement>) {
-  props = useProviderProps(props)
+  // props = usePageProps(props)
   props = useSlotProps(props, "actionButton")
 
   const { isQuiet, isDisabled, staticColor, children, autoFocus, ...otherProps } = props

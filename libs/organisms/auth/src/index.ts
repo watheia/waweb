@@ -1,1 +1,1 @@
-export * from "./lib/OrganismsAuth"
+export * from "./lib/AuthContext"

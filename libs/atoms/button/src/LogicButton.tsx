@@ -19,10 +19,10 @@ import { WaLogicButtonProps } from "./@types"
 import styles from "./styles/vars.module.css"
 import { useButton } from "@react-aria/button"
 import { useHover } from "@react-aria/interactions"
-import { useProviderProps } from "@watheia/context"
+// import { useProviderProps } from "@watheia/context"
 
 function LogicButton(props: WaLogicButtonProps, ref: FocusableRef<HTMLButtonElement>) {
-  props = useProviderProps(props)
+  // props = useProviderProps(props)
   const { variant, children, isDisabled, autoFocus, ...otherProps } = props
   const domRef = useFocusableRef<HTMLButtonElement>(ref)
   const { buttonProps, isPressed } = useButton(props, domRef)

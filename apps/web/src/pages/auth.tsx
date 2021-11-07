@@ -14,31 +14,15 @@
   }
   ```
 */
-import { Auth, Card, Typography, Space } from "@supabase/ui"
-import { supabase } from "@watheia/context"
+
 import styles from "./auth.module.css"
 
-export default function AuthPage() {
+export default function AuthPage(props) {
   return (
     <div className={styles.page}>
       <div className="flex-1 flex flex-col justify-center p-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
-          <div className="authcontainer">
-            <Card>
-              <Space direction="vertical" size={8}>
-                <div>
-                  <Typography.Title level={3}>Watheia Gatekeeper</Typography.Title>
-                </div>
-                <Auth
-                  supabaseClient={supabase}
-                  providers={["google", "github"]}
-                  view={"sign_in"}
-                  socialLayout="horizontal"
-                  socialButtonSize="xlarge"
-                />
-              </Space>
-            </Card>
-          </div>
+          <SupaAuthContainer />
         </div>
       </div>
       <div className="hidden lg:block relative w-0 flex-1">

@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { TabNav } from "./tab-nav"
 import { MenuNav } from "./menu-nav"
-import { useAuth } from "@watheia/context"
+import { useAuth } from "@waweb/organisms.auth"
 import Link from "next/link"
 import clsx from "clsx"
 

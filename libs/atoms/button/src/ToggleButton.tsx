@@ -19,12 +19,12 @@ import { WaToggleButtonProps } from "./@types"
 import styles from "./styles/vars.module.css"
 import { Text } from "@waweb/atoms.text"
 import { useHover } from "@react-aria/interactions"
-import { useProviderProps } from "@watheia/context"
+// import { useProviderProps } from "@watheia/context"
 import { useToggleButton } from "@react-aria/button"
 import { useToggleState } from "@react-stately/toggle"
 
 function ToggleButton(props: WaToggleButtonProps, ref: FocusableRef<HTMLButtonElement>) {
-  props = useProviderProps(props)
+  // props = useProviderProps(props)
   const {
     isQuiet,
     isDisabled,
