@@ -14,7 +14,7 @@ import { useButton } from "@react-aria/button"
 import { FocusRing } from "@react-aria/focus"
 import { useHover } from "@react-aria/interactions"
 import { mergeProps } from "@react-aria/utils"
-import { useProviderProps } from "@watheia/context"
+import { usePageProps } from "@waweb/organisms.page"
 import { WaButtonProps } from "./@types"
 import { Text } from "@waweb/atoms.text"
 import { FocusableRef } from "@watheia/types"
@@ -37,7 +37,7 @@ function Button<T extends ElementType = "button">(
   props: WaButtonProps<T>,
   ref: FocusableRef<HTMLButtonElement>
 ) {
-  props = useProviderProps(props)
+  props = usePageProps(props)
   props = useSlotProps(props, "button")
   const {
     elementType: ElementType = "button",

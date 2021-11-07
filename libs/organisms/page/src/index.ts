@@ -1,1 +1,2 @@
-export * from "./lib/OrganismsPage"
+export * from "./lib/Page"
+export { default as defaultSeo } from "./lib/default-seo"

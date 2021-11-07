@@ -16,9 +16,11 @@
     "baseUrl": "./",
     "paths": {
       "@watheia/context": ["libs/context/src/index.tsx"],
+      "@watheia/theme": ["libs/theme/src/index.ts"],
       "@watheia/types": ["libs/types/src/index.ts"],
       "@watheia/utils": ["libs/utils/src/index.ts"],
       "@waweb/atoms.button": ["libs/atoms/button/src/index.ts"],
+      "@waweb/atoms.container": ["libs/atoms/container/src/index.ts"],
       "@waweb/atoms.text": ["libs/atoms/text/src/index.ts"],
       "@waweb/atoms.view": ["libs/atoms/view/src/index.ts"],
       "@waweb/molecules.layout": ["libs/molecules/layout/src/index.ts"],

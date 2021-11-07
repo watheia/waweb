@@ -2,10 +2,10 @@
   "version": 2,
   "projects": {
     "atoms-button": "libs/atoms/button",
+    "atoms-container": "libs/atoms/container",
     "atoms-text": "libs/atoms/text",
     "atoms-view": "libs/atoms/view",
     "compendium": "apps/compendium",
-    "context": "libs/context",
     "corporate": "apps/corporate",
     "corporate-e2e": "apps/corporate-e2e",
     "gatekeeper": "apps/gatekeeper",
