@@ -1,0 +1,61 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@waweb/base-ui.atoms.heading": [
+        "libs/base-ui/atoms/heading/src/index.ts"
+      ],
+      "@waweb/base-ui.atoms.link": ["libs/base-ui/atoms/link/src/index.ts"],
+      "@waweb/base-ui.atoms.text": ["libs/base-ui/atoms/text/src/index.ts"],
+      "@waweb/base-ui.molecules.card": [
+        "libs/base-ui/molecules/card/src/index.ts"
+      ],
+      "@waweb/base-ui.views.welcome": [
+        "libs/base-ui/views/welcome/src/index.ts"
+      ],
+      "@waweb/envs.nx-react": ["libs/envs/nx-react/src/index.ts"],
+      "@waweb/theme.tokens.global": ["libs/theme/tokens/global/src/index.ts"],
+      "@waweb/theme.tokens.palette.dark": [
+        "libs/theme/tokens/palette/dark/src/index.ts"
+      ],
+      "@waweb/theme.tokens.palette.darkest": [
+        "libs/theme/tokens/palette/darkest/src/index.ts"
+      ],
+      "@waweb/theme.tokens.palette.light": [
+        "libs/theme/tokens/palette/light/src/index.ts"
+      ],
+      "@waweb/theme.tokens.palette.lightest": [
+        "libs/theme/tokens/palette/lightest/src/index.ts"
+      ],
+      "@waweb/theme.tokens.scale.large": [
+        "libs/theme/tokens/scale/large/src/index.ts"
+      ],
+      "@waweb/theme.tokens.scale.medium": [
+        "libs/theme/tokens/scale/medium/src/index.ts"
+      ],
+      "@waweb/theme.types.css-module": [
+        "libs/theme/types/css-module/src/index.ts"
+      ],
+      "@waweb/tools.functions.modular-css-rollup-config": [
+        "libs/tools/functions/modular-css-rollup-config/src/index.js"
+      ],
+      "@waweb/tools.functions.modular-css-webpack-config": [
+        "libs/tools/functions/modular-css-webpack-config/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,43 @@
+{
+  "root": "libs/base-ui/views/welcome",
+  "sourceRoot": "libs/base-ui/views/welcome/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/base-ui/views/welcome",
+        "tsConfig": "libs/base-ui/views/welcome/tsconfig.lib.json",
+        "project": "libs/base-ui/views/welcome/package.json",
+        "entryFile": "libs/base-ui/views/welcome/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "rollup.config.js",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/base-ui/views/welcome/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/base-ui/views/welcome/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/base-ui/views/welcome"],
+      "options": {
+        "jestConfig": "libs/base-ui/views/welcome/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

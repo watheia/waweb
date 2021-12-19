@@ -1,0 +1,55 @@
+.Link {
+  color: var(--link-text-color, #04bfbf);
+
+  &:hover {
+    color: var(--link-text-color-hover, #027373);
+  }
+
+  &:active {
+    color: var(--link-text-color-down, #027373);
+  }
+
+  &:focus-ring {
+    color: var(--link-text-color-key-focus);
+  }
+
+  &.is-disabled {
+    color: var(--link-text-color-disabled);
+  }
+}
+
+.LinkSecondary {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:active {
+    color: inherit;
+  }
+
+  &:focus {
+    color: inherit;
+  }
+}
+
+.LinkOverBackground {
+  color: var(--link-over-background-text-color);
+
+  &:hover {
+    color: var(--link-over-background-text-color-hover);
+  }
+
+  &:active {
+    color: var(--link-over-background-text-color-down);
+  }
+
+  &:focus {
+    color: var(--link-over-background-text-color-key-focus);
+  }
+
+  &.is-disabled {
+    color: var(--link-over-background-text-color-disabled);
+  }
+}

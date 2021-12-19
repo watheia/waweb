@@ -1,0 +1,34 @@
+{
+  "root": "libs/envs/nx-react",
+  "sourceRoot": "libs/envs/nx-react/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/envs/nx-react",
+        "tsConfig": "libs/envs/nx-react/tsconfig.lib.json",
+        "packageJson": "libs/envs/nx-react/package.json",
+        "main": "libs/envs/nx-react/src/index.ts",
+        "assets": ["libs/envs/nx-react/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/envs/nx-react/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/envs/nx-react"],
+      "options": {
+        "jestConfig": "libs/envs/nx-react/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

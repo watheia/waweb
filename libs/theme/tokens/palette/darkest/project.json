@@ -1,0 +1,37 @@
+{
+  "root": "libs/theme/tokens/palette/darkest",
+  "sourceRoot": "libs/theme/tokens/palette/darkest/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/theme/tokens/palette/darkest",
+        "tsConfig": "libs/theme/tokens/palette/darkest/tsconfig.lib.json",
+        "project": "libs/theme/tokens/palette/darkest/package.json",
+        "entryFile": "libs/theme/tokens/palette/darkest/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/theme/tokens/palette/darkest/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/theme/tokens/palette/darkest/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}
