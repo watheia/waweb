@@ -1,5 +1,5 @@
 export type CSSModule = {
-  readonly [key: string]: string;
+  readonly [className: string]: string;
 };
 
 declare module '*.module.css' {

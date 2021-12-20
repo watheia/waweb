@@ -39,7 +39,6 @@
     "packageManager": "teambit.dependencies/yarn",
     "policy": {
       "dependencies": {
-        "@teambit/design.ui.external-link": "0.0.344",
         "@teambit/documenter.theme.theme-compositions": "4.1.1",
         "@teambit/eslint-config-bit-react": "~0.0.367",
         "@teambit/harmony": "0.2.11",
@@ -97,7 +96,7 @@
     /**
      * configure theme using standard react env
      */
-    "{styles/**}, {tokens/**}": {
+    "{styles/**}, {tokens/**}, {ui/default-theme}, {ui/dark-theme}, {ui/light-theme}": {
       "teambit.react/react": {}
     },
     /**

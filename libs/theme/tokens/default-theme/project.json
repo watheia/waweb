@@ -1,0 +1,37 @@
+{
+  "root": "libs/theme/tokens/default-theme",
+  "sourceRoot": "libs/theme/tokens/default-theme/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/theme/tokens/default-theme",
+        "tsConfig": "libs/theme/tokens/default-theme/tsconfig.lib.json",
+        "project": "libs/theme/tokens/default-theme/package.json",
+        "entryFile": "libs/theme/tokens/default-theme/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/theme/tokens/default-theme/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/theme/tokens/default-theme/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

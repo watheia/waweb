@@ -1,6 +1,6 @@
-import React from 'react';
 import { render } from '@testing-library/react';
-import { BasicCard, CardWithCopyBox } from './card.composition';
+import React from 'react';
+import { BasicCard } from './card.composition';
 
 it('should render a Heading', () => {
   const { getByText } = render(<BasicCard />);
@@ -14,8 +14,8 @@ it('should render some text', () => {
   expect(rendered).toBeTruthy();
 });
 
-it('should contain a command that can be copied', () => {
-  const { getByText } = render(<CardWithCopyBox />);
-  const rendered = getByText('bit templates');
-  expect(rendered).toBeTruthy();
-});
+// it('should contain a command that can be copied', () => {
+//   const { getByText } = render(<CardWithCopyBox />);
+//   const rendered = getByText('bit templates');
+//   expect(rendered).toBeTruthy();
+// });

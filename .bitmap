@@ -15,6 +15,12 @@
         "mainFile": "index.ts",
         "rootDir": "libs/base-ui/atoms/heading/src"
     },
+    "atoms/link": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/base-ui/atoms/link/src"
+    },
     "atoms/text": {
         "scope": "",
         "version": "",
@@ -33,6 +39,12 @@
         "mainFile": "index.ts",
         "rootDir": "libs/tools/functions/modular-css-webpack-config/src"
     },
+    "model/theme": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/tools/model/theme/src"
+    },
     "molecules/card": {
         "scope": "",
         "version": "",
@@ -45,11 +57,29 @@
         "mainFile": "index.ts",
         "rootDir": "libs/envs/nx-react/src"
     },
+    "tokens/dark-theme": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/theme/tokens/dark-theme/src"
+    },
+    "tokens/default-theme": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/theme/tokens/default-theme/src"
+    },
     "tokens/global": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/global/src"
+    },
+    "tokens/light-theme": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/theme/tokens/light-theme/src"
     },
     "tokens/palette/dark": {
         "scope": "",
@@ -86,12 +116,6 @@
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/scale/medium/src"
-    },
-    "types/css-module": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "libs/theme/types/css-module/src"
     },
     "views/welcome": {
         "scope": "",
