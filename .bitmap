@@ -10,116 +10,116 @@
 
 {
     "atoms/heading": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.base-ui",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/base-ui/atoms/heading/src"
     },
     "atoms/link": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.base-ui",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/base-ui/atoms/link/src"
     },
     "atoms/text": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.base-ui",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/base-ui/atoms/text/src"
     },
     "functions/modular-css-rollup-config": {
         "scope": "",
-        "version": "",
+        "version": "0.1.0",
         "mainFile": "index.js",
         "rootDir": "libs/tools/functions/modular-css-rollup-config/src"
     },
     "functions/modular-css-webpack-config": {
         "scope": "",
-        "version": "",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/tools/functions/modular-css-webpack-config/src"
     },
     "model/theme": {
         "scope": "",
-        "version": "",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/tools/model/theme/src"
     },
     "molecules/card": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.base-ui",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/base-ui/molecules/card/src"
     },
     "nx-react": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.envs",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/envs/nx-react/src"
     },
     "tokens/dark-theme": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/dark-theme/src"
     },
     "tokens/default-theme": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/default-theme/src"
     },
     "tokens/global": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/global/src"
     },
     "tokens/light-theme": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/light-theme/src"
     },
     "tokens/palette/dark": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/palette/dark/src"
     },
     "tokens/palette/darkest": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/palette/darkest/src"
     },
     "tokens/palette/light": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/palette/light/src"
     },
     "tokens/palette/lightest": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/palette/lightest/src"
     },
     "tokens/scale/large": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/scale/large/src"
     },
     "tokens/scale/medium": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.theme",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/scale/medium/src"
     },
     "views/welcome": {
-        "scope": "",
-        "version": "",
+        "scope": "waweb.base-ui",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/base-ui/views/welcome/src"
     },
