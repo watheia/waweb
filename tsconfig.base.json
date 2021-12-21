@@ -26,6 +26,7 @@
       "@waweb/base-ui.views.welcome": [
         "libs/base-ui/views/welcome/src/index.ts"
       ],
+      "@waweb/envs.modular-css": ["libs/envs/modular-css/src/index.ts"],
       "@waweb/envs.nx-react": ["libs/envs/nx-react/src/index.ts"],
       "@waweb/theme.tokens.dark-theme": [
         "libs/theme/tokens/dark-theme/src/index.ts"
@@ -58,13 +59,14 @@
       "@waweb/theme.types.css-module": [
         "libs/theme/types/css-module/src/index.ts"
       ],
+      "@waweb/theme.ui.provider": ["libs/theme/ui/provider/src/index.ts"],
       "@waweb/tools.functions.modular-css-rollup-config": [
         "libs/tools/functions/modular-css-rollup-config/src/index.js"
       ],
-      "@waweb/tools.functions.modular-css-webpack-config": [
-        "libs/tools/functions/modular-css-webpack-config/src/index.ts"
-      ],
-      "@waweb/tools.model.theme": ["libs/tools/model/theme/src/index.ts"]
+      "@waweb/tools.model.theme": ["libs/tools/model/theme/src/index.ts"],
+      "@waweb/tools.use-modular-css": [
+        "libs/tools/use-modular-css/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

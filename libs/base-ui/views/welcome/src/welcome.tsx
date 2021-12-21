@@ -5,10 +5,9 @@ import React from 'react';
 import * as styles from './welcome.module.scss';
 
 export function Welcome() {
-  console.log(styles);
   return (
     <div className={styles.page}>
-      <Heading className={styles.h1}>Welcome to Bit</Heading>
+      <Heading className={styles.h1}>Welcome to waweb!</Heading>
       <Text
         className={styles.texts}
         text="Edit this component and see it change in the UI or play with the commands below to learn more about how Bit works."

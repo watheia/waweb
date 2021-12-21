@@ -6,6 +6,7 @@
     "base-ui-atoms-text": "libs/base-ui/atoms/text",
     "base-ui-molecules-card": "libs/base-ui/molecules/card",
     "base-ui-views-welcome": "libs/base-ui/views/welcome",
+    "envs-modular-css": "libs/envs/modular-css",
     "envs-nx-react": "libs/envs/nx-react",
     "theme-tokens-dark-theme": "libs/theme/tokens/dark-theme",
     "theme-tokens-default-theme": "libs/theme/tokens/default-theme",
@@ -17,9 +18,9 @@
     "theme-tokens-palette-lightest": "libs/theme/tokens/palette/lightest",
     "theme-tokens-scale-large": "libs/theme/tokens/scale/large",
     "theme-tokens-scale-medium": "libs/theme/tokens/scale/medium",
-    "tools-functions-modular-css-rollup-config": "libs/tools/functions/modular-css-rollup-config",
-    "tools-functions-modular-css-webpack-config": "libs/tools/functions/modular-css-webpack-config",
+    "theme-ui-provider": "libs/theme/ui/provider",
     "tools-model-theme": "libs/tools/model/theme",
+    "tools-use-modular-css": "libs/tools/use-modular-css",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

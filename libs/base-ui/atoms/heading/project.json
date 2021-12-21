@@ -13,7 +13,7 @@
         "project": "libs/base-ui/atoms/heading/package.json",
         "entryFile": "libs/base-ui/atoms/heading/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "rollup.config.js",
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {

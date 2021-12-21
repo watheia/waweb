@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/{
+ **/ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -41,7 +41,6 @@
       "dependencies": {
         "@teambit/documenter.theme.theme-compositions": "4.1.1",
         "@teambit/eslint-config-bit-react": "~0.0.367",
-        "@teambit/harmony": "0.2.11",
         "@teambit/react.templates.themes.theme": "0.0.4",
         "@teambit/webpack.modules.style-regexps": "0.0.129",
         "@watheia/base-ui.routing.compare-url": "1.2.0",
@@ -51,7 +50,8 @@
         "@watheia/base-ui.routing.routing-provider": "1.6.0"
       },
       "peerDependencies": {
-        "@testing-library/react": "12.0.0",
+        "@teambit/harmony": "^0.2.11",
+        "@testing-library/react": "^12.0.0",
         "react": "17.0.2",
         "react-dom": "17.0.2"
       }
@@ -96,8 +96,9 @@
     /**
      * configure theme using standard react env
      */
-    "{styles/**}, {tokens/**}, {ui/default-theme}, {ui/dark-theme}, {ui/light-theme}": {
-      "teambit.react/react": {}
+    "{styles/**}, {tokens/**}": {
+      "teambit.react/react": "-",
+      "waweb.envs/modular-css": {}
     },
     /**
      * configures components with namespace 'content' to use the MDX dev environment.
@@ -108,7 +109,7 @@
     /**
      * configures components with namespaces 'envs' and 'aspects' to use the default Aspect development environment.
      */
-    "{nx-react}": {
+    "{nx-react}, {modular-css}": {
       "teambit.harmony/aspect": {},
       "teambit.react/react": "-"
     }

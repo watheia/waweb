@@ -1,10 +1,10 @@
 import {
   Link as BaseLink,
-  LinkProps as WaLinkProps
+  LinkProps as WaLinkProps,
 } from '@watheia/base-ui.routing.link';
 import classNames from 'clsx';
 import React from 'react';
-import * as styles from './link.module.scss';
+import * as styles from './link.module.css';
 
 export type LinkProps = WaLinkProps;
 

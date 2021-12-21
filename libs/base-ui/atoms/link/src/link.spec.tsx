@@ -6,7 +6,7 @@ import { LinkExample, LinkWithExternal } from './link.composition';
 it('should render correctly', () => {
   const { getByTestId } = render(<LinkExample />);
   const rendered = getByTestId('test-link');
-  expect(rendered).to.exist;
+  expect(rendered).to.be.instanceOf(HTMLElement);
 });
 it('should render with target blank', () => {
   const { getByTestId } = render(<LinkWithExternal />);

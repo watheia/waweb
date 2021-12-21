@@ -1,3 +1,18 @@
+const postCssPlugins = [
+  require(`postcss-preset-env`)({ stage: 3 }),
+  require('@modular-css/postcss')({
+    cwd: process.cwd(),
+    map: { inline: false },
+    dupewarn: true,
+    postcss: {},
+    resolvers: [],
+    rewrite: true,
+    verbose: true,
+    exportGlobals: true,
+  }),
+  require('postcss-reporter')({}),
+];
+
 module.exports = {
   siteMetadata: {
     title: `web`,
@@ -41,6 +56,11 @@ module.exports = {
         icon: `src/images/logo.svg`,
       },
     },
-    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins,
+      },
+    },
   ],
 };

@@ -13,49 +13,79 @@
         "scope": "waweb.base-ui",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "libs/base-ui/atoms/heading/src"
+        "rootDir": "libs/base-ui/atoms/heading/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "atoms/link": {
         "scope": "waweb.base-ui",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "libs/base-ui/atoms/link/src"
+        "rootDir": "libs/base-ui/atoms/link/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "atoms/text": {
         "scope": "waweb.base-ui",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "libs/base-ui/atoms/text/src"
-    },
-    "functions/modular-css-rollup-config": {
-        "scope": "",
-        "version": "0.1.0",
-        "mainFile": "index.js",
-        "rootDir": "libs/tools/functions/modular-css-rollup-config/src"
-    },
-    "functions/modular-css-webpack-config": {
-        "scope": "",
-        "version": "0.1.0",
-        "mainFile": "index.ts",
-        "rootDir": "libs/tools/functions/modular-css-webpack-config/src"
+        "rootDir": "libs/base-ui/atoms/text/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "model/theme": {
-        "scope": "",
+        "scope": "waweb.tools",
         "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "libs/tools/model/theme/src"
+    },
+    "modular-css": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/envs/modular-css/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "molecules/card": {
         "scope": "waweb.base-ui",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "libs/base-ui/molecules/card/src"
+        "rootDir": "libs/base-ui/molecules/card/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "nx-react": {
         "scope": "waweb.envs",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "libs/envs/nx-react/src"
+        "rootDir": "libs/envs/nx-react/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "tokens/dark-theme": {
         "scope": "waweb.theme",
@@ -117,11 +147,35 @@
         "mainFile": "index.ts",
         "rootDir": "libs/theme/tokens/scale/medium/src"
     },
+    "ui/provider": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/theme/ui/provider/src"
+    },
+    "use-modular-css": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "libs/tools/use-modular-css/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
+    },
     "views/welcome": {
         "scope": "waweb.base-ui",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "libs/base-ui/views/welcome/src"
+        "rootDir": "libs/base-ui/views/welcome/src",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "Aaron Miller",
+            "email": "amiller@watheia.org"
+        }
     },
     "$schema-version": "14.9.0"
 }

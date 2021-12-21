@@ -12,7 +12,7 @@ export type HeadingProps = {
 export function Heading({ children, element, className }: HeadingProps) {
   const Element = element || 'h1';
   return (
-    <Element className={classNames(styles.heading, className)}>
+    <Element className={classNames(styles.Heading, className)}>
       {children}
     </Element>
   );

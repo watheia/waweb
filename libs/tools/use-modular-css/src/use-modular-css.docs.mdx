@@ -1,0 +1,29 @@
+---
+description: 'Shareable component for adding modular-css support to webpack in a Bit env'
+labels: ['react', 'shareable', 'modular-css', 'webpack']
+---
+
+# Overview
+
+This component contains a Bit webpack transformer that merges postcss options
+with any existing configuration from the Bit env.
+
+
+## Usage
+
+```js
+const {
+    previewTransform,
+    devServerTransform
+} = useModularCss({}); // e.g. with default options
+
+[...]
+
+react.useWebpack({
+  previewConfig: [previewTransform],
+  devServerConfig: [devServerTransform],
+}),
+
+```
+
+See the [`modular-css`](https://bit.dev/waweb/envs/modular-css) env for usage.

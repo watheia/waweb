@@ -1,0 +1,8 @@
+{
+    "../../libs/base-ui/atoms/link/src/link.module.css": {
+        "Link": "mc65a716a7_Link",
+        "is-disabled": "mc65a716a7_is-disabled",
+        "LinkSecondary": "mc65a716a7_LinkSecondary",
+        "LinkOverBackground": "mc65a716a7_LinkOverBackground"
+    }
+}

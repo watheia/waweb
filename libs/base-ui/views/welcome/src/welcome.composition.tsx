@@ -1,4 +1,8 @@
 import React from 'react';
 import { Welcome } from './welcome';
 
-export const WelcomePage = () => <Welcome />;
+export const WelcomePage = () => (
+  <div data-testid="welcome">
+    <Welcome />
+  </div>
+);
